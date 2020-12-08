@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Hacking Django, how Bazaar</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="bzr" />
+        <meta name="tags" content="django" />
+        <meta name="tags" content="dvcs" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Hacking Django, how Bazaar</h1>
+
+<div class="entrydate"><p>January 11, 2007</p></div>
+
+<p>A short while ago, I went on a mission to find a better way to hack <a class="reference external" href="http://www.djangoproject.com/">Django</a>.  I needed a way to keep my patches organized and updated.  So, in this article I discuss my experiences with a tool I found to help me achieve these goals...</p>
+<p>Enter <a class="reference external" href="http://bazaar-vcs.org/">Bazaar</a>, one of the several <a class="reference external" href="http://en.wikipedia.org/wiki/Version_control_system#Distributed_version_control">distributed version control systems</a> that have been getting some hype recently.  With <a class="reference external" href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">so many to choose from</a>, why did I choose Bazaar?  Well, maybe it was because of the cool name, or maybe it was the pretty website, or maybe just because it's written in the language I love—<a class="reference external" href="http://www.python.org/">Python</a>.  If you are familiar with <a class="reference external" href="http://subversion.tigris.org/">Subversion</a>, then you will feel right at home with Bazaar.  This is because Bazaar uses most of the same commands as Subversion (e.g. <tt class="docutils literal">svn ci = bzr ci</tt>, <tt class="docutils literal">svn st = bzr st</tt>, etc.).</p>
+<p>Following <a class="reference external" href="http://jameswestby.net/tips/tips/hacking-a-project-with-bzr.html">this guide for hacking an open source project using bzr</a>, I created a <tt class="docutils literal">django</tt> directory to stash my django hacks.  After using svn to check out the latest Django code to a directory named <tt class="docutils literal">upstream</tt>, and turning <tt class="docutils literal">upstream</tt> into a bzr repository too, it was time to start the real work.  To re-iterate in command line speak, here is what I did:</p>
+<p><strong>Update:</strong> The steps below have been updated to reflect changes with bzr commands (versions &gt;=0.15rc2).</p>
+<pre class="literal-block">
+mkdir django
+cd django
+bzr init-repo .            # use &quot;bzr init-repo --trees .&quot; here instead if using a version &lt;0.15rc2
+svn co http://code.djangoproject.com/svn/django/trunk/ upstream
+cd upstream
+bzr init
+echo &quot;.svn&quot; &gt; .bzrignore   # do not store svn metadata in our bzr repo
+bzr add
+bzr ci -m 'Initial import of Django.'
+</pre>
+<p>Usually, when you want to add a new feature to some code, you create a branch.  The purpose of these, so called, feature branches is to keep the features separated.  Trying to create multiple features in the same branch would just be a big mess.  Creating branches in a Subversion repository is easy enough, you just <tt class="docutils literal">svn cp</tt> the code to a new location.  It's the keeping your branch in sync with the trunk that's not as easy.</p>
+<p>With Subversion, you have to keep track of the revisions that have already been merged to your branch and make sure to only merge the changes that haven't already been merged.  Not so with Bazaar; Bazaar keeps track of this for you.  A simple <tt class="docutils literal">bzr merge</tt> will pull in upstream changes that have not been merged yet.</p>
+<p>So, when I wanted to start working on a patch for <a class="reference external" href="http://code.djangoproject.com/ticket/2473">ticket #2473</a>, I created a branch:</p>
+<pre class="literal-block">
+bzr branch upstream in-and-empty-list-2473
+</pre>
+<p>After <tt class="docutils literal">cd</tt>'ing into my new branch and committing my changes, I created a diff to attach to the ticket with the command:</p>
+<pre class="literal-block">
+bzr diff -r branch:../upstream
+</pre>
+<p>So far, working with Bazaar has been a breeze.  Without it, <a class="reference external" href="http://code.djangoproject.com/ticket/2473">my</a> <a class="reference external" href="http://code.djangoproject.com/ticket/2756">Django</a> <a class="reference external" href="http://code.djangoproject.com/ticket/3180">holiday</a> <a class="reference external" href="http://code.djangoproject.com/ticket/3182">hacking</a> wouldn't have been nearly as fun.</p>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on January 11, 2007</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/bzr/">bzr</a>, <a rel="tag" href="/tags/django/">django</a>, <a rel="tag" href="/tags/dvcs/">dvcs</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2006/is_authenticated-vs-is_anonymous/"><tt class="docutils literal">is_authenticated()</tt> vs. <tt class="docutils literal">is_anonymous()</tt></a></div>
+        <div class="next"><div class="title">Next</div><a href="/blog/2007/texas-python-regional-unconference/">Texas Python Regional Unconference</a></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>

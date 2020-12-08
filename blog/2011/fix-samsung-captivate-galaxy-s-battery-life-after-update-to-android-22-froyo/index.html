@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Fix Samsung Captivate (Galaxy S) battery life after update to Android 2.2 (Froyo)</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="android" />
+        <meta name="tags" content="at&t" />
+        <meta name="tags" content="battery" />
+        <meta name="tags" content="captivate" />
+        <meta name="tags" content="froyo" />
+        <meta name="tags" content="galaxy s" />
+        <meta name="tags" content="samsung" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Fix Samsung Captivate (Galaxy S) battery life after update to Android 2.2 (Froyo)</h1>
+
+<div class="entrydate"><p>July 14, 2011</p></div>
+
+<div class="section" id="the-update">
+<h2>The Update</h2>
+<p>Finally, <a class="reference external" href="http://www.samsung.com/us/froyoupgrade2_2/captivate">Samsung has released</a> the <a class="reference external" href="http://developer.android.com/sdk/android-2.2-highlights.html">Android 2.2 Froyo</a> update for the Galaxy S (<a class="reference external" href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FSamsung-Captivate-Android-Phone-AT%2Fdp%2FB003TLMQG8%2F&amp;tag=listfrenzy-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">AT&amp;T Captivate</a>). For reference, before the update I was getting about one-and-a-half days of battery life with normal usage (wi-fi and sync always on). Android 2.2 touts a 2x-5x improvement in CPU performance and improved memory management, both contributing to faster and smoother performance.</p>
+<p>Sold! Where do I upgrade?</p>
+</div>
+<div class="section" id="the-aftermath">
+<h2>The Aftermath</h2>
+<p>Unfortunately, shortly after installing the update I notice an unacceptable battery drain rate. From a full change and with, at most, 10 minutes of use, my battery was dead about eight hours later. Wait a second, I thought performance was supposed to be better! Did this improved performance mean I had to sacrifice to the battery gods? This is not at all what I signed up for.</p>
+<p>Maybe the first charge cycle was a fluke, I told myself. Well, it wasn't.  Two more charge cycles came and went, and I was still experiencing no more than about eight to ten hours of battery life.  At this point, I'm searching Android forums for solutions and finding many similar battery life horror stories.  It wasn't just Samsung Galaxy phones either. Reports about other HTC, Samsung, etc. phones were also prevalent. However, I could find no definitive solution to the problem.  Suggestions ranged everywhere from get a new battery to perform a factory reset to turn off wi-fi and many, many more.  At this point, I'm seriously considering reverting back to Android 2.1 (or rooting and going to 2.3.4), because less than half a day's worth a battery is no way to live.</p>
+</div>
+<div class="section" id="the-solution">
+<h2>The Solution</h2>
+<p>Then, there was one suggested solution I came across that actually seemed plausible.  I'm sure as hell not going to reset the phone and spend the time reloading all my data and apps, and nothing is wrong with my 6-month old battery as it was working just fine before the update to 2.2.</p>
+<p><strong>The suggested solution was to reset the battery calibration table.</strong> The theory here was that the software estimates the battery usage and life, and is what tells the phone what percentage the battery is at and when the phone should shut down due to critically-low remaining capacity. By reseting the calibration table, the software would relearn the battery capacity.  OK, I buy that, so how do I do this? Well, the suggestion was to install the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.vertiform.android.app.batteryspy">Battery Spy</a> app, open the app, then follow: Menu button -&gt; Battery Profile -&gt; Reset calibration table -&gt; Yes. Afterwards, you must let the battery drain all the way down, then charge it back to full (I did this with the phone off), and then let it charge all the way down again.</p>
+</div>
+<div class="section" id="the-numbers">
+<h2>The Numbers</h2>
+<p>Once changed to full, I performed a couple more actions: I turned off auto -sync and also changed the wi-fi sleep policy option to turn off wireless when the screen is inactive (Menu -&gt; Settings -&gt; Wireless and network -&gt; Wi-Fi settings -&gt; Menu -&gt; Advanced -&gt; Wi-Fi sleep policy -&gt; When screen turns off).  The last option here is a default policy that was changed in Android 2.2; previously, &quot;When screen turns off&quot; was the default, but in 2.2 the default changed to &quot;Never&quot;. From what I could gather, the &quot;When screen turns off&quot; setting was a problem because if the phone sat idle (e.g. while you were asleep) it would switch to 3G (even if it had excellent wi-fi signal) and potentially rack up unintended data usage. Another reason for the settings change, again from what I could gather, was that the wi-fi transmitter uses less power than the cell radio, and less power = more battery life.</p>
+<p>To my astonishment, <strong>4 days 22 hours and 14 minutes</strong> later the phone was down to 2% battery, but still on despite normal usage and not ever going near a charger.  Wow, this is unbelievable!  Nearly five days of charge, that was more than twice the battery life I've ever experienced on this phone; but, was this due to the battery calibration or the settings I changed?  Time to test. I next charged the phone up to 100% again, then turned auto-sync back on.  1 day 20 hours and 45 minutes later, battery is at 5%.  OK, big hit there, but still better than I had ever experienced before the upgrade to Android 2.2.  Next, I changed fully once more, and then set the wi-fi sleep policy back to &quot;Never&quot;. That time, 2 days 6 hours and 11 minutes later, it's at 4% charge.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>Your mileage may vary, but it seems that the battery calibration is what did the trick. At over two days of average battery life now, I'm once again a happy Android user and am enjoying a bit faster performance to boot.  Before I wrap this up, I'll leave you with one last tip: the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.bvalosek.cpuspy">CPU Spy</a> app. This nice little app gives you a breakdown of how much time the CPU has spent in its various clock speeds (e.g. 1000, 800, 400, 200, and 100 MHz, and deep sleep), and the far majority of the phone's time should be in the deep sleep mode.  If it's not, then there's likely some app or background process that is keeping the phone from entering this low-power state.  Find out what's keeping it out of deep sleep, and your battery will thank you.  Hope this was helpful, and I would definitely try the battery recalibration before taking more drastic measures that involve losing all your apps and data.</p>
+</div>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on July 14, 2011</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/android/">android</a>, <a rel="tag" href="/tags/att/">at&t</a>, <a rel="tag" href="/tags/battery/">battery</a>, <a rel="tag" href="/tags/captivate/">captivate</a>, <a rel="tag" href="/tags/froyo/">froyo</a>, <a rel="tag" href="/tags/galaxy-s/">galaxy s</a>, <a rel="tag" href="/tags/samsung/">samsung</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2011/drawing-petri-nets/">Drawing Petri nets</a></div>
+        <div class="next"><div class="title">Next</div><a href="/blog/2012/blog-has-moved/">Blog has moved</a></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>

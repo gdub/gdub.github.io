@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Form validators that always get tested</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="django" />
+        <meta name="tags" content="forms" />
+        <meta name="tags" content="validators" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Form validators that always get tested</h1>
+
+<div class="entrydate"><p>February 28, 2006</p></div>
+
+<p>I needed to make a form that had two inputs, and wanted to require that one or both fields be filled in.  While poking around in <tt class="docutils literal">django.core.formfields</tt>, I noticed the following check:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">is_required</span>
+    <span class="ow">or</span> <span class="n">new_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">validator</span><span class="p">,</span> <span class="s1">&#39;always_test&#39;</span><span class="p">)):</span>
+</pre></div>
+<p>Ah ha!  What is this <tt class="docutils literal">always_test</tt> I see here?  The devs must have already thought of a situation like this, but just failed to mention it in the <a class="reference external" href="http://www.djangoproject.com/documentation/forms/">documentation</a>.  Anyway, on to the to the custom form:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">formfields</span><span class="p">,</span> <span class="n">validators</span>
+
+<span class="k">class</span> <span class="nc">ItemAddForm</span><span class="p">(</span><span class="n">formfields</span><span class="o">.</span><span class="n">Manipulator</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">formfields</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+                <span class="n">length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">maxlength</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                <span class="n">validator_list</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">oneIsRequried</span><span class="p">]),</span>
+            <span class="n">formfields</span><span class="o">.</span><span class="n">URLField</span><span class="p">(</span><span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="p">,</span>
+                <span class="n">validator_list</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">oneIsRequried</span><span class="p">]),</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">oneIsRequried</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_data</span><span class="p">,</span> <span class="n">all_data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">validators</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">,</span> \
+                <span class="s2">&quot;One of either name or URL must be filled in.&quot;</span>
+    <span class="n">oneIsRequried</span><span class="o">.</span><span class="n">always_test</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+<p>After defining the <tt class="docutils literal">oneIsRequired</tt> method, I set its <tt class="docutils literal">always_test</tt> attribute to <tt class="docutils literal">True</tt>.  You see, normally, a field's validators will not get run if the field is left blank.  Here, the two fields will always get tested against the <tt class="docutils literal">oneIsRequired</tt> validator method, blank or not.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Technically, I did not need to put the <tt class="docutils literal">oneIsRequired</tt> in both fields' <tt class="docutils literal">validator_list</tt> parameters, but by listing it in both, each field will get the error message in the <tt class="docutils literal">form.errors</tt> dict.</p>
+</div>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on February 28, 2006</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/django/">django</a>, <a rel="tag" href="/tags/forms/">forms</a>, <a rel="tag" href="/tags/validators/">validators</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2006/hello-world/">Hello world!</a></div>
+        <div class="next"><div class="title">Next</div><a href="/blog/2006/news-sites-that-dont-suck/">News sites that don't suck</a></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>

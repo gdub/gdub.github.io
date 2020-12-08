@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Cyclomatic complexity for Python code</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="cyclomatic complexity" />
+        <meta name="tags" content="metrics" />
+        <meta name="tags" content="python" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Cyclomatic complexity for Python code</h1>
+
+<div class="entrydate"><p>July 9, 2006</p></div>
+
+<p>We all know that maintenance is the biggest cost of software.  You can keep the maintenance cost of your program down by writing readable code.  More readable code means faster bug fixing, which leads to more time for adding new bugs.</p>
+<p>One measure of readability is <a class="reference external" href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">cyclomatic complexity</a>, a software metric that measures a program's complexity based on the number of distinct paths or branches in the code.  <a class="reference external" href="http://www.sei.cmu.edu/str/descriptions/cyclomatic_body.html">Carnegie Mellon's Software Engineering Institute</a> defines the following complexity risk levels:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Cyclomatic Complexity</th>
+<th class="head">Risk Evaluation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1-10</td>
+<td>a simple program, without much risk</td>
+</tr>
+<tr><td>11-20</td>
+<td>more complex, moderate risk</td>
+</tr>
+<tr><td>21-50</td>
+<td>complex, high risk program</td>
+</tr>
+<tr><td>greater than 50</td>
+<td>untestable program (very high risk)</td>
+</tr>
+</tbody>
+</table>
+<p>I have written a python script that takes <a class="reference external" href="http://www.journyx.com/curt/complexity.html">these complexity scripts</a> a bit further by printing the most complex functions/methods in an entire Python package specified on the command line.  Save the following as <tt class="docutils literal">complexity.py</tt>:</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Find the most complex functions/methods in your python code.</span>
+
+<span class="sd">This program is offered freely into the public domain by</span>
+<span class="sd">Gary Wilson (gary.wilson@gmail.com).</span>
+
+<span class="sd">This code requires the complexity shell scripts found at</span>
+<span class="sd">http://journyx.com/curt/complexity.html</span>
+<span class="sd">Download the four files and then specify the path to the</span>
+<span class="sd">&quot;complexity&quot; script below, as PATH_TO_COMPLEXITY.</span>
+
+<span class="sd">Note: To get the scripts to work for me I had to change the line</span>
+<span class="sd">open (T,&quot;|$dn/tab|sort -n +5&quot;) || die &quot;no tab?&quot;;</span>
+<span class="sd">to</span>
+<span class="sd">open (T,&quot;|$dn/tab|sort -n -k 6&quot;) || die &quot;no tab?&quot;;</span>
+<span class="sd">This line appears once in &quot;complexdef&quot; and twice in &quot;complexdefclass&quot;.</span>
+
+<span class="sd">Example uses:</span>
+
+<span class="sd">Search the current directory.</span>
+<span class="sd">python complexity.py</span>
+
+<span class="sd">Search the mypythonpackage package.</span>
+<span class="sd">python complexity.py ~/mypythonpackage</span>
+
+<span class="sd">You can also specify multiple files and/or directories.</span>
+<span class="sd">python complexity.py ~/mypythonpackage /src/myscript.py</span>
+
+<span class="sd">This script will search for all files ending in &quot;.py&quot; within the</span>
+<span class="sd">paths specified on the command line.  All functions and methods will</span>
+<span class="sd">be sorted by decreasing complexity and printed along with the</span>
+<span class="sd">filename and number of lines of code.</span>
+
+<span class="sd">By default, this script will print out all functions/methods found.</span>
+<span class="sd">If you would rather only see functions/methods with a certain</span>
+<span class="sd">complexity or above, then change the COMPLEXITY_LEVEL setting below.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1">## User Settings ###########################################</span>
+<span class="n">PATH_TO_COMPLEXITY</span> <span class="o">=</span> <span class="s1">&#39;~/complex/complexity&#39;</span>
+<span class="c1"># Only show functions/methods with a complexity greater than or</span>
+<span class="c1"># equal to COMPLEXITY_LEVEL.  Setting to 0 will print all functions/methods.</span>
+<span class="n">COMPLEXITY_LEVEL</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">############################################################</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+
+<span class="k">def</span> <span class="nf">complexity_for_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">PATH_TO_COMPLEXITY</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">close_fds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
+    <span class="n">tuples</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">reached_functions</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">function_header</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;Funcname|Classless_Function&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">function_header</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+            <span class="n">reached_functions</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">reached_functions</span><span class="p">:</span>
+            <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="c1"># We don&#39;t want the header lines.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="c1"># filename, function name, lines of code, and complexity.</span>
+            <span class="n">tuples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">filename</span><span class="p">,</span> <span class="n">fields</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fields</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">fields</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">tuples</span>
+
+<span class="k">def</span> <span class="nf">add_to_functions</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">filenames</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.py&#39;</span><span class="p">):</span>
+            <span class="n">functions</span> <span class="o">+=</span> <span class="n">complexity_for_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">get_column_widths</span><span class="p">(</span><span class="n">function_tuples</span><span class="p">):</span>
+    <span class="n">widths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">function_tuples</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">widths</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">function_tuples</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="n">widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">ft</span><span class="p">[</span><span class="n">col</span><span class="p">])</span> <span class="k">for</span> <span class="n">ft</span> <span class="ow">in</span> <span class="n">function_tuples</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">widths</span>
+
+<span class="k">def</span> <span class="nf">get_print_parms</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">function_tuple</span><span class="p">):</span>
+    <span class="n">parms</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">)):</span>
+        <span class="n">parms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">widths</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+        <span class="n">parms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">function_tuple</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">parms</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">function_tuples</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">curdir</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">add_to_functions</span><span class="p">,</span> <span class="n">function_tuples</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">function_tuples</span> <span class="o">+=</span> <span class="n">complexity_for_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="c1"># Filter out functions less than desired complexity level.</span>
+    <span class="n">function_tuples</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">function_tuples</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">COMPLEXITY_LEVEL</span><span class="p">]</span>
+    <span class="c1"># Sort by complexity.</span>
+    <span class="n">function_tuples</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">function_tuples</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Showing functions/methods with complexity greater than or equal to </span><span class="si">%s</span><span class="s2">:</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">COMPLEXITY_LEVEL</span>
+    <span class="k">if</span> <span class="n">function_tuples</span><span class="p">:</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Filename&#39;</span><span class="p">,</span> <span class="s1">&#39;Function/Method&#39;</span><span class="p">,</span> <span class="s1">&#39;Lines of Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Complexity&#39;</span><span class="p">)</span>
+        <span class="n">widths</span> <span class="o">=</span> <span class="n">get_column_widths</span><span class="p">(</span><span class="n">function_tuples</span> <span class="o">+</span> <span class="p">[</span><span class="n">headers</span><span class="p">])</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%-*s</span><span class="s1"> </span><span class="si">%-*s</span><span class="s1"> </span><span class="si">%*s</span><span class="s1"> </span><span class="si">%*s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">get_print_parms</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ft</span> <span class="ow">in</span> <span class="n">function_tuples</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%-*s</span><span class="s1"> </span><span class="si">%-*s</span><span class="s1"> </span><span class="si">%*s</span><span class="s1"> </span><span class="si">%*s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">get_print_parms</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">ft</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s2">&quot;None.&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on July 9, 2006</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/cyclomatic-complexity/">cyclomatic complexity</a>, <a rel="tag" href="/tags/metrics/">metrics</a>, <a rel="tag" href="/tags/python/">python</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2006/cyclomatic-complexity-of-django/">Cyclomatic complexity of Django</a></div>
+        <div class="next"><div class="title">Next</div><a href="/blog/2006/using-cracklib-to-require-stronger-passwords/">Using CrackLib to require stronger passwords</a></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>

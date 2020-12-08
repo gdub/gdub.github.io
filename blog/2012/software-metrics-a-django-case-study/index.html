@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Software Metrics: A Django Case Study</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="django" />
+        <meta name="tags" content="grad school" />
+        <meta name="tags" content="metrics" />
+        <meta name="tags" content="python" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Software Metrics: A Django Case Study</h1>
+
+<div class="entrydate"><p>March 23, 2012</p></div>
+
+<p>With the permission of the other authors, I'd like to share with you a couple of reports written for an assignment in the Software Measurement and Metrics graduate course I took last semester.
+For this project, our class split into two teams that each performed their own case study on the <a class="reference external" href="https://www.djangoproject.com/">Django project</a>.
+The reports were submitted in November 2011, and thus analyzed code and bug data through about the end of October 2011.</p>
+<p>While I have <a class="reference external" href="/blog/2006/cyclomatic-complexity-of-django/">previously analyzed Django's complexity</a> (using a <a class="reference external" href="/blog/2006/cyclomatic-complexity-for-python-code/">hack of some existing complexity scripts</a>), the case studies presented here analyze several aspects of the Django project, including code size, code complexity, component quality, and test coverage.</p>
+<div class="section" id="reports">
+<h2>Reports</h2>
+<p>Below you will find excerpts describing the motivations for each report, followed by links to the full PDF versions of the reports.</p>
+<div class="section" id="team-a">
+<h3>Team A</h3>
+<p>Written by Eric Huneke, Brendan Long, and Gary Wilson Jr.</p>
+<blockquote>
+This report describes our case study of Django, an open source web application framework written in Python. The overall goal of our study was a data-driven exploration of Django's code base, issue tracker, and wiki space, targeted to answer our research questions related to code size, complexity, and defect counts. We explored both the current state and the history of the Django project's artifacts, and produced several visualizations of the most interesting data.</blockquote>
+<p><a class="reference external" href="/blog/2012/03/23/django_case_study_team_a.pdf">Download report</a> (815K, 19 pages).</p>
+</div>
+<div class="section" id="team-b">
+<h3>Team B</h3>
+<p>Written by Kevin Boos, Richard Campbell, Evan Grim, and Hasanain A. Jwair.</p>
+<blockquote>
+Our motivation for conducting this case study, aside from the obvious assignment requirements, is to answer a variety of research questions corresponding to several standard software metrics: code size, modularity, complexity, unit test coverage, and component quality relative to defect quantity. We believe that obtaining and analyzing data from the Django repositories and databases will allow us to generate graphical representations of important relationships between developer behavior, component organization, testing and debugging procedures, and a wide variety of other project characteristics. From these relationships, we can then draw conclusions about how to improve the software development process and other facets of the Django project.</blockquote>
+<p><a class="reference external" href="/blog/2012/03/23/django_case_study_team_b.pdf">Download report</a> (2.4M, 25 pages).</p>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions</h2>
+<p>I encourage you to browse through the reports and their visualizations.  For the impatient, the teams' conclusions were as follows:</p>
+<div class="section" id="id1">
+<h3>Team A</h3>
+<blockquote>
+This report presented the data we collected as part of a case study examining various aspects of Django, an open source web application framework. We found that the codebase has been growing at a steady rate since its start and will likely continue to grow. Overall complexity has been manageable, with just a few files containing egregiously complex functions. A refactoring effort focused on the files presented in table 4.1 is recommended. Ticket data relating to Django reflect basic intuitions about how they should behave. We were able to get a rough measure of component quality by looking at the number of tickets relating to each component, and showed that the top three components by ticket count (documentation, database layer, and contrib.admin) accounted for over 40% of all reported tickets. Test coverage of Django's components is high, with most components having at least 95% coverage. Coverage has trended upward for almost the entire project's history, and saw an extreme increase in the time periods before its 1.0 release.</blockquote>
+</div>
+<div class="section" id="id2">
+<h3>Team B</h3>
+<blockquote>
+<p>This case study of the Django project, an open-source web development framework composed in Python, has presented a wide variety of statistically-significant data. To measure code size, rate of growth, complexity, and maintainability, we used Django's source control repository to analyze historical revisions since 2005. To analyze defect tracking, we looked at ticket records dating to the beginning of the Django project. For unit testing coverage, coding standards, and style guidelines analysis, we analyzed source code that was extracted from the Django subversion server on October 31, 2011.</p>
+<p>We found that the size of the project has greatly increased since its start, but that the rate of increase has decreased over time. The largest component with approximately half of the code is the contrib component which could be broken up into smaller, more manageable components. The overall cyclomatic complexity of Django is 2.49 which is respectable. Complexity started out nice and increased for the first few years, but has decreased since the initial increase. Some modules, though, have high complexities which should be reduced if possible.</p>
+<p>The ticket data showed that the majority of the tickets opened were for defects. When looking at only the defect tickets, we found 4 components out of 48 had almost 60% of the defects opened against them. The core and database components have the most defects per SLOC, so improving code quality in these areas will greatly reduce the overall number of defects in the Django project.</p>
+<p>As a whole, we found that the Django code is well covered by its test cases. The component with the lowest coverage, contrib.admin, was also found to be one of the components with the highest number of defects opened against it. Improving test coverage may reduce the number of tickets opened.</p>
+<p>We found that python coding standards and style conventions are poorly followed by Django developers. Additionally, Django code is poorly commented, only 7% of the total lines of the code base were comment lines. We also found that the amount of documentation is not consistent throughout the code elements, while most of the methods are documented, less than half the modules and classes have documentations.</p>
+</blockquote>
+</div>
+</div>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on March 23, 2012</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/django/">django</a>, <a rel="tag" href="/tags/grad-school/">grad school</a>, <a rel="tag" href="/tags/metrics/">metrics</a>, <a rel="tag" href="/tags/python/">python</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2012/blog-has-moved/">Blog has moved</a></div>
+        <div class="next"><div class="title">Next</div><a href="/blog/2012/julython-kickoff/">Julython Kickoff</a></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>

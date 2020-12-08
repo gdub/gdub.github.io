@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+    <head>
+            <meta charset="UTF-8" />
+        <title>Software Quality Survey Results</title>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-21464766-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
+        <link rel="alternate" type="application/atom+xml" href="/blog/feed/" />
+        <link rel="stylesheet" type="text/css" media="all" href="/theme/style.css" />
+        <meta name="robots" content="noodp" />
+        <meta name="description" content="The personal website and blog of Gary Wilson Jr." />
+
+
+
+        <meta name="tags" content="grad school" />
+        <meta name="tags" content="metrics" />
+        <meta name="tags" content="quality" />
+        <meta name="tags" content="software engineering" />
+        <meta name="tags" content="survey" />
+    </head>
+
+    <body class="home blog">
+        <div id="wrapper" class="hfeed">
+            <header>
+                <div id="masthead">
+                    <div id="branding" role="banner">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="Home">Gary Wilson Jr.</a>
+                            </span>
+                        </h1>
+
+                        <div id="site-description">&ldquo;If brute force doesn't solve your problems,<br />then you aren't using enough.&rdquo;</div>
+                        <img src="/theme/goat.jpg" width="940" height="198" alt="Goat pressing top of head against barrel." />
+                    </div><!-- #branding -->
+
+                    <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu">
+                            <ul>
+                                <li class="page_item"><a href="/">Home</a></li>
+                                <li class="page_item"><a href="/blog/">Blog</a></li>
+                                <li class="page_item"><a href="/about/">About</a></li>
+                                <!--
+                                    <ul class='children'>
+                                    <li class="page_item"><a href="" title="Sub-page">Sub-page</a></li>
+                                    </ul>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+                    </div><!-- #access -->
+                </div><!-- #masthead -->
+            </header>
+
+            <div id="main">
+
+                <div id="container">
+                    <div id="content" role="main">
+<h1 class="title">Software Quality Survey Results</h1>
+
+<div class="entrydate"><p>June 19, 2013</p></div>
+
+<p>In April, <a class="reference external" href="/blog/2013/software-quality-metrics-survey/">I conducted a survey</a> to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.</p>
+<div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>A literature review on software quality showed that software quality is a broad topic covering several factors, requiring a diverse set of metrics to adequately evaluate and control.  My goal with the survey to software professionals was to compare their opinions of the definition of software quality with the definitions found in the literature, and to understand how well-known and utilized software methods, metrics, and visualizations are within software teams.
+Guiding questions for the survey included:</p>
+<ul class="simple">
+<li>How do software professionals define quality?</li>
+<li>What methods do teams most frequently use for improving quality?</li>
+<li>How often do teams/companies manage quality through metrics and visualizations?</li>
+<li>How well do developers know available software quality metrics?</li>
+<li>How likely are software professionals to make use of metric visualization tools for monitoring software quality during software evolution?</li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>Background</h2>
+<p>The survey consisted of 23 questions, and was administered online using <a class="reference external" href="http://kwiksurveys.com/">kwiksurveys</a>.</p>
+<p>In total, 75 responses across 21 countries and more than 17 companies—not all subjects specified their place of work—were accumulated.  The table below shows the full breakdown of the frequency of responses by country.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="96%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Count</th>
+<th class="head">Countries</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>33</td>
+<td>United States</td>
+</tr>
+<tr><td>6</td>
+<td>Germany</td>
+</tr>
+<tr><td>5</td>
+<td>Poland</td>
+</tr>
+<tr><td>5</td>
+<td>United Kingdom</td>
+</tr>
+<tr><td>4</td>
+<td>Australia</td>
+</tr>
+<tr><td>3</td>
+<td>France</td>
+</tr>
+<tr><td>2</td>
+<td>Argentina, Austria, Canada, India</td>
+</tr>
+<tr><td>1</td>
+<td>Denmark, Hungary, Italy, Lithuania, Netherlands, Romania, Singapore, South Africa, Spain, Sweden, Switzerland</td>
+</tr>
+</tbody>
+</table>
+<p>Responders averaged 10.2 years of software industry experience and identified themselves into the following breakdown of job roles (approx.): 79% developers, 16% managers, 4% test/QA engineers, and 1% business analysts.</p>
+<p>Over half (50.7%) of the responders identified as working for a company with 6–50 employees, while another significant portion (30.7%) identified as working for companies with greater than 1,000 employees.
+The vast majority of responders (89.3%) identified as working within teams of 10 or less, almost evenly split between a size of 1–5 (49.3%) and a size of 6–10 (40.0%).  See the tables below for the full distribution of responders' company and team sizes.</p>
+<table border="1" class="docutils">
+<caption>Company-size distribution.</caption>
+<colgroup>
+<col width="57%" />
+<col width="24%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Size</th>
+<th class="head">Count</th>
+<th class="head">%</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>up to 5</td>
+<td>9</td>
+<td>12.0</td>
+</tr>
+<tr><td>up to 50</td>
+<td>29</td>
+<td>38.7</td>
+</tr>
+<tr><td>up to 250</td>
+<td>8</td>
+<td>10.7</td>
+</tr>
+<tr><td>up to 1,000</td>
+<td>6</td>
+<td>8.0</td>
+</tr>
+<tr><td>over 1,000</td>
+<td>23</td>
+<td>30.7</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<caption>Team-size distribution.</caption>
+<colgroup>
+<col width="47%" />
+<col width="29%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Size</th>
+<th class="head">Count</th>
+<th class="head">%</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>up to 5</td>
+<td>37</td>
+<td>49.3</td>
+</tr>
+<tr><td>up to 10</td>
+<td>30</td>
+<td>40.0</td>
+</tr>
+<tr><td>over 10</td>
+<td>8</td>
+<td>10.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="quality">
+<h2>Quality</h2>
+<p>When asked which definition best defines software quality, responders overwhelmingly choose &quot;a broad mix of factors&quot; (77%) over &quot;fit of need&quot; (17%) and &quot;lack of defects&quot; (5%); however, the latter two definitions weighted heavily in the responders' perceptions of quality.  When asked to rank a set of eight quality factors in how important the factors represent code quality, <em>Correctness</em> and <em>Reliability</em> were predominantly ranked first and second, respectively.
+These results confirm the quality definitions found in the literature, with both the <em>Correctness</em> (i.e. &quot;fit of need&quot;) and <em>Reliability</em> (i.e. &quot;defects&quot;) attributes standing out from the others.
+With quality in manufacturing very much tied to defects and reliability, it is interesting that, here, &quot;lack of defects&quot; was thought to be less important than &quot;fit of need.&quot;</p>
+<p>The figure below shows a graph of the rank selection distribution for how important the subjects felt each attribute represents quality.</p>
+<div class="figure align-center">
+<img alt="" src="/blog/2013/06/19/figures/quality_attribute_ranks_1600_crop.png" />
+<p class="caption">Ranks given to attributes for importance in representing code quality.</p>
+</div>
+<p>The table below shows the attributes sorted by their weighted-average ranking.</p>
+<table border="1" class="docutils">
+<caption>Weighted-average ranks of how important each quality factor is in representing quality.</caption>
+<colgroup>
+<col width="18%" />
+<col width="38%" />
+<col width="26%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Quality factor</th>
+<th class="head">Weighted-average rank (out of 8)</th>
+<th class="head">Median rank (out of 8)</th>
+<th class="head">Mode (out of 8)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Correctness</td>
+<td>1.76</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr><td>Reliability</td>
+<td>2.61</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr><td>Usability</td>
+<td>3.57</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr><td>Maintainability</td>
+<td>4.13</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr><td>Testability</td>
+<td>5.41</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr><td>Efficiency</td>
+<td>5.56</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr><td>Flexibility</td>
+<td>5.93</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr><td>Reusability</td>
+<td>6.97</td>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>By far, the most important attribute was <em>Correctness</em>, which was placed in the first rank by nearly 70% of the subjects.  Second, third, and fourth ranks were also clearly shown to be <em>Reliability</em>, <em>Usability</em>, and <em>Maintainability</em>, respectively.
+<em>Reusability</em> was clearly the lowest ranked factor, on average, while the remaining three factors (<em>Testability</em>, <em>Efficiency</em>, and <em>Flexibility</em>) were tightly bunched between the fourth and eight ranked factors.  While most factors display a single peak within the rank positioning, <em>Efficiency</em> was the only factor that demonstrated two distinct local-maxima (centered around ranks three and seven), suggesting that this factor may have importance in only certain environments or applications.</p>
+<p>Subjects were then asked to rank three popular trade-off factors (cost, quality, and schedule) in how influential the factors were for a typical software project at their company.
+The responses predominantly showed <em>schedule</em> ranked first, <em>quality</em> ranked second, and <em>cost</em> ranked third, with resulting weighted-rank averages of 1.69, 1.93, and 2.32 (out of 3), respectively.  The figure below shows the full rank distribution for all three factors.</p>
+<div class="figure align-center">
+<img alt="" src="/blog/2013/06/19/figures/schedule_quality_cost_ranks_1600_crop.png" />
+<p class="caption">Rank distributions of schedule, quality, and cost influence for a typical software project.</p>
+</div>
+<p>In a follow-up question to responders who ranked either schedule or cost as more influential than quality, (summarized) reasons given for their selections included:</p>
+<ul class="simple">
+<li>Typical projects involve fast-paced, exploratory prototyping.</li>
+<li>Schedule is typically driven by outside factors, such as dependent projects, partner relationships, or regulatory changes.</li>
+<li>Cost and/or schedule are typically the primary focus within contracts.</li>
+<li>Deadlines and schedule receive a high level of focus from management.</li>
+<li>Focus on low cost leads to situations such as the use of less experienced developers who lack the skills to improve quality, or a lack of proper management resources.</li>
+</ul>
+<p>Although quality was not ranked as a top consideration for software projects, it was reassuring to learn that the majority of subjects did report on their teams' regular use of multiple methods during the development and/or release process for improving quality.  The complete tally of responses can be seen in the table below.</p>
+<table border="1" class="docutils">
+<caption>The use of methods during development and/or release processes for improving quality, sorted from most used to least used.</caption>
+<colgroup>
+<col width="67%" />
+<col width="25%" />
+<col width="8%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Method</th>
+<th class="head">Count (of 75)</th>
+<th class="head">%</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Informal discussion with colleagues</td>
+<td>63</td>
+<td>84.0</td>
+</tr>
+<tr><td>Automated testing</td>
+<td>59</td>
+<td>78.7</td>
+</tr>
+<tr><td>Human QA testing</td>
+<td>58</td>
+<td>77.3</td>
+</tr>
+<tr><td>Code reviews</td>
+<td>42</td>
+<td>56.0</td>
+</tr>
+<tr><td>Pair programming</td>
+<td>24</td>
+<td>32.0</td>
+</tr>
+<tr><td>Formal meetings</td>
+<td>21</td>
+<td>28.0</td>
+</tr>
+<tr><td>Software metrics</td>
+<td>13</td>
+<td>17.3</td>
+</tr>
+<tr><td>Other</td>
+<td>2</td>
+<td>2.7</td>
+</tr>
+</tbody>
+</table>
+<p>The most popular method used was &quot;informal discussion with colleagues&quot; (84.0%), followed closely by &quot;automated testing&quot; (78.7%) and &quot;human quality assurance (QA) testing&quot; (77.3%).  The least used method was &quot;software metrics&quot;, which received marks from only 17.3% of responders.
+The two responses marked &quot;Other&quot; both made mention of static code-analysis tools.
+The minimal use of metrics as a method for improving quality is disconcerting since it shows that most development teams do not quantitatively know if, or to what degree, their current quality improvement methods are helping them.</p>
+<p>When asked to elaborate on methods used for improving quality, including how and why they are used, the result was a wide range of responses, with most describing choices that were provided in the previous question.
+Notable answers not included in the answer choices included: refactoring, bug monitoring, coding guidelines, stress-test tools, branching strategies (e.g. feature branching), and continuing education.
+Additional insights gathered on choices that were presented include:</p>
+<ul class="simple">
+<li>Related to automated testing were mentions of test-driven development (TDD) and continuous integration.</li>
+<li>Several responses mentioned the fact that automated testing was either under-utilized within their software products, new to their environment, and/or undergoing active improvement.</li>
+<li>Those who mentioned pair programming indicated use of the method for complex or critical bugs and code changes.</li>
+<li>Informal discussions were utilized for completing complex bugs or features, identifying potential issues, learning from problems teammates were facing, and completing changes requiring quick turn-around.</li>
+<li>Code reviews were utilized during new projects, release/sprint iterations, and mentorship situations.</li>
+<li>Human QA testing was used for verifying software correctness and usability, validating releases, and building test plans.</li>
+<li>Responses mentioning formal meetings involved project reviews or retrospectives.</li>
+</ul>
+<p>Out of the 75 total subjects, 10 (13.3%) responded that their team does not use any methods for improving quality.  Reasons cited included: tight deadlines, lack of time, lack of experience, bad tool support, non-production software, too many projects, lack of management, and team/company culture.  The multiple mentions of time constraints here align with the earlier results that show <em>schedule</em> as a more influential trade-off factor on software projects over <em>quality</em>.</p>
+</div>
+<div class="section" id="metrics">
+<h2>Metrics</h2>
+<p>In the previous section, it was shown that software metrics was the least utilized method for improving quality as part of development processes.  However, when asked if their team currently utilizes any metrics for the intentional purpose of improving code quality, just over half of the responders (38 of 75) answered &quot;yes.&quot;</p>
+<p>The subjects were then asked how regularly their team used metrics to evaluate seven different areas, which represented a one-to-one mapping to the measurement goals derived in the Goal, Question, Metric (GQM) exercise (not presented here).
+Answer choices were a frequency-type Likert scale with the following labels: Never, Rarely, Sometimes, Regularly, Constantly.  The figure below depicts the choice distributions for all seven measurement areas, and the table below shows the measurement areas sorted by most frequently used (a weighted-average ordering assuming approximately equal intervals of the frequency-type Likert scale, with values 1 to 5 representing &quot;Never&quot; to &quot;Constantly&quot;, respectively).</p>
+<div class="figure align-center" id="figure-measurement-goal-frequency">
+<img alt="" src="/blog/2013/06/19/figures/measurement_frequency_1600_crop.png" />
+<p class="caption">Distributions of the frequency that teams make use of metrics to address measurement goals presented in GQM exercise.</p>
+</div>
+<table border="1" class="docutils">
+<caption>Frequency that teams make use of metrics to address measurement goals presented in GQM exercise.</caption>
+<colgroup>
+<col width="40%" />
+<col width="13%" />
+<col width="13%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Object of measurement</th>
+<th class="head">Mode</th>
+<th class="head">Median</th>
+<th class="head">Weighted rank (out of 5)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Issues in issue database</td>
+<td>Regularly</td>
+<td>Sometimes</td>
+<td>2.99</td>
+</tr>
+<tr><td>Test suites or benchmarks</td>
+<td>Never</td>
+<td>Sometimes</td>
+<td>2.67</td>
+</tr>
+<tr><td>Maintenance effort performed</td>
+<td>Never</td>
+<td>Rarely</td>
+<td>2.39</td>
+</tr>
+<tr><td>Modularity of software</td>
+<td>Never</td>
+<td>Rarely</td>
+<td>2.20</td>
+</tr>
+<tr><td>Adequacy of documentation</td>
+<td>Never</td>
+<td>Rarely</td>
+<td>1.89</td>
+</tr>
+<tr><td>Complexity of software</td>
+<td>Rarely</td>
+<td>Rarely</td>
+<td>1.88</td>
+</tr>
+<tr><td>Size of software</td>
+<td>Never</td>
+<td>Rarely</td>
+<td>1.87</td>
+</tr>
+</tbody>
+</table>
+<p>While over half of the responders answered &quot;yes&quot; to currently utilizing metrics for improving code quality, they did so at a very low frequency in each of the measurement areas questioned.  Only two areas (<em>issues in issue database</em> and <em>test suites or benchmarks</em>) had a median frequency above &quot;Rarely,&quot; and were also not much more utilized themselves with a median frequency of &quot;Sometimes.&quot;  Likewise, only two areas had a most-selected frequency above &quot;Never&quot;—<em>complexity of software</em> had a mode of &quot;Rarely&quot; and <em>issues in issue database</em> had a mode of &quot;Regularly.&quot;
+<em>Issues in issue database</em> was the most-frequently utilized metric area, clearly seen as on outlier within the &quot;Regularly&quot; frequency choice in <a class="reference internal" href="#figure-measurement-goal-frequency">Figure measurement goal frequency</a>.  In fact, aside from that single outlying point, there is no metric area for the &quot;Regularly&quot; and &quot;Constantly&quot; frequencies that had more selections than the least-selected metric area for the &quot;Rarely&quot; and &quot;Never&quot; frequencies.</p>
+<p>Next, the subjects were asked to rate their knowledge and use of 28 different metrics on a Likert scale consisting of the four choices: Never heard of or do not know, Know of but have not used, Have used before, and Use regularly.
+The list of metrics used for the survey was primarily taken from a GQM derivation (omitted from this post), and was found throughout a range of topics in the software engineering literature, including:</p>
+<ul class="simple">
+<li>software sizing and effort <a class="footnote-reference" href="#albrecht-1979-measuring-productivity" id="id1">[1]</a> <a class="footnote-reference" href="#albrecht-1983-softwarefunction" id="id2">[2]</a> <a class="footnote-reference" href="#halstead-1977-softwarescience" id="id3">[19]</a> <a class="footnote-reference" href="#leffingwell-2003-managingrequirements" id="id4">[24]</a></li>
+<li>complexity <a class="footnote-reference" href="#banker-1993-complexityandmaintenance" id="id5">[4]</a> <a class="footnote-reference" href="#gonzalez-1995-unifiedmetriccomplexity" id="id6">[17]</a> <a class="footnote-reference" href="#mccabe-1976-complexity" id="id7">[26]</a></li>
+<li>defects <a class="footnote-reference" href="#basili-2001-experiencebase" id="id8">[7]</a> <a class="footnote-reference" href="#nagappan-2005-codechurn" id="id9">[27]</a> <a class="footnote-reference" href="#fenton-1999-defectprediction" id="id10">[13]</a> <a class="footnote-reference" href="#gray-1986-mtbf" id="id11">[18]</a></li>
+<li>code duplication <a class="footnote-reference" href="#lague-1997-functionclone" id="id12">[23]</a></li>
+<li>testing <a class="footnote-reference" href="#horgan-1994-testingcoverage" id="id13">[21]</a> <a class="footnote-reference" href="#williams-2001-codecoverage" id="id14">[32]</a> <a class="footnote-reference" href="#demillo-1978-testdataselection" id="id15">[10]</a> <a class="footnote-reference" href="#andrews-2005-mutationtesting" id="id16">[3]</a> <a class="footnote-reference" href="#weyuker-2000-performancetesting" id="id17">[31]</a> <a class="footnote-reference" href="#vokolos-1998-performancetesting" id="id18">[30]</a> <a class="footnote-reference" href="#zhu-1997-testcoverage" id="id19">[33]</a></li>
+<li>evolution <a class="footnote-reference" href="#fluri-2007-codecomments" id="id20">[15]</a></li>
+<li>coupling <a class="footnote-reference" href="#gall-1998-logicalcoupling" id="id21">[16]</a></li>
+<li>cohesion and object-oriented design <a class="footnote-reference" href="#chidamber-1994-metrics-oodesign" id="id22">[9]</a> <a class="footnote-reference" href="#basili-1996-validation-oometrics" id="id23">[6]</a> <a class="footnote-reference" href="#briand-1998-cohesionmeasurement" id="id24">[8]</a> <a class="footnote-reference" href="#rosenberg-1997-oometrics" id="id25">[29]</a> <a class="footnote-reference" href="#eabreu-1994-oometrics" id="id26">[11]</a></li>
+<li>information flow <a class="footnote-reference" href="#henry-1981-informationflow" id="id27">[20]</a></li>
+<li>people and organizational structure <a class="footnote-reference" href="#nagappan-2008-orgstructure" id="id28">[28]</a></li>
+<li>various combinations of the proceeding topics <a class="footnote-reference" href="#basili-1984-errorsandcomplexity" id="id29">[5]</a> <a class="footnote-reference" href="#fenton-2000-faultsandfaiures" id="id30">[14]</a> <a class="footnote-reference" href="#lipow-1982-faultsperloc" id="id31">[25]</a> <a class="footnote-reference" href="#zimmerman-2011-dependency-neighborhoods" id="id32">[34]</a> <a class="footnote-reference" href="#jacob-2003-codereview" id="id33">[22]</a> <a class="footnote-reference" href="#fenton-1991-softwaremetrics" id="id34">[12]</a></li>
+</ul>
+<p>The table below shows the full count (and percentage) breakdown of responses for each metric.  The data is sorted by highest weighted average (assuming approximate equal intervals of a Likert scale, weighted from 1 to 4 representing the selections &quot;Never heard of or do not know&quot; to &quot;Use regularly&quot;), which allows identification of the central tendency of selections for each metric.</p>
+<table border="1" class="docutils">
+<caption>The knowledge and use of 28 different metrics, sorted by most frequently used and well-known.</caption>
+<colgroup>
+<col width="32%" />
+<col width="10%" />
+<col width="10%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="5%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" rowspan="2">Metric</th>
+<th class="head" colspan="2">Never heard of or do not know</th>
+<th class="head" colspan="2">Know of but have not used</th>
+<th class="head" colspan="2">Have used before</th>
+<th class="head" colspan="2">Use regularly</th>
+<th class="head" rowspan="2">Weighted average
+(out of 4)</th>
+</tr>
+<tr><th class="head">Count</th>
+<th class="head">%</th>
+<th class="head">Count</th>
+<th class="head">%</th>
+<th class="head">Count</th>
+<th class="head">%</th>
+<th class="head">Count</th>
+<th class="head">%</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Unit test failures or pass/fail ratio</td>
+<td>4</td>
+<td>5.3</td>
+<td>10</td>
+<td>13.3</td>
+<td>29</td>
+<td>38.7</td>
+<td>32</td>
+<td>42.7</td>
+<td>3.19</td>
+</tr>
+<tr><td>Line coverage</td>
+<td>5</td>
+<td>6.7</td>
+<td>24</td>
+<td>32.0</td>
+<td>30</td>
+<td>40.0</td>
+<td>16</td>
+<td>21.3</td>
+<td>2.76</td>
+</tr>
+<tr><td>Lines of code</td>
+<td>2</td>
+<td>2.7</td>
+<td>29</td>
+<td>38.7</td>
+<td>32</td>
+<td>42.7</td>
+<td>12</td>
+<td>16.0</td>
+<td>2.72</td>
+</tr>
+<tr><td>Number of classes/functions/files/modules</td>
+<td>5</td>
+<td>6.7</td>
+<td>32</td>
+<td>42.7</td>
+<td>27</td>
+<td>36.0</td>
+<td>11</td>
+<td>14.7</td>
+<td>2.59</td>
+</tr>
+<tr><td>Branch/path coverage</td>
+<td>14</td>
+<td>18.7</td>
+<td>25</td>
+<td>33.3</td>
+<td>26</td>
+<td>34.7</td>
+<td>10</td>
+<td>13.3</td>
+<td>2.43</td>
+</tr>
+<tr><td>Duplicated code (or code clone) percentage</td>
+<td>9</td>
+<td>12.0</td>
+<td>33</td>
+<td>44.0</td>
+<td>27</td>
+<td>36.0</td>
+<td>6</td>
+<td>8.0</td>
+<td>2.40</td>
+</tr>
+<tr><td>Defect count or distribution</td>
+<td>14</td>
+<td>18.7</td>
+<td>38</td>
+<td>50.7</td>
+<td>16</td>
+<td>21.3</td>
+<td>7</td>
+<td>9.3</td>
+<td>2.21</td>
+</tr>
+<tr><td>Time-to-fix defect</td>
+<td>13</td>
+<td>17.3</td>
+<td>44</td>
+<td>58.7</td>
+<td>13</td>
+<td>17.3</td>
+<td>5</td>
+<td>6.7</td>
+<td>2.13</td>
+</tr>
+<tr><td>Cyclomatic complexity</td>
+<td>22</td>
+<td>29.3</td>
+<td>26</td>
+<td>34.7</td>
+<td>23</td>
+<td>30.7</td>
+<td>4</td>
+<td>5.3</td>
+<td>2.12</td>
+</tr>
+<tr><td>Depth of nesting</td>
+<td>15</td>
+<td>20.0</td>
+<td>38</td>
+<td>50.7</td>
+<td>21</td>
+<td>28.0</td>
+<td>1</td>
+<td>1.3</td>
+<td>2.11</td>
+</tr>
+<tr><td>Function points or similar</td>
+<td>29</td>
+<td>38.7</td>
+<td>24</td>
+<td>32.0</td>
+<td>17</td>
+<td>22.7</td>
+<td>5</td>
+<td>6.7</td>
+<td>1.97</td>
+</tr>
+<tr><td>Coupling</td>
+<td>26</td>
+<td>34.7</td>
+<td>29</td>
+<td>38.7</td>
+<td>17</td>
+<td>22.7</td>
+<td>3</td>
+<td>4.0</td>
+<td>1.96</td>
+</tr>
+<tr><td>Depth of inheritance tree</td>
+<td>20</td>
+<td>26.7</td>
+<td>39</td>
+<td>52.0</td>
+<td>15</td>
+<td>20.0</td>
+<td>1</td>
+<td>1.3</td>
+<td>1.96</td>
+</tr>
+<tr><td>Cohesion (or lack of cohesion)</td>
+<td>27</td>
+<td>36.0</td>
+<td>31</td>
+<td>41.3</td>
+<td>14</td>
+<td>18.7</td>
+<td>3</td>
+<td>4.0</td>
+<td>1.91</td>
+</tr>
+<tr><td>Defect density</td>
+<td>24</td>
+<td>32.0</td>
+<td>40</td>
+<td>53.3</td>
+<td>6</td>
+<td>8.0</td>
+<td>5</td>
+<td>6.7</td>
+<td>1.89</td>
+</tr>
+<tr><td>Mean time between defect/error</td>
+<td>18</td>
+<td>24.0</td>
+<td>49</td>
+<td>65.3</td>
+<td>6</td>
+<td>8.0</td>
+<td>2</td>
+<td>2.7</td>
+<td>1.89</td>
+</tr>
+<tr><td>Code churn, turnover ratio, or edit frequency</td>
+<td>26</td>
+<td>34.7</td>
+<td>39</td>
+<td>52.0</td>
+<td>10</td>
+<td>13.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.79</td>
+</tr>
+<tr><td>Number of engineers</td>
+<td>30</td>
+<td>40.0</td>
+<td>34</td>
+<td>45.3</td>
+<td>8</td>
+<td>10.7</td>
+<td>3</td>
+<td>4.0</td>
+<td>1.79</td>
+</tr>
+<tr><td>Fan-in and fan-out (class/module dependencies)</td>
+<td>38</td>
+<td>50.7</td>
+<td>24</td>
+<td>32.0</td>
+<td>11</td>
+<td>14.7</td>
+<td>2</td>
+<td>2.7</td>
+<td>1.69</td>
+</tr>
+<tr><td>Number of ex-engineers</td>
+<td>35</td>
+<td>46.7</td>
+<td>34</td>
+<td>45.3</td>
+<td>4</td>
+<td>5.3</td>
+<td>2</td>
+<td>2.7</td>
+<td>1.64</td>
+</tr>
+<tr><td>Defect slippage ratio</td>
+<td>41</td>
+<td>54.7</td>
+<td>30</td>
+<td>40.0</td>
+<td>4</td>
+<td>5.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.51</td>
+</tr>
+<tr><td>Percentage of org contributing to development</td>
+<td>48</td>
+<td>64.0</td>
+<td>23</td>
+<td>30.7</td>
+<td>4</td>
+<td>5.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.41</td>
+</tr>
+<tr><td>Overall organization ownership</td>
+<td>54</td>
+<td>72.0</td>
+<td>17</td>
+<td>22.7</td>
+<td>4</td>
+<td>5.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.33</td>
+</tr>
+<tr><td>Level of organizational code ownership</td>
+<td>56</td>
+<td>74.7</td>
+<td>15</td>
+<td>20.0</td>
+<td>4</td>
+<td>5.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.31</td>
+</tr>
+<tr><td>Depth of master ownership</td>
+<td>59</td>
+<td>78.7</td>
+<td>12</td>
+<td>16.0</td>
+<td>4</td>
+<td>5.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.27</td>
+</tr>
+<tr><td>Halstead metrics</td>
+<td>58</td>
+<td>77.3</td>
+<td>16</td>
+<td>21.3</td>
+<td>1</td>
+<td>1.3</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.24</td>
+</tr>
+<tr><td>Mutant killing percentage</td>
+<td>60</td>
+<td>80.0</td>
+<td>13</td>
+<td>17.3</td>
+<td>2</td>
+<td>2.7</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.23</td>
+</tr>
+<tr><td>Organization intersection factor</td>
+<td>61</td>
+<td>81.3</td>
+<td>11</td>
+<td>14.7</td>
+<td>3</td>
+<td>4.0</td>
+<td>0</td>
+<td>0.0</td>
+<td>1.23</td>
+</tr>
+</tbody>
+</table>
+<p>From the data collected, several insights were captured:</p>
+<ul class="simple">
+<li>No metric was used regularly by a majority of the responders.  The only metric that came close (42.7%) was <em>Unit test failures or pass/fail ratio</em>.</li>
+<li>Only four metrics have been used before or were used regularly by a majority of responders: <em>Unit test failures or pass/fail ratio</em>, <em>Line coverage</em>, <em>Lines of code</em>, and <em>Number of classes/functions/files/modules</em>.  These four metrics were also the only ones that were both unknown to less than 10% of responders and used regularly by more than 10% of responders.</li>
+<li>Aside from the four metrics mentioned in the previous bullet, <em>Branch/path coverage</em> was the only other metric that was used regularly by more than 10% of the responders; however, a higher percentage of responders (19%) had never heard of this metric (about three times more than the four metrics mentioned above).</li>
+<li>Several metrics were highly known, yet not used before or used regularly, including: <em>Mean time between defect/error</em>, <em>Time-to-fix defect</em>, <em>Defect density</em>, <em>Code churn</em>, <em>Depth of inheritance tree</em>, <em>Depth of nesting</em>, and <em>Defect count or distribution</em>.  It us unknown, however, if the high levels of knowledge of these metrics are due to familiarity of their use within the software industry or rather due to the ease of which their definitions can be gleaned from their names.</li>
+<li>Nearly one-third of the metrics presented were completely unknown by a majority of responders, with most metrics in this group used regularly by zero responders and used before by about 5% or less of responders.  Metrics in this group consisted of <em>Fan-in and fan-out</em>, <em>Defect slippage ratio</em>, <em>Halstead metrics</em>, <em>Mutant killing percentage</em>, and several of the people and organizational metrics described by Zimmermann et. al <a class="footnote-reference" href="#zimmerman-2011-dependency-neighborhoods" id="id35">[34]</a>.</li>
+</ul>
+<p>The final two questions in the survey related to metrics were on the topic of the use of metrics to evaluate employee performance.  About 15% of responders indicated that their company uses software metrics for evaluating employee performance.  Surprisingly, nearly twice that amount (28.0%) either agreed or strongly agreed with the use of metrics for evaluating employee performance.
+The full results can been seen in the table below, broken down by manager and non-manager roles (as identified earlier in the survey, see <a class="reference internal" href="#background">Background</a>).</p>
+<table border="1" class="docutils">
+<caption>Level to which responders agree with using software metrics to evaluate employee performance, broken down by manager and non-manager roles.</caption>
+<colgroup>
+<col width="18%" />
+<col width="10%" />
+<col width="23%" />
+<col width="12%" />
+<col width="11%" />
+<col width="8%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" rowspan="2">Role</th>
+<th class="head" rowspan="2">Count</th>
+<th class="head" colspan="5">Percentage of Responders</th>
+</tr>
+<tr><th class="head">Strongly Disagree</th>
+<th class="head">Disagree</th>
+<th class="head">Neutral</th>
+<th class="head">Agree</th>
+<th class="head">Strongly Agree</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Managers</td>
+<td>12</td>
+<td>16.7</td>
+<td>16.7</td>
+<td>8.3</td>
+<td>50.0</td>
+<td>8.3</td>
+</tr>
+<tr><td>Non-managers</td>
+<td>63</td>
+<td>17.5</td>
+<td>23.8</td>
+<td>36.5</td>
+<td>19.1</td>
+<td>3.2</td>
+</tr>
+<tr><td>Total</td>
+<td>75</td>
+<td>17.3</td>
+<td>22.7</td>
+<td>32.0</td>
+<td>24.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<p>From the manager vs. non-manager results, we expectedly see that those in manager roles were much more likely to agree (50.0%) or strongly agree (8.3%) than were those in non-manager roles.  Those in non-manager roles were most likely to be neutral (32.0%) or to disagree (23.8%).  Both manager and non-manager roles differed by less than 1% in the strongly disagree segment and, in aggregate, very few (4.0%) responders identified as strongly agreeing with the use of metrics for employee performance evaluation.</p>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization</h2>
+<p>The survey to software professionals also included four questions on the topic of visualizing software metrics.
+Overall, responders overwhelmingly felt that it would be useful to visualize metrics about their software projects over time, with over 81% who either agreed or strongly agreed with this statement and less than 6% who either disagreed or strongly disagreed.  However, when asked if their team currently uses any tools to visualize software metrics over time, less than 30% answered &quot;yes.&quot;
+In a similar question, subjects were asked how likely they would be to use a software metrics visualization tool to help improve the quality of software they write.  Here, responders were also positive, albeit slightly less enthusiastic.  The majority of responders fell into the likely (42.7%) or neutral (25.3%) segments, with an equal percentage (14.6%) in both the unlikely and very likely segments.  The full results for these two questions can be seen in the tables below.</p>
+<!-- table_metrics_over_time: -->
+<!-- table: Percentage of responders by how useful it would be to visualize metrics about software projects over time.
+
+================= ======== ======= ===== ==============
+Strongly Disagree Disagree Neutral Agree Strongly Agree
+================= ======== ======= ===== ==============
+2.7               2.7      13.3    54.7  26.7
+================= ======== ======= ===== ============== -->
+<!-- table_visualization_tool: -->
+<!-- table: Percentage of responders by how likely they would be to use a software metrics visualization tool to improve the quality of software they write.
+
+============= ======== ======= ====== ===========
+Very Unlikely Unlikely Neutral Likely Very Likely
+============= ======== ======= ====== ===========
+2.7           14.7     25.3    42.7   14.7
+============= ======== ======= ====== =========== -->
+<p>From these results, combined with the earlier result that just over half of the responders answering &quot;yes&quot; to their team currently utilizing metrics for improving code quality, there clearly exists a gap between those who use metrics and those who use metrics visualizations.
+Additionally, the positive responses to the perceived usefulness of metrics visualizations, and willingness to use metrics visualizations, suggests there is opportunity and demand for such tools.</p>
+<p>On the topic of visualization tools, subjects were asked how they would like to use such a tool (see figure below for a chart of all responses).  The most popular choices, selected by about 61--71% of the responders, were: <em>integrated into build/test server</em>, <em>integrated into issue tracker</em>, and <em>a self-hosted, stand-alone product with web interface</em>.  Least popular were: <em>integrated into editor/IDE</em> and <em>a hosted service with web interface</em>.  Four responders filled in a selection for <em>other</em>, mentioning a dedicated build server, as well as a script or command-line interface.</p>
+<!-- figure_howtouse_metrics_tool: -->
+<div class="figure align-center">
+<img alt="" src="/blog/2013/06/19/figures/howtouse_visualization_tool_1600_crop.png" />
+<p class="caption">Number of responses on how subjects would like to use a tool for calculating and visualizing metrics describing their software.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References</h2>
+<table class="docutils footnote" frame="void" id="albrecht-1979-measuring-productivity" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Allan J. Albrecht. Measuring application development productivity. In <em>Proceedings of the Joint SHARE/GUIDE/IBM Application Development Symposium</em>, volume 10, pages 83–92. SHARE Inc. and GUIDE International Corp. Monterey, CA, 1979.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="albrecht-1983-softwarefunction" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Allan J. Albrecht and John E. Gaffney. Software function, source lines of code, and development effort prediction: A software science validation. <em>Software Engineering, IEEE Transactions on</em>, SE-9(6):639–648, 1983.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="andrews-2005-mutationtesting" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id16">[3]</a></td><td>J. H. Andrews, L. C. Briand, and Y. Labiche. Is mutation an appropriate tool for testing experiments? In <em>Software Engineering, 2005</em>. <em>ICSE 2005</em>. <em>Proceedings. 27th International Conference on</em>, pages 402–411, 2005.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="banker-1993-complexityandmaintenance" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[4]</a></td><td>Rajiv D. Banker, Srikant M. Datar, Chris F. Kemerer, and Dani Zweig. Software complexity and maintenance costs. <em>Commun. ACM</em>, 36(11):81–94, Nov. 1993.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="basili-1984-errorsandcomplexity" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id29">[5]</a></td><td>Victor R. Basili and Barry T. Perricone. Software errors and complexity: an empirical investigation. <em>Communications of the ACM</em>, 27(1):42–52, Jan. 1984.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="basili-1996-validation-oometrics" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id23">[6]</a></td><td>Victor R. Basili, Lionel C. Briand, and  Walcélio L. Melo. A validation of object-oriented design metrics as quality indicators. <em>Software Engineering, IEEE Transactions on</em>, 22(10):751–761, 1996.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="basili-2001-experiencebase" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[7]</a></td><td>Victor Basili, Roseanne Tesoriero, Patricia Costa, Mikael Lindvall, Ioana Rus, Forrest Shull, and Marvin Zelkowitz. Building an experience base for software engineering: A report on the first cebase eworkshop. In Frank Bomarius and Seija Komi-Sirviö, editors, <em>Product Focused Software Process Improvement</em>, volume 2188 of <em>Lecture Notes in Computer Science</em>, pages 110–125. Springer-Verlag Berlin Heidelberg, 2001.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="briand-1998-cohesionmeasurement" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id24">[8]</a></td><td>Lionel C. Briand, John W. Daly, and Jürgen Wüst. A unified framework for cohesion measurement in object-oriented systems. <em>Empirical Software Engineering</em>, 3(1):65–117, 1998.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="chidamber-1994-metrics-oodesign" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id22">[9]</a></td><td>Shyam R. Chidamber and Chris F. Kemerer. A metrics suite for object oriented design. <em>Software Engineering, IEEE Transactions on</em>, 20(6):476–493, 1994.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="demillo-1978-testdataselection" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id15">[10]</a></td><td>Richard A. DeMillo, Richard J. Lipton, and Frederick G. Sayward. Hints on test data selection: Help for the practicing programmer. <em>Computer</em>, 11(4):34–41, 1978.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="eabreu-1994-oometrics" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id26">[11]</a></td><td>Fernando Brito e Abreu and Rogério Carapuça. Candidate metrics for object-oriented software within a taxonomy framework. <em>Journal of Systems and Software</em>, 26(1):87–96, 1994.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="fenton-1991-softwaremetrics" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id34">[12]</a></td><td>Norman E. Fenton and Shari Lawrence Pfleeger. <em>Software metrics</em>, volume 1. Chapman &amp; Hall, 1991.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="fenton-1999-defectprediction" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id10">[13]</a></td><td>Norman E. Fenton and Martin Neil. A critique of software defect prediction models. <em>Software Engineering, IEEE Transactions on</em>, 25(5):675–689, 1999.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="fenton-2000-faultsandfaiures" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id30">[14]</a></td><td>Norman E. Fenton and N. Ohlsson. Quantitative analysis of faults and failures in a complex software system. <em>Software Engineering, IEEE Transactions on</em>, 26(8):797–814, 2000.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="fluri-2007-codecomments" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id20">[15]</a></td><td>Beat Fluri, Michael Würsch, and Harald C. Gall. Do code and comments co-evolve? on the relation between source code and comment changes. In <em>Reverse Engineering, 2007. WCRE 2007. 14th Working Conference on</em>, pages 70–79, 2007.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="gall-1998-logicalcoupling" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id21">[16]</a></td><td>Harald Gall, Karin Hajek, and Mehdi Jazayeri. Detection of logical coupling based on product release history. In <em>Software Maintenance</em>, 1998. <em>Proceedings., International Conference on</em>, pages 190–198, 1998.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="gonzalez-1995-unifiedmetriccomplexity" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[17]</a></td><td>Renato R. Gonzalez. A unified metric of software complexity: Measuring productivity, quality, and value. <em>Journal of Systems and Software</em>, 29(1):17–37, 1995.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="gray-1986-mtbf" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[18]</a></td><td>Jim Gray. Why do computers stop and what can be done about it? Technical Report 85.7, Tandom Computers, June 1985.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="halstead-1977-softwarescience" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[19]</a></td><td>Maurice H. Halstead. <em>Elements of Software Science (Operating and programming systems series)</em>. Elsevier Science Inc., New York, NY, USA, 1977.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="henry-1981-informationflow" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id27">[20]</a></td><td>Sallie Henry and Dennis Kafura. Software structure metrics based on information flow. <em>Software Engineering, IEEE Transactions on</em>, SE-7(5):510–518, 1981.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="horgan-1994-testingcoverage" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[21]</a></td><td>Joseph R. Horgan, Saul London, and Michael R. Lyu. Achieving software quality with testing coverage measures. <em>Computer</em>, 27(9):60–69, 1994.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="jacob-2003-codereview" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id33">[22]</a></td><td>Alice L. Jacob and S. K. Pillai. Statistical process control to improve coding and code review. <em>Software, IEEE</em>, 20(3):50–55, 2003.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="lague-1997-functionclone" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id12">[23]</a></td><td>Bruno Laguë, Daniel Proulx, Jean Mayrand, Ettore M. Merlo, and John Hudepohl. Assessing the benefits of incorporating function clone detection in a development process. In <em>Software Maintenance, 1997. Proceedings., International Conference on</em>, pages 314–321, 1997.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="leffingwell-2003-managingrequirements" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[24]</a></td><td>Dean Leffingwell and Don Widrig. <em>Managing software requirements: a use case approach</em>. Addison-Wesley, 2003.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="lipow-1982-faultsperloc" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id31">[25]</a></td><td>M. Lipow. Number of faults per line of code. <em>Software Engineering, IEEE Transactions on</em>, SE-8(4):437–439, 1982.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="mccabe-1976-complexity" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[26]</a></td><td>Thomas J. McCabe. <em>A complexity measure. Software Engineering, IEEE Transactions on</em>, SE-2(4):308–320, 1976.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="nagappan-2005-codechurn" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[27]</a></td><td>Nachiappan Nagappan and Thomas Ball. Use of relative code churn measures to predict system defect density. In <em>Software Engineering, 2005. ICSE 2005. Proceedings. 27th International Conference on</em>, pages 284–292, 2005.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="nagappan-2008-orgstructure" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id28">[28]</a></td><td>Nachiappan Nagappan, Brendan Murphy, and Victor Basili. The influence of organizational structure on software quality: an empirical case study. In <em>Proceedings of the 30th international conference on Software engineering</em>, ICSE '08, pages 521–530, New York, NY, USA, 2008. ACM.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="rosenberg-1997-oometrics" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id25">[29]</a></td><td>Linda H. Rosenberg and Lawrence E. Hyatt. Software quality metrics for object-oriented environments. <em>Crosstalk Journal</em>, April 1997.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="vokolos-1998-performancetesting" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id18">[30]</a></td><td>Filippos I. Vokolos and Elaine J. Weyuker. Performance testing of software systems. In <em>Proceedings of the 1st international workshop on Software and performance</em>, WOSP ’98, pages 80–87, New York, NY, USA, 1998. ACM.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="weyuker-2000-performancetesting" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id17">[31]</a></td><td>Elaine J. Weyuker and Filippos I. Vokolos. Experience with performance testing of software systems: issues, an approach, and case study. <em>Software Engineering, IEEE Transactions on</em>, 26(12):1147–1156, 2000.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="williams-2001-codecoverage" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id14">[32]</a></td><td>T.W. Williams, M.R. Mercer, J.P. Mucha, and R. Kapur. Code coverage, what does it mean in terms of quality? In <em>Reliability and Maintainability Symposium</em>, pages 420–424, 2001.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="zhu-1997-testcoverage" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[33]</a></td><td>Hong Zhu, Patrick A. V. Hall, and John H. R. May. Software unit test coverage and adequacy. <em>ACM Computing Surveys</em>, 29(4):366–427, Dec. 1997.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="zimmerman-2011-dependency-neighborhoods" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[34]</td><td><em>(<a class="fn-backref" href="#id32">1</a>, <a class="fn-backref" href="#id35">2</a>)</em> T. Zimmerman, N. Nagappan, K. Herzig, R. Premraj, and L. Williams. An empirical study on the relation between dependency neighborhoods and failures. In <em>Software Testing, Verification and Validation (ICST), 2011 IEEE Fourth International Conference on</em>, pages 347–356, 2011.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<hr />
+<div class="entryfooter">
+    <div id="footerdate">Posted on June 19, 2013</div>
+    <div id="footertags"><strong>Tags:</strong> <a rel="tag" href="/tags/grad-school/">grad school</a>, <a rel="tag" href="/tags/metrics/">metrics</a>, <a rel="tag" href="/tags/quality/">quality</a>, <a rel="tag" href="/tags/software-engineering/">software engineering</a>, <a rel="tag" href="/tags/survey/">survey</a></div>
+    <div class="nav">
+        <div class="prev"><div class="title">Previous</div><a href="/blog/2013/a-survey-on-software-quality/">A Survey on Software Quality</a></div>
+        <div class="next"></div>
+    </div>
+</div>
+<hr />
+
+
+                    </div><!-- #content -->
+                </div><!-- #container -->
+
+                <div id="primary" class="widget-area" role="complementary">
+                    <ul class="xoxo">
+                    <li id="recentposts" class="widget-container">
+                        <h3 class="widget-title">Latest Posts
+                        <a href="#"><img src="/theme/feed-icon-14x14.png" title="feed" /></a></h3>
+<ul>
+<li><a href="/blog/2013/software-quality-survey-results/" title="June 19, 2013">Software Quality Survey Results</a></li>
+<li><a href="/blog/2013/a-survey-on-software-quality/" title="April 7, 2013">A Survey on Software Quality</a></li>
+<li><a href="/blog/2012/julython-kickoff/" title="July 1, 2012">Julython Kickoff</a></li>
+<li><a href="/blog/2012/software-metrics-a-django-case-study/" title="March 23, 2012">Software Metrics: A Django Case Study</a></li>
+<li><a href="/blog/2012/blog-has-moved/" title="March 12, 2012">Blog has moved</a></li>
+</ul>                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Blog Archive</h3>
+                        <ul>
+                        <li><a href="/blog/archive/" title="Archive by date">By date</a></li>
+                        <li><a href="/tags/" title="Archive by tag">By tag</a></li>
+                        </ul>
+                    </li>
+                    <li class="widget-container">
+                        <h3 class="widget-title">Find Me</h3>
+                        <ul>
+                        <li><a rel="me external" href="https://www.flickr.com/photos/gdoubleu">flickr</a></li>
+                        <li><a rel="me external" href="https://github.com/gdub">github</a></li>
+                        <li><a rel="me external" href="https://www.linkedin.com/in/garywilsonjr/">linkedin</a></li>
+                        <li><a rel="me external" href="https://twitter.com/gdoubleu">twitter</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div><!-- #primary .widget-area -->
+
+            </div><!-- #main -->
+
+            <footer role="contentinfo">
+                <div id="colophon">
+                    <!--
+                    <div id="footer-widget-area">
+                        <div class="widget-area">Widget Area 1</div>
+                        <div class="widget-area">Widget Area 2</div>
+                        <div class="widget-area">Widget Area 3</div>
+                        <div class="widget-area fourth">Widget Area 4</div>
+                    </div>
+                    -->
+                    <div id="site-info">
+                        Copyright Gary Wilson Jr.<br />
+                        <a rel="license external" href="http://creativecommons.org/licenses/by/3.0/" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License">Some rights reserved.</a>
+                    </div><!-- #site-info -->
+
+                    <div id="site-credits">
+                        <a rel="external" href="http://wordpress.org/extend/themes/twentyten">Theme adapted from twentyten.</a>
+                        <a rel="external" href="http://nouseforaname.deviantart.com/">Background by nouseforaname.</a>
+                        <a rel="external" href="https://www.djangoproject.com/">Powered by Django.</a>
+                    </div><!-- #site-credits -->
+                </div><!-- #colophon -->
+            </footer>
+
+        </div><!-- #wrapper -->
+    </body>
+
+</html>
