@@ -66,7 +66,7 @@
 dot -T png barber.dot -o barber.png
 &lt;/pre&gt;
 &lt;p&gt;...you get an image that looks something like this:&lt;/p&gt;
-&lt;img alt="Petri net barber example" src="/blog/2011/03/14/barber.png" /&gt;
+&lt;img alt="Petri net barber example" src="https://gdub.github.io/thegarywilson.com/blog/2011/drawing-petri-nets/barber.png" /&gt;
 &lt;p&gt;However, there doesn't seem to be a very good way for drawing the tokens within the place nodes.  Nodes can define text labels, but using periods for tokens isn't very readable. Alternatively, since nodes can specify a background image, you could generate a few images with different numbers of tokens and use the correct image to represent the desired number of tokens, while still having a text label too.&lt;/p&gt;
 &lt;p&gt;If you intend to put your graph into LaTeX, check out the &lt;a class="reference external" href="http://www.fauskes.net/code/dot2tex/"&gt;dot2tex&lt;/a&gt; tool (written in Python) which will convert Graphviz's xdot output to LaTeX using PSTricks and PGF. Not only does this allow you to create beautiful graphs in your LaTeX documents, but it also allows your labels to be typeset by LaTeX (including the use of math mode, which is very nice).&lt;/p&gt;
 &lt;/li&gt;

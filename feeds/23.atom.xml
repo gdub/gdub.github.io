@@ -12,14 +12,14 @@ The reports were submitted in November 2011, and thus analyzed code and bug data
 &lt;p&gt;Written by Eric Huneke, Brendan Long, and Gary Wilson Jr.&lt;/p&gt;
 &lt;blockquote&gt;
 This report describes our case study of Django, an open source web application framework written in Python. The overall goal of our study was a data-driven exploration of Django's code base, issue tracker, and wiki space, targeted to answer our research questions related to code size, complexity, and defect counts. We explored both the current state and the history of the Django project's artifacts, and produced several visualizations of the most interesting data.&lt;/blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/2012/03/23/django_case_study_team_a.pdf"&gt;Download report&lt;/a&gt; (815K, 19 pages).&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://gdub.github.io/thegarywilson.com/blog/2012/software-metrics-a-django-case-study/django_case_study_team_a.pdf"&gt;Download report&lt;/a&gt; (815K, 19 pages).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="team-b"&gt;
 &lt;h3&gt;Team B&lt;/h3&gt;
 &lt;p&gt;Written by Kevin Boos, Richard Campbell, Evan Grim, and Hasanain A. Jwair.&lt;/p&gt;
 &lt;blockquote&gt;
 Our motivation for conducting this case study, aside from the obvious assignment requirements, is to answer a variety of research questions corresponding to several standard software metrics: code size, modularity, complexity, unit test coverage, and component quality relative to defect quantity. We believe that obtaining and analyzing data from the Django repositories and databases will allow us to generate graphical representations of important relationships between developer behavior, component organization, testing and debugging procedures, and a wide variety of other project characteristics. From these relationships, we can then draw conclusions about how to improve the software development process and other facets of the Django project.&lt;/blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="/blog/2012/03/23/django_case_study_team_b.pdf"&gt;Download report&lt;/a&gt; (2.4M, 25 pages).&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://gdub.github.io/thegarywilson.com/blog/2012/software-metrics-a-django-case-study/django_case_study_team_b.pdf"&gt;Download report&lt;/a&gt; (2.4M, 25 pages).&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="conclusions"&gt;
