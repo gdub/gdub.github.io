@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr.</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/feeds/all.atom.xml" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2013-06-19T00:00:00-05:00</updated><entry><title>Software Quality Survey Results</title><link href="https://gdub.github.io/thegarywilson.com/blog/2013/software-quality-survey-results/" rel="alternate"></link><published>2013-06-19T00:00:00-05:00</published><updated>2013-06-19T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2013-06-19:/thegarywilson.com/blog/2013/software-quality-survey-results/</id><summary type="html">&lt;p&gt;In April, &lt;a class="reference external" href="/blog/2013/software-quality-metrics-survey/"&gt;I conducted a survey&lt;/a&gt; to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.&lt;/p&gt;
+&lt;div class="section" id="introduction"&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A literature review on software quality showed that software quality is a broad topic covering several factors, requiring a diverse set …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In April, &lt;a class="reference external" href="/blog/2013/software-quality-metrics-survey/"&gt;I conducted a survey&lt;/a&gt; to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.&lt;/p&gt;
+&lt;div class="section" id="introduction"&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A literature review on software quality showed that software quality is a broad topic covering several factors, requiring a diverse set of metrics to adequately evaluate and control.  My goal with the survey to software professionals was to compare their opinions of the definition of software quality with the definitions found in the literature, and to understand how well-known and utilized software methods, metrics, and visualizations are within software teams.
+Guiding questions for the survey included:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How do software professionals define quality?&lt;/li&gt;
+&lt;li&gt;What methods do teams most frequently use for improving quality?&lt;/li&gt;
+&lt;li&gt;How often do teams/companies manage quality through metrics and visualizations?&lt;/li&gt;
+&lt;li&gt;How well do developers know available software quality metrics?&lt;/li&gt;
+&lt;li&gt;How likely are software professionals to make use of metric visualization tools for monitoring software quality during software evolution?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;The survey consisted of 23 questions, and was administered online using &lt;a class="reference external" href="http://kwiksurveys.com/"&gt;kwiksurveys&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In total, 75 responses across 21 countries and more than 17 companies—not all subjects specified their place of work—were accumulated.  The table below shows the full breakdown of the frequency of responses by country.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="4%" /&gt;
+&lt;col width="96%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;Countries&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;United States&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;Germany&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Poland&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;United Kingdom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Australia&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;France&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Argentina, Austria, Canada, India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Denmark, Hungary, Italy, Lithuania, Netherlands, Romania, Singapore, South Africa, Spain, Sweden, Switzerland&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Responders averaged 10.2 years of software industry experience and identified themselves into the following breakdown of job roles (approx.): 79% developers, 16% managers, 4% test/QA engineers, and 1% business analysts.&lt;/p&gt;
+&lt;p&gt;Over half (50.7%) of the responders identified as working for a company with 6–50 employees, while another significant portion (30.7%) identified as working for companies with greater than 1,000 employees.
+The vast majority of responders (89.3%) identified as working within teams of 10 or less, almost evenly split between a size of 1–5 (49.3%) and a size of 6–10 (40.0%).  See the tables below for the full distribution of responders' company and team sizes.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;Company-size distribution.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="57%" /&gt;
+&lt;col width="24%" /&gt;
+&lt;col width="19%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Size&lt;/th&gt;
+&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;up to 5&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;up to 50&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;38.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;up to 250&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;10.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;up to 1,000&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;8.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;over 1,000&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;30.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;Team-size distribution.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="47%" /&gt;
+&lt;col width="29%" /&gt;
+&lt;col width="24%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Size&lt;/th&gt;
+&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;up to 5&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;49.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;up to 10&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;40.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;over 10&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;10.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="quality"&gt;
+&lt;h2&gt;Quality&lt;/h2&gt;
+&lt;p&gt;When asked which definition best defines software quality, responders overwhelmingly choose &amp;quot;a broad mix of factors&amp;quot; (77%) over &amp;quot;fit of need&amp;quot; (17%) and &amp;quot;lack of defects&amp;quot; (5%); however, the latter two definitions weighted heavily in the responders' perceptions of quality.  When asked to rank a set of eight quality factors in how important the factors represent code quality, &lt;em&gt;Correctness&lt;/em&gt; and &lt;em&gt;Reliability&lt;/em&gt; were predominantly ranked first and second, respectively.
+These results confirm the quality definitions found in the literature, with both the &lt;em&gt;Correctness&lt;/em&gt; (i.e. &amp;quot;fit of need&amp;quot;) and &lt;em&gt;Reliability&lt;/em&gt; (i.e. &amp;quot;defects&amp;quot;) attributes standing out from the others.
+With quality in manufacturing very much tied to defects and reliability, it is interesting that, here, &amp;quot;lack of defects&amp;quot; was thought to be less important than &amp;quot;fit of need.&amp;quot;&lt;/p&gt;
+&lt;p&gt;The figure below shows a graph of the rank selection distribution for how important the subjects felt each attribute represents quality.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="/blog/2013/06/19/figures/quality_attribute_ranks_1600_crop.png" /&gt;
+&lt;p class="caption"&gt;Ranks given to attributes for importance in representing code quality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The table below shows the attributes sorted by their weighted-average ranking.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;Weighted-average ranks of how important each quality factor is in representing quality.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="18%" /&gt;
+&lt;col width="38%" /&gt;
+&lt;col width="26%" /&gt;
+&lt;col width="18%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Quality factor&lt;/th&gt;
+&lt;th class="head"&gt;Weighted-average rank (out of 8)&lt;/th&gt;
+&lt;th class="head"&gt;Median rank (out of 8)&lt;/th&gt;
+&lt;th class="head"&gt;Mode (out of 8)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Correctness&lt;/td&gt;
+&lt;td&gt;1.76&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Reliability&lt;/td&gt;
+&lt;td&gt;2.61&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Usability&lt;/td&gt;
+&lt;td&gt;3.57&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maintainability&lt;/td&gt;
+&lt;td&gt;4.13&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Testability&lt;/td&gt;
+&lt;td&gt;5.41&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Efficiency&lt;/td&gt;
+&lt;td&gt;5.56&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Flexibility&lt;/td&gt;
+&lt;td&gt;5.93&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Reusability&lt;/td&gt;
+&lt;td&gt;6.97&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;By far, the most important attribute was &lt;em&gt;Correctness&lt;/em&gt;, which was placed in the first rank by nearly 70% of the subjects.  Second, third, and fourth ranks were also clearly shown to be &lt;em&gt;Reliability&lt;/em&gt;, &lt;em&gt;Usability&lt;/em&gt;, and &lt;em&gt;Maintainability&lt;/em&gt;, respectively.
+&lt;em&gt;Reusability&lt;/em&gt; was clearly the lowest ranked factor, on average, while the remaining three factors (&lt;em&gt;Testability&lt;/em&gt;, &lt;em&gt;Efficiency&lt;/em&gt;, and &lt;em&gt;Flexibility&lt;/em&gt;) were tightly bunched between the fourth and eight ranked factors.  While most factors display a single peak within the rank positioning, &lt;em&gt;Efficiency&lt;/em&gt; was the only factor that demonstrated two distinct local-maxima (centered around ranks three and seven), suggesting that this factor may have importance in only certain environments or applications.&lt;/p&gt;
+&lt;p&gt;Subjects were then asked to rank three popular trade-off factors (cost, quality, and schedule) in how influential the factors were for a typical software project at their company.
+The responses predominantly showed &lt;em&gt;schedule&lt;/em&gt; ranked first, &lt;em&gt;quality&lt;/em&gt; ranked second, and &lt;em&gt;cost&lt;/em&gt; ranked third, with resulting weighted-rank averages of 1.69, 1.93, and 2.32 (out of 3), respectively.  The figure below shows the full rank distribution for all three factors.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="/blog/2013/06/19/figures/schedule_quality_cost_ranks_1600_crop.png" /&gt;
+&lt;p class="caption"&gt;Rank distributions of schedule, quality, and cost influence for a typical software project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In a follow-up question to responders who ranked either schedule or cost as more influential than quality, (summarized) reasons given for their selections included:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Typical projects involve fast-paced, exploratory prototyping.&lt;/li&gt;
+&lt;li&gt;Schedule is typically driven by outside factors, such as dependent projects, partner relationships, or regulatory changes.&lt;/li&gt;
+&lt;li&gt;Cost and/or schedule are typically the primary focus within contracts.&lt;/li&gt;
+&lt;li&gt;Deadlines and schedule receive a high level of focus from management.&lt;/li&gt;
+&lt;li&gt;Focus on low cost leads to situations such as the use of less experienced developers who lack the skills to improve quality, or a lack of proper management resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although quality was not ranked as a top consideration for software projects, it was reassuring to learn that the majority of subjects did report on their teams' regular use of multiple methods during the development and/or release process for improving quality.  The complete tally of responses can be seen in the table below.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;The use of methods during development and/or release processes for improving quality, sorted from most used to least used.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="67%" /&gt;
+&lt;col width="25%" /&gt;
+&lt;col width="8%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Method&lt;/th&gt;
+&lt;th class="head"&gt;Count (of 75)&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Informal discussion with colleagues&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;84.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Automated testing&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;td&gt;78.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Human QA testing&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;td&gt;77.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Code reviews&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;56.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pair programming&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Formal meetings&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;28.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Software metrics&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;17.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The most popular method used was &amp;quot;informal discussion with colleagues&amp;quot; (84.0%), followed closely by &amp;quot;automated testing&amp;quot; (78.7%) and &amp;quot;human quality assurance (QA) testing&amp;quot; (77.3%).  The least used method was &amp;quot;software metrics&amp;quot;, which received marks from only 17.3% of responders.
+The two responses marked &amp;quot;Other&amp;quot; both made mention of static code-analysis tools.
+The minimal use of metrics as a method for improving quality is disconcerting since it shows that most development teams do not quantitatively know if, or to what degree, their current quality improvement methods are helping them.&lt;/p&gt;
+&lt;p&gt;When asked to elaborate on methods used for improving quality, including how and why they are used, the result was a wide range of responses, with most describing choices that were provided in the previous question.
+Notable answers not included in the answer choices included: refactoring, bug monitoring, coding guidelines, stress-test tools, branching strategies (e.g. feature branching), and continuing education.
+Additional insights gathered on choices that were presented include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Related to automated testing were mentions of test-driven development (TDD) and continuous integration.&lt;/li&gt;
+&lt;li&gt;Several responses mentioned the fact that automated testing was either under-utilized within their software products, new to their environment, and/or undergoing active improvement.&lt;/li&gt;
+&lt;li&gt;Those who mentioned pair programming indicated use of the method for complex or critical bugs and code changes.&lt;/li&gt;
+&lt;li&gt;Informal discussions were utilized for completing complex bugs or features, identifying potential issues, learning from problems teammates were facing, and completing changes requiring quick turn-around.&lt;/li&gt;
+&lt;li&gt;Code reviews were utilized during new projects, release/sprint iterations, and mentorship situations.&lt;/li&gt;
+&lt;li&gt;Human QA testing was used for verifying software correctness and usability, validating releases, and building test plans.&lt;/li&gt;
+&lt;li&gt;Responses mentioning formal meetings involved project reviews or retrospectives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Out of the 75 total subjects, 10 (13.3%) responded that their team does not use any methods for improving quality.  Reasons cited included: tight deadlines, lack of time, lack of experience, bad tool support, non-production software, too many projects, lack of management, and team/company culture.  The multiple mentions of time constraints here align with the earlier results that show &lt;em&gt;schedule&lt;/em&gt; as a more influential trade-off factor on software projects over &lt;em&gt;quality&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="metrics"&gt;
+&lt;h2&gt;Metrics&lt;/h2&gt;
+&lt;p&gt;In the previous section, it was shown that software metrics was the least utilized method for improving quality as part of development processes.  However, when asked if their team currently utilizes any metrics for the intentional purpose of improving code quality, just over half of the responders (38 of 75) answered &amp;quot;yes.&amp;quot;&lt;/p&gt;
+&lt;p&gt;The subjects were then asked how regularly their team used metrics to evaluate seven different areas, which represented a one-to-one mapping to the measurement goals derived in the Goal, Question, Metric (GQM) exercise (not presented here).
+Answer choices were a frequency-type Likert scale with the following labels: Never, Rarely, Sometimes, Regularly, Constantly.  The figure below depicts the choice distributions for all seven measurement areas, and the table below shows the measurement areas sorted by most frequently used (a weighted-average ordering assuming approximately equal intervals of the frequency-type Likert scale, with values 1 to 5 representing &amp;quot;Never&amp;quot; to &amp;quot;Constantly&amp;quot;, respectively).&lt;/p&gt;
+&lt;div class="figure align-center" id="figure-measurement-goal-frequency"&gt;
+&lt;img alt="" src="/blog/2013/06/19/figures/measurement_frequency_1600_crop.png" /&gt;
+&lt;p class="caption"&gt;Distributions of the frequency that teams make use of metrics to address measurement goals presented in GQM exercise.&lt;/p&gt;
+&lt;/div&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;Frequency that teams make use of metrics to address measurement goals presented in GQM exercise.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="40%" /&gt;
+&lt;col width="13%" /&gt;
+&lt;col width="13%" /&gt;
+&lt;col width="34%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Object of measurement&lt;/th&gt;
+&lt;th class="head"&gt;Mode&lt;/th&gt;
+&lt;th class="head"&gt;Median&lt;/th&gt;
+&lt;th class="head"&gt;Weighted rank (out of 5)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Issues in issue database&lt;/td&gt;
+&lt;td&gt;Regularly&lt;/td&gt;
+&lt;td&gt;Sometimes&lt;/td&gt;
+&lt;td&gt;2.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Test suites or benchmarks&lt;/td&gt;
+&lt;td&gt;Never&lt;/td&gt;
+&lt;td&gt;Sometimes&lt;/td&gt;
+&lt;td&gt;2.67&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maintenance effort performed&lt;/td&gt;
+&lt;td&gt;Never&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;2.39&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Modularity of software&lt;/td&gt;
+&lt;td&gt;Never&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;2.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Adequacy of documentation&lt;/td&gt;
+&lt;td&gt;Never&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;1.89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Complexity of software&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;1.88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Size of software&lt;/td&gt;
+&lt;td&gt;Never&lt;/td&gt;
+&lt;td&gt;Rarely&lt;/td&gt;
+&lt;td&gt;1.87&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;While over half of the responders answered &amp;quot;yes&amp;quot; to currently utilizing metrics for improving code quality, they did so at a very low frequency in each of the measurement areas questioned.  Only two areas (&lt;em&gt;issues in issue database&lt;/em&gt; and &lt;em&gt;test suites or benchmarks&lt;/em&gt;) had a median frequency above &amp;quot;Rarely,&amp;quot; and were also not much more utilized themselves with a median frequency of &amp;quot;Sometimes.&amp;quot;  Likewise, only two areas had a most-selected frequency above &amp;quot;Never&amp;quot;—&lt;em&gt;complexity of software&lt;/em&gt; had a mode of &amp;quot;Rarely&amp;quot; and &lt;em&gt;issues in issue database&lt;/em&gt; had a mode of &amp;quot;Regularly.&amp;quot;
+&lt;em&gt;Issues in issue database&lt;/em&gt; was the most-frequently utilized metric area, clearly seen as on outlier within the &amp;quot;Regularly&amp;quot; frequency choice in &lt;a class="reference internal" href="#figure-measurement-goal-frequency"&gt;Figure measurement goal frequency&lt;/a&gt;.  In fact, aside from that single outlying point, there is no metric area for the &amp;quot;Regularly&amp;quot; and &amp;quot;Constantly&amp;quot; frequencies that had more selections than the least-selected metric area for the &amp;quot;Rarely&amp;quot; and &amp;quot;Never&amp;quot; frequencies.&lt;/p&gt;
+&lt;p&gt;Next, the subjects were asked to rate their knowledge and use of 28 different metrics on a Likert scale consisting of the four choices: Never heard of or do not know, Know of but have not used, Have used before, and Use regularly.
+The list of metrics used for the survey was primarily taken from a GQM derivation (omitted from this post), and was found throughout a range of topics in the software engineering literature, including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;software sizing and effort &lt;a class="footnote-reference" href="#albrecht-1979-measuring-productivity" id="id1"&gt;[1]&lt;/a&gt; &lt;a class="footnote-reference" href="#albrecht-1983-softwarefunction" id="id2"&gt;[2]&lt;/a&gt; &lt;a class="footnote-reference" href="#halstead-1977-softwarescience" id="id3"&gt;[19]&lt;/a&gt; &lt;a class="footnote-reference" href="#leffingwell-2003-managingrequirements" id="id4"&gt;[24]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;complexity &lt;a class="footnote-reference" href="#banker-1993-complexityandmaintenance" id="id5"&gt;[4]&lt;/a&gt; &lt;a class="footnote-reference" href="#gonzalez-1995-unifiedmetriccomplexity" id="id6"&gt;[17]&lt;/a&gt; &lt;a class="footnote-reference" href="#mccabe-1976-complexity" id="id7"&gt;[26]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;defects &lt;a class="footnote-reference" href="#basili-2001-experiencebase" id="id8"&gt;[7]&lt;/a&gt; &lt;a class="footnote-reference" href="#nagappan-2005-codechurn" id="id9"&gt;[27]&lt;/a&gt; &lt;a class="footnote-reference" href="#fenton-1999-defectprediction" id="id10"&gt;[13]&lt;/a&gt; &lt;a class="footnote-reference" href="#gray-1986-mtbf" id="id11"&gt;[18]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;code duplication &lt;a class="footnote-reference" href="#lague-1997-functionclone" id="id12"&gt;[23]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;testing &lt;a class="footnote-reference" href="#horgan-1994-testingcoverage" id="id13"&gt;[21]&lt;/a&gt; &lt;a class="footnote-reference" href="#williams-2001-codecoverage" id="id14"&gt;[32]&lt;/a&gt; &lt;a class="footnote-reference" href="#demillo-1978-testdataselection" id="id15"&gt;[10]&lt;/a&gt; &lt;a class="footnote-reference" href="#andrews-2005-mutationtesting" id="id16"&gt;[3]&lt;/a&gt; &lt;a class="footnote-reference" href="#weyuker-2000-performancetesting" id="id17"&gt;[31]&lt;/a&gt; &lt;a class="footnote-reference" href="#vokolos-1998-performancetesting" id="id18"&gt;[30]&lt;/a&gt; &lt;a class="footnote-reference" href="#zhu-1997-testcoverage" id="id19"&gt;[33]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;evolution &lt;a class="footnote-reference" href="#fluri-2007-codecomments" id="id20"&gt;[15]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;coupling &lt;a class="footnote-reference" href="#gall-1998-logicalcoupling" id="id21"&gt;[16]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cohesion and object-oriented design &lt;a class="footnote-reference" href="#chidamber-1994-metrics-oodesign" id="id22"&gt;[9]&lt;/a&gt; &lt;a class="footnote-reference" href="#basili-1996-validation-oometrics" id="id23"&gt;[6]&lt;/a&gt; &lt;a class="footnote-reference" href="#briand-1998-cohesionmeasurement" id="id24"&gt;[8]&lt;/a&gt; &lt;a class="footnote-reference" href="#rosenberg-1997-oometrics" id="id25"&gt;[29]&lt;/a&gt; &lt;a class="footnote-reference" href="#eabreu-1994-oometrics" id="id26"&gt;[11]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;information flow &lt;a class="footnote-reference" href="#henry-1981-informationflow" id="id27"&gt;[20]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;people and organizational structure &lt;a class="footnote-reference" href="#nagappan-2008-orgstructure" id="id28"&gt;[28]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;various combinations of the proceeding topics &lt;a class="footnote-reference" href="#basili-1984-errorsandcomplexity" id="id29"&gt;[5]&lt;/a&gt; &lt;a class="footnote-reference" href="#fenton-2000-faultsandfaiures" id="id30"&gt;[14]&lt;/a&gt; &lt;a class="footnote-reference" href="#lipow-1982-faultsperloc" id="id31"&gt;[25]&lt;/a&gt; &lt;a class="footnote-reference" href="#zimmerman-2011-dependency-neighborhoods" id="id32"&gt;[34]&lt;/a&gt; &lt;a class="footnote-reference" href="#jacob-2003-codereview" id="id33"&gt;[22]&lt;/a&gt; &lt;a class="footnote-reference" href="#fenton-1991-softwaremetrics" id="id34"&gt;[12]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The table below shows the full count (and percentage) breakdown of responses for each metric.  The data is sorted by highest weighted average (assuming approximate equal intervals of a Likert scale, weighted from 1 to 4 representing the selections &amp;quot;Never heard of or do not know&amp;quot; to &amp;quot;Use regularly&amp;quot;), which allows identification of the central tendency of selections for each metric.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;The knowledge and use of 28 different metrics, sorted by most frequently used and well-known.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="32%" /&gt;
+&lt;col width="10%" /&gt;
+&lt;col width="10%" /&gt;
+&lt;col width="8%" /&gt;
+&lt;col width="8%" /&gt;
+&lt;col width="5%" /&gt;
+&lt;col width="6%" /&gt;
+&lt;col width="5%" /&gt;
+&lt;col width="5%" /&gt;
+&lt;col width="12%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head" rowspan="2"&gt;Metric&lt;/th&gt;
+&lt;th class="head" colspan="2"&gt;Never heard of or do not know&lt;/th&gt;
+&lt;th class="head" colspan="2"&gt;Know of but have not used&lt;/th&gt;
+&lt;th class="head" colspan="2"&gt;Have used before&lt;/th&gt;
+&lt;th class="head" colspan="2"&gt;Use regularly&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Weighted average
+(out of 4)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;th class="head"&gt;Count&lt;/th&gt;
+&lt;th class="head"&gt;%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Unit test failures or pass/fail ratio&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;13.3&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;38.7&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;42.7&lt;/td&gt;
+&lt;td&gt;3.19&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Line coverage&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6.7&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;40.0&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;21.3&lt;/td&gt;
+&lt;td&gt;2.76&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Lines of code&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;38.7&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;42.7&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;16.0&lt;/td&gt;
+&lt;td&gt;2.72&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of classes/functions/files/modules&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6.7&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;42.7&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;36.0&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;14.7&lt;/td&gt;
+&lt;td&gt;2.59&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Branch/path coverage&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;18.7&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;33.3&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;34.7&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;13.3&lt;/td&gt;
+&lt;td&gt;2.43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Duplicated code (or code clone) percentage&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;44.0&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;36.0&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;8.0&lt;/td&gt;
+&lt;td&gt;2.40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Defect count or distribution&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;18.7&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;50.7&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;21.3&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;9.3&lt;/td&gt;
+&lt;td&gt;2.21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Time-to-fix defect&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;17.3&lt;/td&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;58.7&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;17.3&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6.7&lt;/td&gt;
+&lt;td&gt;2.13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Cyclomatic complexity&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;29.3&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;34.7&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;30.7&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;2.12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Depth of nesting&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;20.0&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;50.7&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;28.0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.3&lt;/td&gt;
+&lt;td&gt;2.11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Function points or similar&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;38.7&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;22.7&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6.7&lt;/td&gt;
+&lt;td&gt;1.97&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Coupling&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;34.7&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;38.7&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;22.7&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;td&gt;1.96&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Depth of inheritance tree&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;26.7&lt;/td&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;52.0&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;20.0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.3&lt;/td&gt;
+&lt;td&gt;1.96&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Cohesion (or lack of cohesion)&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;36.0&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;41.3&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;18.7&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;td&gt;1.91&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Defect density&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;53.3&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;8.0&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6.7&lt;/td&gt;
+&lt;td&gt;1.89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Mean time between defect/error&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;24.0&lt;/td&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;65.3&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;8.0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;1.89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Code churn, turnover ratio, or edit frequency&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;34.7&lt;/td&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;52.0&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;13.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.79&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of engineers&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;40.0&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;45.3&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;10.7&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;td&gt;1.79&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Fan-in and fan-out (class/module dependencies)&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;50.7&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;14.7&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;1.69&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Number of ex-engineers&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;46.7&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;45.3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;1.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Defect slippage ratio&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;54.7&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;40.0&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.51&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Percentage of org contributing to development&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;64.0&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;30.7&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.41&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Overall organization ownership&lt;/td&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;72.0&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;22.7&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.33&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Level of organizational code ownership&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;74.7&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;20.0&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Depth of master ownership&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;td&gt;78.7&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;16.0&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Halstead metrics&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;td&gt;77.3&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;21.3&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Mutant killing percentage&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;80.0&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;17.3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.7&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Organization intersection factor&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;td&gt;81.3&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;14.7&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From the data collected, several insights were captured:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No metric was used regularly by a majority of the responders.  The only metric that came close (42.7%) was &lt;em&gt;Unit test failures or pass/fail ratio&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Only four metrics have been used before or were used regularly by a majority of responders: &lt;em&gt;Unit test failures or pass/fail ratio&lt;/em&gt;, &lt;em&gt;Line coverage&lt;/em&gt;, &lt;em&gt;Lines of code&lt;/em&gt;, and &lt;em&gt;Number of classes/functions/files/modules&lt;/em&gt;.  These four metrics were also the only ones that were both unknown to less than 10% of responders and used regularly by more than 10% of responders.&lt;/li&gt;
+&lt;li&gt;Aside from the four metrics mentioned in the previous bullet, &lt;em&gt;Branch/path coverage&lt;/em&gt; was the only other metric that was used regularly by more than 10% of the responders; however, a higher percentage of responders (19%) had never heard of this metric (about three times more than the four metrics mentioned above).&lt;/li&gt;
+&lt;li&gt;Several metrics were highly known, yet not used before or used regularly, including: &lt;em&gt;Mean time between defect/error&lt;/em&gt;, &lt;em&gt;Time-to-fix defect&lt;/em&gt;, &lt;em&gt;Defect density&lt;/em&gt;, &lt;em&gt;Code churn&lt;/em&gt;, &lt;em&gt;Depth of inheritance tree&lt;/em&gt;, &lt;em&gt;Depth of nesting&lt;/em&gt;, and &lt;em&gt;Defect count or distribution&lt;/em&gt;.  It us unknown, however, if the high levels of knowledge of these metrics are due to familiarity of their use within the software industry or rather due to the ease of which their definitions can be gleaned from their names.&lt;/li&gt;
+&lt;li&gt;Nearly one-third of the metrics presented were completely unknown by a majority of responders, with most metrics in this group used regularly by zero responders and used before by about 5% or less of responders.  Metrics in this group consisted of &lt;em&gt;Fan-in and fan-out&lt;/em&gt;, &lt;em&gt;Defect slippage ratio&lt;/em&gt;, &lt;em&gt;Halstead metrics&lt;/em&gt;, &lt;em&gt;Mutant killing percentage&lt;/em&gt;, and several of the people and organizational metrics described by Zimmermann et. al &lt;a class="footnote-reference" href="#zimmerman-2011-dependency-neighborhoods" id="id35"&gt;[34]&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final two questions in the survey related to metrics were on the topic of the use of metrics to evaluate employee performance.  About 15% of responders indicated that their company uses software metrics for evaluating employee performance.  Surprisingly, nearly twice that amount (28.0%) either agreed or strongly agreed with the use of metrics for evaluating employee performance.
+The full results can been seen in the table below, broken down by manager and non-manager roles (as identified earlier in the survey, see &lt;a class="reference internal" href="#background"&gt;Background&lt;/a&gt;).&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;caption&gt;Level to which responders agree with using software metrics to evaluate employee performance, broken down by manager and non-manager roles.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="18%" /&gt;
+&lt;col width="10%" /&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="12%" /&gt;
+&lt;col width="11%" /&gt;
+&lt;col width="8%" /&gt;
+&lt;col width="19%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head" rowspan="2"&gt;Role&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Count&lt;/th&gt;
+&lt;th class="head" colspan="5"&gt;Percentage of Responders&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Strongly Disagree&lt;/th&gt;
+&lt;th class="head"&gt;Disagree&lt;/th&gt;
+&lt;th class="head"&gt;Neutral&lt;/th&gt;
+&lt;th class="head"&gt;Agree&lt;/th&gt;
+&lt;th class="head"&gt;Strongly Agree&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Managers&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;16.7&lt;/td&gt;
+&lt;td&gt;16.7&lt;/td&gt;
+&lt;td&gt;8.3&lt;/td&gt;
+&lt;td&gt;50.0&lt;/td&gt;
+&lt;td&gt;8.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Non-managers&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;17.5&lt;/td&gt;
+&lt;td&gt;23.8&lt;/td&gt;
+&lt;td&gt;36.5&lt;/td&gt;
+&lt;td&gt;19.1&lt;/td&gt;
+&lt;td&gt;3.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;td&gt;17.3&lt;/td&gt;
+&lt;td&gt;22.7&lt;/td&gt;
+&lt;td&gt;32.0&lt;/td&gt;
+&lt;td&gt;24.0&lt;/td&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From the manager vs. non-manager results, we expectedly see that those in manager roles were much more likely to agree (50.0%) or strongly agree (8.3%) than were those in non-manager roles.  Those in non-manager roles were most likely to be neutral (32.0%) or to disagree (23.8%).  Both manager and non-manager roles differed by less than 1% in the strongly disagree segment and, in aggregate, very few (4.0%) responders identified as strongly agreeing with the use of metrics for employee performance evaluation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="visualization"&gt;
+&lt;h2&gt;Visualization&lt;/h2&gt;
+&lt;p&gt;The survey to software professionals also included four questions on the topic of visualizing software metrics.
+Overall, responders overwhelmingly felt that it would be useful to visualize metrics about their software projects over time, with over 81% who either agreed or strongly agreed with this statement and less than 6% who either disagreed or strongly disagreed.  However, when asked if their team currently uses any tools to visualize software metrics over time, less than 30% answered &amp;quot;yes.&amp;quot;
+In a similar question, subjects were asked how likely they would be to use a software metrics visualization tool to help improve the quality of software they write.  Here, responders were also positive, albeit slightly less enthusiastic.  The majority of responders fell into the likely (42.7%) or neutral (25.3%) segments, with an equal percentage (14.6%) in both the unlikely and very likely segments.  The full results for these two questions can be seen in the tables below.&lt;/p&gt;
+&lt;!-- table_metrics_over_time: --&gt;
+&lt;!-- table: Percentage of responders by how useful it would be to visualize metrics about software projects over time.
+
+================= ======== ======= ===== ==============
+Strongly Disagree Disagree Neutral Agree Strongly Agree
+================= ======== ======= ===== ==============
+2.7               2.7      13.3    54.7  26.7
+================= ======== ======= ===== ============== --&gt;
+&lt;!-- table_visualization_tool: --&gt;
+&lt;!-- table: Percentage of responders by how likely they would be to use a software metrics visualization tool to improve the quality of software they write.
+
+============= ======== ======= ====== ===========
+Very Unlikely Unlikely Neutral Likely Very Likely
+============= ======== ======= ====== ===========
+2.7           14.7     25.3    42.7   14.7
+============= ======== ======= ====== =========== --&gt;
+&lt;p&gt;From these results, combined with the earlier result that just over half of the responders answering &amp;quot;yes&amp;quot; to their team currently utilizing metrics for improving code quality, there clearly exists a gap between those who use metrics and those who use metrics visualizations.
+Additionally, the positive responses to the perceived usefulness of metrics visualizations, and willingness to use metrics visualizations, suggests there is opportunity and demand for such tools.&lt;/p&gt;
+&lt;p&gt;On the topic of visualization tools, subjects were asked how they would like to use such a tool (see figure below for a chart of all responses).  The most popular choices, selected by about 61--71% of the responders, were: &lt;em&gt;integrated into build/test server&lt;/em&gt;, &lt;em&gt;integrated into issue tracker&lt;/em&gt;, and &lt;em&gt;a self-hosted, stand-alone product with web interface&lt;/em&gt;.  Least popular were: &lt;em&gt;integrated into editor/IDE&lt;/em&gt; and &lt;em&gt;a hosted service with web interface&lt;/em&gt;.  Four responders filled in a selection for &lt;em&gt;other&lt;/em&gt;, mentioning a dedicated build server, as well as a script or command-line interface.&lt;/p&gt;
+&lt;!-- figure_howtouse_metrics_tool: --&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="/blog/2013/06/19/figures/howtouse_visualization_tool_1600_crop.png" /&gt;
+&lt;p class="caption"&gt;Number of responses on how subjects would like to use a tool for calculating and visualizing metrics describing their software.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;table class="docutils footnote" frame="void" id="albrecht-1979-measuring-productivity" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Allan J. Albrecht. Measuring application development productivity. In &lt;em&gt;Proceedings of the Joint SHARE/GUIDE/IBM Application Development Symposium&lt;/em&gt;, volume 10, pages 83–92. SHARE Inc. and GUIDE International Corp. Monterey, CA, 1979.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="albrecht-1983-softwarefunction" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Allan J. Albrecht and John E. Gaffney. Software function, source lines of code, and development effort prediction: A software science validation. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, SE-9(6):639–648, 1983.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="andrews-2005-mutationtesting" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id16"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;J. H. Andrews, L. C. Briand, and Y. Labiche. Is mutation an appropriate tool for testing experiments? In &lt;em&gt;Software Engineering, 2005&lt;/em&gt;. &lt;em&gt;ICSE 2005&lt;/em&gt;. &lt;em&gt;Proceedings. 27th International Conference on&lt;/em&gt;, pages 402–411, 2005.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="banker-1993-complexityandmaintenance" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id5"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rajiv D. Banker, Srikant M. Datar, Chris F. Kemerer, and Dani Zweig. Software complexity and maintenance costs. &lt;em&gt;Commun. ACM&lt;/em&gt;, 36(11):81–94, Nov. 1993.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="basili-1984-errorsandcomplexity" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id29"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Victor R. Basili and Barry T. Perricone. Software errors and complexity: an empirical investigation. &lt;em&gt;Communications of the ACM&lt;/em&gt;, 27(1):42–52, Jan. 1984.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="basili-1996-validation-oometrics" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id23"&gt;[6]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Victor R. Basili, Lionel C. Briand, and  Walcélio L. Melo. A validation of object-oriented design metrics as quality indicators. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, 22(10):751–761, 1996.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="basili-2001-experiencebase" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id8"&gt;[7]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Victor Basili, Roseanne Tesoriero, Patricia Costa, Mikael Lindvall, Ioana Rus, Forrest Shull, and Marvin Zelkowitz. Building an experience base for software engineering: A report on the first cebase eworkshop. In Frank Bomarius and Seija Komi-Sirviö, editors, &lt;em&gt;Product Focused Software Process Improvement&lt;/em&gt;, volume 2188 of &lt;em&gt;Lecture Notes in Computer Science&lt;/em&gt;, pages 110–125. Springer-Verlag Berlin Heidelberg, 2001.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="briand-1998-cohesionmeasurement" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id24"&gt;[8]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lionel C. Briand, John W. Daly, and Jürgen Wüst. A unified framework for cohesion measurement in object-oriented systems. &lt;em&gt;Empirical Software Engineering&lt;/em&gt;, 3(1):65–117, 1998.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="chidamber-1994-metrics-oodesign" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id22"&gt;[9]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Shyam R. Chidamber and Chris F. Kemerer. A metrics suite for object oriented design. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, 20(6):476–493, 1994.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="demillo-1978-testdataselection" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id15"&gt;[10]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Richard A. DeMillo, Richard J. Lipton, and Frederick G. Sayward. Hints on test data selection: Help for the practicing programmer. &lt;em&gt;Computer&lt;/em&gt;, 11(4):34–41, 1978.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="eabreu-1994-oometrics" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id26"&gt;[11]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fernando Brito e Abreu and Rogério Carapuça. Candidate metrics for object-oriented software within a taxonomy framework. &lt;em&gt;Journal of Systems and Software&lt;/em&gt;, 26(1):87–96, 1994.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="fenton-1991-softwaremetrics" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id34"&gt;[12]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Norman E. Fenton and Shari Lawrence Pfleeger. &lt;em&gt;Software metrics&lt;/em&gt;, volume 1. Chapman &amp;amp; Hall, 1991.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="fenton-1999-defectprediction" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id10"&gt;[13]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Norman E. Fenton and Martin Neil. A critique of software defect prediction models. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, 25(5):675–689, 1999.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="fenton-2000-faultsandfaiures" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id30"&gt;[14]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Norman E. Fenton and N. Ohlsson. Quantitative analysis of faults and failures in a complex software system. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, 26(8):797–814, 2000.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="fluri-2007-codecomments" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id20"&gt;[15]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Beat Fluri, Michael Würsch, and Harald C. Gall. Do code and comments co-evolve? on the relation between source code and comment changes. In &lt;em&gt;Reverse Engineering, 2007. WCRE 2007. 14th Working Conference on&lt;/em&gt;, pages 70–79, 2007.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="gall-1998-logicalcoupling" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id21"&gt;[16]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Harald Gall, Karin Hajek, and Mehdi Jazayeri. Detection of logical coupling based on product release history. In &lt;em&gt;Software Maintenance&lt;/em&gt;, 1998. &lt;em&gt;Proceedings., International Conference on&lt;/em&gt;, pages 190–198, 1998.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="gonzalez-1995-unifiedmetriccomplexity" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id6"&gt;[17]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Renato R. Gonzalez. A unified metric of software complexity: Measuring productivity, quality, and value. &lt;em&gt;Journal of Systems and Software&lt;/em&gt;, 29(1):17–37, 1995.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="gray-1986-mtbf" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id11"&gt;[18]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Jim Gray. Why do computers stop and what can be done about it? Technical Report 85.7, Tandom Computers, June 1985.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="halstead-1977-softwarescience" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id3"&gt;[19]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maurice H. Halstead. &lt;em&gt;Elements of Software Science (Operating and programming systems series)&lt;/em&gt;. Elsevier Science Inc., New York, NY, USA, 1977.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="henry-1981-informationflow" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id27"&gt;[20]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sallie Henry and Dennis Kafura. Software structure metrics based on information flow. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, SE-7(5):510–518, 1981.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="horgan-1994-testingcoverage" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id13"&gt;[21]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Joseph R. Horgan, Saul London, and Michael R. Lyu. Achieving software quality with testing coverage measures. &lt;em&gt;Computer&lt;/em&gt;, 27(9):60–69, 1994.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="jacob-2003-codereview" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id33"&gt;[22]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alice L. Jacob and S. K. Pillai. Statistical process control to improve coding and code review. &lt;em&gt;Software, IEEE&lt;/em&gt;, 20(3):50–55, 2003.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="lague-1997-functionclone" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id12"&gt;[23]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bruno Laguë, Daniel Proulx, Jean Mayrand, Ettore M. Merlo, and John Hudepohl. Assessing the benefits of incorporating function clone detection in a development process. In &lt;em&gt;Software Maintenance, 1997. Proceedings., International Conference on&lt;/em&gt;, pages 314–321, 1997.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="leffingwell-2003-managingrequirements" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id4"&gt;[24]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dean Leffingwell and Don Widrig. &lt;em&gt;Managing software requirements: a use case approach&lt;/em&gt;. Addison-Wesley, 2003.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="lipow-1982-faultsperloc" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id31"&gt;[25]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;M. Lipow. Number of faults per line of code. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, SE-8(4):437–439, 1982.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="mccabe-1976-complexity" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id7"&gt;[26]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Thomas J. McCabe. &lt;em&gt;A complexity measure. Software Engineering, IEEE Transactions on&lt;/em&gt;, SE-2(4):308–320, 1976.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="nagappan-2005-codechurn" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id9"&gt;[27]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nachiappan Nagappan and Thomas Ball. Use of relative code churn measures to predict system defect density. In &lt;em&gt;Software Engineering, 2005. ICSE 2005. Proceedings. 27th International Conference on&lt;/em&gt;, pages 284–292, 2005.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="nagappan-2008-orgstructure" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id28"&gt;[28]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nachiappan Nagappan, Brendan Murphy, and Victor Basili. The influence of organizational structure on software quality: an empirical case study. In &lt;em&gt;Proceedings of the 30th international conference on Software engineering&lt;/em&gt;, ICSE '08, pages 521–530, New York, NY, USA, 2008. ACM.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="rosenberg-1997-oometrics" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id25"&gt;[29]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Linda H. Rosenberg and Lawrence E. Hyatt. Software quality metrics for object-oriented environments. &lt;em&gt;Crosstalk Journal&lt;/em&gt;, April 1997.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="vokolos-1998-performancetesting" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id18"&gt;[30]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Filippos I. Vokolos and Elaine J. Weyuker. Performance testing of software systems. In &lt;em&gt;Proceedings of the 1st international workshop on Software and performance&lt;/em&gt;, WOSP ’98, pages 80–87, New York, NY, USA, 1998. ACM.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="weyuker-2000-performancetesting" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id17"&gt;[31]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Elaine J. Weyuker and Filippos I. Vokolos. Experience with performance testing of software systems: issues, an approach, and case study. &lt;em&gt;Software Engineering, IEEE Transactions on&lt;/em&gt;, 26(12):1147–1156, 2000.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="williams-2001-codecoverage" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id14"&gt;[32]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;T.W. Williams, M.R. Mercer, J.P. Mucha, and R. Kapur. Code coverage, what does it mean in terms of quality? In &lt;em&gt;Reliability and Maintainability Symposium&lt;/em&gt;, pages 420–424, 2001.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="zhu-1997-testcoverage" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id19"&gt;[33]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hong Zhu, Patrick A. V. Hall, and John H. R. May. Software unit test coverage and adequacy. &lt;em&gt;ACM Computing Surveys&lt;/em&gt;, 29(4):366–427, Dec. 1997.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="zimmerman-2011-dependency-neighborhoods" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;[34]&lt;/td&gt;&lt;td&gt;&lt;em&gt;(&lt;a class="fn-backref" href="#id32"&gt;1&lt;/a&gt;, &lt;a class="fn-backref" href="#id35"&gt;2&lt;/a&gt;)&lt;/em&gt; T. Zimmerman, N. Nagappan, K. Herzig, R. Premraj, and L. Williams. An empirical study on the relation between dependency neighborhoods and failures. In &lt;em&gt;Software Testing, Verification and Validation (ICST), 2011 IEEE Fourth International Conference on&lt;/em&gt;, pages 347–356, 2011.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</content><category term="19"></category><category term="grad school"></category><category term="metrics"></category><category term="quality"></category><category term="software engineering"></category><category term="survey"></category></entry><entry><title>A Survey on Software Quality</title><link href="https://gdub.github.io/thegarywilson.com/blog/2013/a-survey-on-software-quality/" rel="alternate"></link><published>2013-04-07T00:00:00-05:00</published><updated>2013-04-07T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2013-04-07:/thegarywilson.com/blog/2013/a-survey-on-software-quality/</id><summary type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
+&lt;p&gt;Great!  I am writing my graduate report on the topic of software quality, metrics, and visualization.
+The report will include a write-up on the results of the survey distributed here,
+an evaluation of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
+&lt;p&gt;Great!  I am writing my graduate report on the topic of software quality, metrics, and visualization.
+The report will include a write-up on the results of the survey distributed here,
+an evaluation of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how software-industry professionals define software quality&lt;/li&gt;
+&lt;li&gt;how software methods, metrics, and visualizations are used within teams for software quality improvement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The survey is about 25 questions long and takes about 10 minutes
+to complete.  You can find the survey at:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit April 10, 2013:&lt;/strong&gt; The survey is now closed, thanks to all that participated!&lt;/p&gt;
+&lt;p&gt;I would appreciate your help in distributing this survey to others you know in
+the software industry who would be interested in helping with this research on
+software quality.  Results from the survey will be posted here next month.&lt;/p&gt;
+&lt;p&gt;If interested in reading more on the subject, I encourage you to take a look
+at my &lt;a class="reference external" href="/tags/metrics/"&gt;previous posts about metrics&lt;/a&gt;, including a case study of Django and
+cyclomatic complexity metrics for Python code.&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;
+</content><category term="07"></category><category term="django"></category><category term="grad school"></category><category term="metrics"></category><category term="python"></category><category term="quality"></category><category term="software engineering"></category><category term="survey"></category></entry><entry><title>Julython Kickoff</title><link href="https://gdub.github.io/thegarywilson.com/blog/2012/julython-kickoff/" rel="alternate"></link><published>2012-07-01T00:00:00-05:00</published><updated>2012-07-01T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2012-07-01:/thegarywilson.com/blog/2012/julython-kickoff/</id><summary type="html">&lt;p&gt;Early this morning, a handful of developers here in &lt;a class="reference external" href="http://www.julython.org/location/austin-tx/"&gt;Austin, TX&lt;/a&gt; got together to kickoff &lt;a class="reference external" href="http://www.julython.org/"&gt;Julython&lt;/a&gt; over at &lt;a class="reference external" href="http://www.bennucoffee.com/"&gt;Bennu Coffee&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The idea of Julython is to work a little each day on the project(s) of your choice, and is based on &lt;a class="reference external" href="http://en.wikipedia.org/wiki/National_Novel_Writing_Month"&gt;National Novel Writing Month (a.k.a. NaNoWriMo …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Early this morning, a handful of developers here in &lt;a class="reference external" href="http://www.julython.org/location/austin-tx/"&gt;Austin, TX&lt;/a&gt; got together to kickoff &lt;a class="reference external" href="http://www.julython.org/"&gt;Julython&lt;/a&gt; over at &lt;a class="reference external" href="http://www.bennucoffee.com/"&gt;Bennu Coffee&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The idea of Julython is to work a little each day on the project(s) of your choice, and is based on &lt;a class="reference external" href="http://en.wikipedia.org/wiki/National_Novel_Writing_Month"&gt;National Novel Writing Month (a.k.a. NaNoWriMo)&lt;/a&gt;.  Getting started for Julython is easy, just head to &lt;a class="reference external" href="http://www.julython.org/"&gt;http://www.julython.org/&lt;/a&gt;, login with your twitter account, &lt;a class="reference external" href="http://www.julython.org/help/"&gt;setup your e-mail address and web hooks&lt;/a&gt;, hack, hack, hack, and start &lt;a class="reference external" href="http://www.julython.org/location/"&gt;racking up points&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I kicked off my Julython with a bug fix for &lt;a class="reference external" href="https://github.com/staale/python-xlsx"&gt;python-xlsx&lt;/a&gt; and a couple enhancements to &lt;a class="reference external" href="https://github.com/gdub/python-archive"&gt;python-archive&lt;/a&gt;.  Incidentally, I'll also be earning some points for this blog post, seeing as how it makes use of a &lt;a class="reference external" href="https://bitbucket.org/gdub/public"&gt;git repo&lt;/a&gt; for its backend.&lt;/p&gt;
+</content><category term="01"></category><category term="archive"></category><category term="julython"></category><category term="python"></category><category term="xlsx"></category></entry><entry><title>Software Metrics: A Django Case Study</title><link href="https://gdub.github.io/thegarywilson.com/blog/2012/software-metrics-a-django-case-study/" rel="alternate"></link><published>2012-03-23T00:00:00-05:00</published><updated>2012-03-23T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2012-03-23:/thegarywilson.com/blog/2012/software-metrics-a-django-case-study/</id><summary type="html">&lt;p&gt;With the permission of the other authors, I'd like to share with you a couple of reports written for an assignment in the Software Measurement and Metrics graduate course I took last semester.
+For this project, our class split into two teams that each performed their own case study on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;With the permission of the other authors, I'd like to share with you a couple of reports written for an assignment in the Software Measurement and Metrics graduate course I took last semester.
+For this project, our class split into two teams that each performed their own case study on the &lt;a class="reference external" href="https://www.djangoproject.com/"&gt;Django project&lt;/a&gt;.
+The reports were submitted in November 2011, and thus analyzed code and bug data through about the end of October 2011.&lt;/p&gt;
+&lt;p&gt;While I have &lt;a class="reference external" href="/blog/2006/cyclomatic-complexity-of-django/"&gt;previously analyzed Django's complexity&lt;/a&gt; (using a &lt;a class="reference external" href="/blog/2006/cyclomatic-complexity-for-python-code/"&gt;hack of some existing complexity scripts&lt;/a&gt;), the case studies presented here analyze several aspects of the Django project, including code size, code complexity, component quality, and test coverage.&lt;/p&gt;
+&lt;div class="section" id="reports"&gt;
+&lt;h2&gt;Reports&lt;/h2&gt;
+&lt;p&gt;Below you will find excerpts describing the motivations for each report, followed by links to the full PDF versions of the reports.&lt;/p&gt;
+&lt;div class="section" id="team-a"&gt;
+&lt;h3&gt;Team A&lt;/h3&gt;
+&lt;p&gt;Written by Eric Huneke, Brendan Long, and Gary Wilson Jr.&lt;/p&gt;
+&lt;blockquote&gt;
+This report describes our case study of Django, an open source web application framework written in Python. The overall goal of our study was a data-driven exploration of Django's code base, issue tracker, and wiki space, targeted to answer our research questions related to code size, complexity, and defect counts. We explored both the current state and the history of the Django project's artifacts, and produced several visualizations of the most interesting data.&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/2012/03/23/django_case_study_team_a.pdf"&gt;Download report&lt;/a&gt; (815K, 19 pages).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="team-b"&gt;
+&lt;h3&gt;Team B&lt;/h3&gt;
+&lt;p&gt;Written by Kevin Boos, Richard Campbell, Evan Grim, and Hasanain A. Jwair.&lt;/p&gt;
+&lt;blockquote&gt;
+Our motivation for conducting this case study, aside from the obvious assignment requirements, is to answer a variety of research questions corresponding to several standard software metrics: code size, modularity, complexity, unit test coverage, and component quality relative to defect quantity. We believe that obtaining and analyzing data from the Django repositories and databases will allow us to generate graphical representations of important relationships between developer behavior, component organization, testing and debugging procedures, and a wide variety of other project characteristics. From these relationships, we can then draw conclusions about how to improve the software development process and other facets of the Django project.&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="/blog/2012/03/23/django_case_study_team_b.pdf"&gt;Download report&lt;/a&gt; (2.4M, 25 pages).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusions"&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;I encourage you to browse through the reports and their visualizations.  For the impatient, the teams' conclusions were as follows:&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h3&gt;Team A&lt;/h3&gt;
+&lt;blockquote&gt;
+This report presented the data we collected as part of a case study examining various aspects of Django, an open source web application framework. We found that the codebase has been growing at a steady rate since its start and will likely continue to grow. Overall complexity has been manageable, with just a few files containing egregiously complex functions. A refactoring effort focused on the files presented in table 4.1 is recommended. Ticket data relating to Django reflect basic intuitions about how they should behave. We were able to get a rough measure of component quality by looking at the number of tickets relating to each component, and showed that the top three components by ticket count (documentation, database layer, and contrib.admin) accounted for over 40% of all reported tickets. Test coverage of Django's components is high, with most components having at least 95% coverage. Coverage has trended upward for almost the entire project's history, and saw an extreme increase in the time periods before its 1.0 release.&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h3&gt;Team B&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This case study of the Django project, an open-source web development framework composed in Python, has presented a wide variety of statistically-significant data. To measure code size, rate of growth, complexity, and maintainability, we used Django's source control repository to analyze historical revisions since 2005. To analyze defect tracking, we looked at ticket records dating to the beginning of the Django project. For unit testing coverage, coding standards, and style guidelines analysis, we analyzed source code that was extracted from the Django subversion server on October 31, 2011.&lt;/p&gt;
+&lt;p&gt;We found that the size of the project has greatly increased since its start, but that the rate of increase has decreased over time. The largest component with approximately half of the code is the contrib component which could be broken up into smaller, more manageable components. The overall cyclomatic complexity of Django is 2.49 which is respectable. Complexity started out nice and increased for the first few years, but has decreased since the initial increase. Some modules, though, have high complexities which should be reduced if possible.&lt;/p&gt;
+&lt;p&gt;The ticket data showed that the majority of the tickets opened were for defects. When looking at only the defect tickets, we found 4 components out of 48 had almost 60% of the defects opened against them. The core and database components have the most defects per SLOC, so improving code quality in these areas will greatly reduce the overall number of defects in the Django project.&lt;/p&gt;
+&lt;p&gt;As a whole, we found that the Django code is well covered by its test cases. The component with the lowest coverage, contrib.admin, was also found to be one of the components with the highest number of defects opened against it. Improving test coverage may reduce the number of tickets opened.&lt;/p&gt;
+&lt;p&gt;We found that python coding standards and style conventions are poorly followed by Django developers. Additionally, Django code is poorly commented, only 7% of the total lines of the code base were comment lines. We also found that the amount of documentation is not consistent throughout the code elements, while most of the methods are documented, less than half the modules and classes have documentations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="23"></category><category term="django"></category><category term="grad school"></category><category term="metrics"></category><category term="python"></category></entry><entry><title>Blog has moved</title><link href="https://gdub.github.io/thegarywilson.com/blog/2012/blog-has-moved/" rel="alternate"></link><published>2012-03-12T00:00:00-05:00</published><updated>2012-03-12T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2012-03-12:/thegarywilson.com/blog/2012/blog-has-moved/</id><summary type="html">&lt;p&gt;Thanks to some time at &lt;a class="reference external" href="https://us.pycon.org/"&gt;PyCon&lt;/a&gt;, I was finally able to move my blog off &lt;a class="reference external" href="http://wordpress.com/"&gt;Wordpress&lt;/a&gt; and onto a new domain at:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;a class="reference external" href="http://thegarywilson.com/"&gt;http://thegarywilson.com/&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;The new site is powered with an &lt;a class="reference external" href="http://nginx.org/"&gt;nginx&lt;/a&gt; / &lt;a class="reference external" href="http://gunicorn.org/"&gt;gunicorn&lt;/a&gt; / &lt;a class="reference external" href="http://djangoproject.com"&gt;Django&lt;/a&gt; / &lt;a class="reference external" href="http://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt; stack.  Using Wordpress' &lt;a class="reference external" href="http://en.support.wordpress.com/site-redirect/"&gt;Site Redirect&lt;/a&gt; feature, I was able to 301 redirect all the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to some time at &lt;a class="reference external" href="https://us.pycon.org/"&gt;PyCon&lt;/a&gt;, I was finally able to move my blog off &lt;a class="reference external" href="http://wordpress.com/"&gt;Wordpress&lt;/a&gt; and onto a new domain at:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;a class="reference external" href="http://thegarywilson.com/"&gt;http://thegarywilson.com/&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;The new site is powered with an &lt;a class="reference external" href="http://nginx.org/"&gt;nginx&lt;/a&gt; / &lt;a class="reference external" href="http://gunicorn.org/"&gt;gunicorn&lt;/a&gt; / &lt;a class="reference external" href="http://djangoproject.com"&gt;Django&lt;/a&gt; / &lt;a class="reference external" href="http://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt; stack.  Using Wordpress' &lt;a class="reference external" href="http://en.support.wordpress.com/site-redirect/"&gt;Site Redirect&lt;/a&gt; feature, I was able to 301 redirect all the existing content to the new domain.&lt;/p&gt;
+</content><category term="12"></category><category term="blog"></category><category term="django"></category><category term="gunicorn"></category><category term="nginx"></category><category term="postgres"></category><category term="wordpress"></category></entry><entry><title>Fix Samsung Captivate (Galaxy S) battery life after update to Android 2.2 (Froyo)</title><link href="https://gdub.github.io/thegarywilson.com/blog/2011/fix-samsung-captivate-galaxy-s-battery-life-after-update-to-android-22-froyo/" rel="alternate"></link><published>2011-07-14T00:00:00-05:00</published><updated>2011-07-14T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2011-07-14:/thegarywilson.com/blog/2011/fix-samsung-captivate-galaxy-s-battery-life-after-update-to-android-22-froyo/</id><summary type="html">&lt;div class="section" id="the-update"&gt;
+&lt;h2&gt;The Update&lt;/h2&gt;
+&lt;p&gt;Finally, &lt;a class="reference external" href="http://www.samsung.com/us/froyoupgrade2_2/captivate"&gt;Samsung has released&lt;/a&gt; the &lt;a class="reference external" href="http://developer.android.com/sdk/android-2.2-highlights.html"&gt;Android 2.2 Froyo&lt;/a&gt; update for the Galaxy S (&lt;a class="reference external" href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;amp;location=http%3A%2F%2Fwww.amazon.com%2FSamsung-Captivate-Android-Phone-AT%2Fdp%2FB003TLMQG8%2F&amp;amp;tag=listfrenzy-20&amp;amp;linkCode=ur2&amp;amp;camp=1789&amp;amp;creative=9325"&gt;AT&amp;amp;T Captivate&lt;/a&gt;). For reference, before the update I was getting about one-and-a-half days of battery life with normal usage (wi-fi and sync always on). Android 2.2 touts a 2x-5x improvement in CPU …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="the-update"&gt;
+&lt;h2&gt;The Update&lt;/h2&gt;
+&lt;p&gt;Finally, &lt;a class="reference external" href="http://www.samsung.com/us/froyoupgrade2_2/captivate"&gt;Samsung has released&lt;/a&gt; the &lt;a class="reference external" href="http://developer.android.com/sdk/android-2.2-highlights.html"&gt;Android 2.2 Froyo&lt;/a&gt; update for the Galaxy S (&lt;a class="reference external" href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;amp;location=http%3A%2F%2Fwww.amazon.com%2FSamsung-Captivate-Android-Phone-AT%2Fdp%2FB003TLMQG8%2F&amp;amp;tag=listfrenzy-20&amp;amp;linkCode=ur2&amp;amp;camp=1789&amp;amp;creative=9325"&gt;AT&amp;amp;T Captivate&lt;/a&gt;). For reference, before the update I was getting about one-and-a-half days of battery life with normal usage (wi-fi and sync always on). Android 2.2 touts a 2x-5x improvement in CPU performance and improved memory management, both contributing to faster and smoother performance.&lt;/p&gt;
+&lt;p&gt;Sold! Where do I upgrade?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-aftermath"&gt;
+&lt;h2&gt;The Aftermath&lt;/h2&gt;
+&lt;p&gt;Unfortunately, shortly after installing the update I notice an unacceptable battery drain rate. From a full change and with, at most, 10 minutes of use, my battery was dead about eight hours later. Wait a second, I thought performance was supposed to be better! Did this improved performance mean I had to sacrifice to the battery gods? This is not at all what I signed up for.&lt;/p&gt;
+&lt;p&gt;Maybe the first charge cycle was a fluke, I told myself. Well, it wasn't.  Two more charge cycles came and went, and I was still experiencing no more than about eight to ten hours of battery life.  At this point, I'm searching Android forums for solutions and finding many similar battery life horror stories.  It wasn't just Samsung Galaxy phones either. Reports about other HTC, Samsung, etc. phones were also prevalent. However, I could find no definitive solution to the problem.  Suggestions ranged everywhere from get a new battery to perform a factory reset to turn off wi-fi and many, many more.  At this point, I'm seriously considering reverting back to Android 2.1 (or rooting and going to 2.3.4), because less than half a day's worth a battery is no way to live.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-solution"&gt;
+&lt;h2&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;Then, there was one suggested solution I came across that actually seemed plausible.  I'm sure as hell not going to reset the phone and spend the time reloading all my data and apps, and nothing is wrong with my 6-month old battery as it was working just fine before the update to 2.2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The suggested solution was to reset the battery calibration table.&lt;/strong&gt; The theory here was that the software estimates the battery usage and life, and is what tells the phone what percentage the battery is at and when the phone should shut down due to critically-low remaining capacity. By reseting the calibration table, the software would relearn the battery capacity.  OK, I buy that, so how do I do this? Well, the suggestion was to install the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=com.vertiform.android.app.batteryspy"&gt;Battery Spy&lt;/a&gt; app, open the app, then follow: Menu button -&amp;gt; Battery Profile -&amp;gt; Reset calibration table -&amp;gt; Yes. Afterwards, you must let the battery drain all the way down, then charge it back to full (I did this with the phone off), and then let it charge all the way down again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-numbers"&gt;
+&lt;h2&gt;The Numbers&lt;/h2&gt;
+&lt;p&gt;Once changed to full, I performed a couple more actions: I turned off auto -sync and also changed the wi-fi sleep policy option to turn off wireless when the screen is inactive (Menu -&amp;gt; Settings -&amp;gt; Wireless and network -&amp;gt; Wi-Fi settings -&amp;gt; Menu -&amp;gt; Advanced -&amp;gt; Wi-Fi sleep policy -&amp;gt; When screen turns off).  The last option here is a default policy that was changed in Android 2.2; previously, &amp;quot;When screen turns off&amp;quot; was the default, but in 2.2 the default changed to &amp;quot;Never&amp;quot;. From what I could gather, the &amp;quot;When screen turns off&amp;quot; setting was a problem because if the phone sat idle (e.g. while you were asleep) it would switch to 3G (even if it had excellent wi-fi signal) and potentially rack up unintended data usage. Another reason for the settings change, again from what I could gather, was that the wi-fi transmitter uses less power than the cell radio, and less power = more battery life.&lt;/p&gt;
+&lt;p&gt;To my astonishment, &lt;strong&gt;4 days 22 hours and 14 minutes&lt;/strong&gt; later the phone was down to 2% battery, but still on despite normal usage and not ever going near a charger.  Wow, this is unbelievable!  Nearly five days of charge, that was more than twice the battery life I've ever experienced on this phone; but, was this due to the battery calibration or the settings I changed?  Time to test. I next charged the phone up to 100% again, then turned auto-sync back on.  1 day 20 hours and 45 minutes later, battery is at 5%.  OK, big hit there, but still better than I had ever experienced before the upgrade to Android 2.2.  Next, I changed fully once more, and then set the wi-fi sleep policy back to &amp;quot;Never&amp;quot;. That time, 2 days 6 hours and 11 minutes later, it's at 4% charge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Your mileage may vary, but it seems that the battery calibration is what did the trick. At over two days of average battery life now, I'm once again a happy Android user and am enjoying a bit faster performance to boot.  Before I wrap this up, I'll leave you with one last tip: the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=com.bvalosek.cpuspy"&gt;CPU Spy&lt;/a&gt; app. This nice little app gives you a breakdown of how much time the CPU has spent in its various clock speeds (e.g. 1000, 800, 400, 200, and 100 MHz, and deep sleep), and the far majority of the phone's time should be in the deep sleep mode.  If it's not, then there's likely some app or background process that is keeping the phone from entering this low-power state.  Find out what's keeping it out of deep sleep, and your battery will thank you.  Hope this was helpful, and I would definitely try the battery recalibration before taking more drastic measures that involve losing all your apps and data.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="14"></category><category term="android"></category><category term="at&amp;t"></category><category term="battery"></category><category term="captivate"></category><category term="froyo"></category><category term="galaxy s"></category><category term="samsung"></category></entry><entry><title>Drawing Petri nets</title><link href="https://gdub.github.io/thegarywilson.com/blog/2011/drawing-petri-nets/" rel="alternate"></link><published>2011-03-14T00:00:00-05:00</published><updated>2011-03-14T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2011-03-14:/thegarywilson.com/blog/2011/drawing-petri-nets/</id><summary type="html">&lt;p&gt;I recently went looking for tools to easily draw &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Petri_net"&gt;Petri nets&lt;/a&gt;, a modeling language for distributed systems, and here's what I found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/macros/generic/petri-nets/"&gt;petri-nets LaTeX package&lt;/a&gt;: A LaTeX package written by Franck Pommereau specifically for drawing Petri nets that makes use of &lt;a class="reference external" href="http://www.tug.org/PSTricks/main.cgi/"&gt;PSTricks&lt;/a&gt; as a basis for the actual creation of …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I recently went looking for tools to easily draw &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Petri_net"&gt;Petri nets&lt;/a&gt;, a modeling language for distributed systems, and here's what I found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/macros/generic/petri-nets/"&gt;petri-nets LaTeX package&lt;/a&gt;: A LaTeX package written by Franck Pommereau specifically for drawing Petri nets that makes use of &lt;a class="reference external" href="http://www.tug.org/PSTricks/main.cgi/"&gt;PSTricks&lt;/a&gt; as a basis for the actual creation of the drawings. I didn't actually try this package out because, after skimming through the documentation, it seems that nodes must be positioned using the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system"&gt;Cartesian coordinate system&lt;/a&gt;. Not really what I'm looking for since, ideally, I'd like to be able to simply define the graph's structure and not have to worry about explicitly positioning each object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/help/Catalogue/entries/pgf.html"&gt;PGF (&amp;quot;portable graphics format&amp;quot;) LaTeX package&lt;/a&gt;: A LaTeX package for creating graphics, similar to PStricks. Unlike PStricks, this package has built-in support for Petri nets. It provides out-of-the box support for defining place and transition nodes, drawing edges, and placing a defined number of tokens within a node.  If interested, Section 3 of the &lt;a class="reference external" href="http://mirror.ctan.org/graphics/pgf/base/doc/generic/pgf/pgfmanual.pdf"&gt;PGF manual&lt;/a&gt; provides an excellent and detailed tutorial on building a Petri net graph. While the syntax for describing a graph seems easier than the petri-nets package above, there are still cumbersome aspects to the definition. For example, positioning is still a bit of a manual process. You must specify &amp;quot;left of&amp;quot;, &amp;quot;right of&amp;quot;, &amp;quot;above of&amp;quot;, and &amp;quot;below of&amp;quot; layout commands for each node, though at least you do not have to deal with coordinates. Now granted, precise layout might be exactly what's needed in a LaTeX document, but I'm looking for something easier and faster to define.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.graphviz.org/"&gt;Graphviz&lt;/a&gt;: visualization software that can auto-generate directed graphs a specification given in its &lt;a class="reference external" href="http://www.graphviz.org/content/dot-language"&gt;DOT language&lt;/a&gt;.  It's easy to create the place and transition nodes using subgraph declarations, and connecting the nodes requires no manual positioning at all.  Below is an example graph:&lt;/p&gt;
+&lt;p&gt;File &lt;tt class="docutils literal"&gt;barber.dot&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;digraph G {
+    subgraph place {
+        graph [shape=circle,color=gray];
+        node [shape=circle,fixedsize=true,width=2];
+        &amp;quot;customer waiting&amp;quot;;
+        cutting;
+        &amp;quot;idle barber&amp;quot;;
+        &amp;quot;customer paying&amp;quot;;
+    }
+    subgraph transitions {
+        node [shape=rect,height=0.2,width=2];
+        enter;
+        &amp;quot;start cutting&amp;quot;;
+        &amp;quot;finish cutting&amp;quot;;
+        exit;
+    }
+    enter -&amp;gt; &amp;quot;customer waiting&amp;quot;;
+    &amp;quot;customer waiting&amp;quot; -&amp;gt; &amp;quot;start cutting&amp;quot;;
+    &amp;quot;idle barber&amp;quot; -&amp;gt; &amp;quot;start cutting&amp;quot;;
+    &amp;quot;start cutting&amp;quot; -&amp;gt; cutting;
+    cutting -&amp;gt; &amp;quot;finish cutting&amp;quot;;
+    &amp;quot;finish cutting&amp;quot; -&amp;gt; &amp;quot;customer paying&amp;quot;;
+    &amp;quot;finish cutting&amp;quot; -&amp;gt; &amp;quot;idle barber&amp;quot;;
+    &amp;quot;customer paying&amp;quot; -&amp;gt; exit;
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When run through dot:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+dot -T png barber.dot -o barber.png
+&lt;/pre&gt;
+&lt;p&gt;...you get an image that looks something like this:&lt;/p&gt;
+&lt;img alt="Petri net barber example" src="/blog/2011/03/14/barber.png" /&gt;
+&lt;p&gt;However, there doesn't seem to be a very good way for drawing the tokens within the place nodes.  Nodes can define text labels, but using periods for tokens isn't very readable. Alternatively, since nodes can specify a background image, you could generate a few images with different numbers of tokens and use the correct image to represent the desired number of tokens, while still having a text label too.&lt;/p&gt;
+&lt;p&gt;If you intend to put your graph into LaTeX, check out the &lt;a class="reference external" href="http://www.fauskes.net/code/dot2tex/"&gt;dot2tex&lt;/a&gt; tool (written in Python) which will convert Graphviz's xdot output to LaTeX using PSTricks and PGF. Not only does this allow you to create beautiful graphs in your LaTeX documents, but it also allows your labels to be typeset by LaTeX (including the use of math mode, which is very nice).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Finally, there's your favorite drawing or image manipulation program. It's quick-and-dirty, but perhaps the easiest solution I examined.  While it might be a pain to edit or reconnect nodes, it's certainly easy to set the positioning you want. If your program supports snapping edges and labels to nodes, such as &lt;a class="reference external" href="http://www.openoffice.org/product/draw.html"&gt;OODraw&lt;/a&gt;, then moving or reconfiguring portions of the graph are even easier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you've found a better tool for drawing Petri nets, please share your experiences.&lt;/p&gt;
+</content><category term="14"></category><category term="distributed systems"></category><category term="grad school"></category><category term="graphviz"></category><category term="latex"></category><category term="modeling"></category><category term="open office"></category><category term="petri nets"></category></entry><entry><title>Dude, where's my color picker?</title><link href="https://gdub.github.io/thegarywilson.com/blog/2008/dude-wheres-my-color-picker/" rel="alternate"></link><published>2008-07-29T00:00:00-05:00</published><updated>2008-07-29T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2008-07-29:/thegarywilson.com/blog/2008/dude-wheres-my-color-picker/</id><summary type="html">&lt;p&gt;It's not something I use too terribly often, but today I found myself missing the KDE color picker applet, a tiny applet that gives you an eye dropper you can use to quickly sample any color on your screen and copy its hex value to the clipboard.  I could have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's not something I use too terribly often, but today I found myself missing the KDE color picker applet, a tiny applet that gives you an eye dropper you can use to quickly sample any color on your screen and copy its hex value to the clipboard.  I could have sworn it was available in Kubuntu Gutsy by default.  Turns out that, in Hardy at least, it comes as part of the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;kicker-applets&lt;/span&gt;&lt;/tt&gt; package.&lt;/p&gt;
+</content><category term="29"></category><category term="applet"></category><category term="color"></category><category term="kde"></category><category term="kubuntu"></category></entry><entry><title>Eclipse security component errors</title><link href="https://gdub.github.io/thegarywilson.com/blog/2008/eclipse-security-component-errors/" rel="alternate"></link><published>2008-04-27T00:00:00-05:00</published><updated>2008-04-27T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2008-04-27:/thegarywilson.com/blog/2008/eclipse-security-component-errors/</id><summary type="html">&lt;p&gt;Just got through installing eclipse on an Kubuntu Hardy box, and got the following error during the splash screen:&lt;/p&gt;
+&lt;blockquote&gt;
+Could not initialize the application's security component. The most likely cause is problems with files in your application's profile directory. Please check that this directory has no read/write restrictions and …&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Just got through installing eclipse on an Kubuntu Hardy box, and got the following error during the splash screen:&lt;/p&gt;
+&lt;blockquote&gt;
+Could not initialize the application's security component. The most likely cause is problems with files in your application's profile directory. Please check that this directory has no read/write restrictions and your hard disk is not full or close to full. It is recommended that you exit the application and fix the problem. If you continue to use this session, you might see incorrect application behavior when accessing security features.&lt;/blockquote&gt;
+&lt;p&gt;The solution seems to be to create the directory: &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.mozilla/eclipse&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;The corresponding bugs where the above solution was found:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/eclipse/+bug/188380"&gt;Ubuntu bug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=206432"&gt;Eclipse bug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="27"></category><category term="eclipse"></category><category term="error"></category><category term="kubuntu"></category></entry><entry><title>Bill Gates at UT</title><link href="https://gdub.github.io/thegarywilson.com/blog/2008/bill-gates-at-ut/" rel="alternate"></link><published>2008-03-05T00:00:00-06:00</published><updated>2008-03-05T00:00:00-06:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2008-03-05:/thegarywilson.com/blog/2008/bill-gates-at-ut/</id><summary type="html">&lt;p&gt;Bill Gates was on The University of Texas at Austin campus a couple weeks ago to talk about &amp;quot;Software, Innovation, Entrepreneurship, and Giving Back.&amp;quot;  While unable to get a ticket to see the talk in-person, I did watch the live webcast (&lt;a class="reference external" href="http://cns.utexas.edu/communications/2008/02/gates_talk.asp"&gt;archive now available&lt;/a&gt;).  Below is my summary of his …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bill Gates was on The University of Texas at Austin campus a couple weeks ago to talk about &amp;quot;Software, Innovation, Entrepreneurship, and Giving Back.&amp;quot;  While unable to get a ticket to see the talk in-person, I did watch the live webcast (&lt;a class="reference external" href="http://cns.utexas.edu/communications/2008/02/gates_talk.asp"&gt;archive now available&lt;/a&gt;).  Below is my summary of his talk with a couple of my own comments mixed in.&lt;/p&gt;
+&lt;p&gt;Bill opened his talk with the mentioning of the incredible advancement of computing.  How computers are getting smaller, how the number of transistors on processors are doubling, how more natural computing interfaces are on the way.  He talked about how TV delivered over the internet is going to revolutionize that field with a level of personalization and interactivity not seen before.  He mentioned how the IT field will be changing as much of the system administration work done by humans today will be taken over by software systems that monitor and fix the systems automatically.&lt;/p&gt;
+&lt;p&gt;Bill talked about how the software industry is still in its infancy and that while user interface tools, such as touch screens and tablet pens, are cheap, the software to effectively make use of these tools is still very far behind.  Now, if you are a fan of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Ray_Kurzweil"&gt;Ray Kurzweil&lt;/a&gt; and &lt;a class="reference external" href="http://us.penguingroup.com/static/packages/us/kurzweil/start.htm"&gt;The Age of Spiritual Machines&lt;/a&gt;, as I am, this might not surprise you.  In his book, Ray details the exponential advancement of computers and mentions that while we might have computers with the computing power equal to that of a human brain by 2020, the software to utilize that power will likely lag by at least a decade.&lt;/p&gt;
+&lt;p&gt;Bill also talked about how computing and software is becoming a more necessary tool for all branches of science, and played a short video showing visualization of mouse-brain scans.  Research today is requiring increasingly large amounts of data and computation, and Bill mentioned that he would like to get more of Microsoft's software into the hands of university researchers.  He announced a program called &lt;a class="reference external" href="https://downloads.channel8.msdn.com/"&gt;DreamSpark&lt;/a&gt;, which allows students free (as in beer) access to Microsoft development software, including Visual Studio and Windows Server.  However, at the end of the talk when a student asked Bill about the openness and availability of Microsoft's 3D visualization software to the world of academia, Bill responded that Microsoft's products might not fit all of their needs but that Microsoft wants to make sure that all of their software available to researchers.  So Bill says that he wants to make this software available, yet if I go visit the DreamSpark website I see only mainstream products like Visual Studio and nothing at all that looks aimed at helping university researchers.&lt;/p&gt;
+&lt;p&gt;Another interesting topic was Bill's discussion about Microsoft's research department and how the &lt;a class="reference external" href="http://www.gatesfoundation.org/"&gt;Bill &amp;amp; Melinda Gates Foundation&lt;/a&gt; is helping people in poor countries.  Bill talked about how he would like to see computing become available to everyone, including the poorest two billion people of the world.  Traditional products and business models for the rich countries of the world are no good in the poor countries of the world.  For example, personal computers, no matter how cheap you sell them for, are useless in places with zero literacy, training, networking, and electrical power.  Starting this summer, these kinds of issues are what Bill will be focusing his attention on, as earlier in the talk he announced that he will be shifting his work schedule to work full time for the foundation and part time for Microsoft.&lt;/p&gt;
+&lt;p&gt;Bill stated that medical research for issues faced by the poor countries of the world is currently in an extremely sad condition.  There are millions of children per year that die from diseases that are non-existent in the rich third of the world's countries, yet no one is willing to help because there is no profit to be made.  For example, ten times more money goes towards researching baldness than towards researching Malaria, which, unlike baldness, kills millions each year.  Bill mentioned that with no money driving innovation in these areas, it is going to take government policies, philanthropy, and people with values to take the initiative.&lt;/p&gt;
+&lt;p&gt;Bill went on to talk about a specific instance of how groups at Microsoft are making a difference.  Ideas such as &amp;quot;Digital Green&amp;quot; where Microsoft is going around to small towns making videos of the successful farmers.  TVs and DVD players are then brought to the town centers where others can learn techniques from the successful farmers.  Bill mentions that this &amp;quot;Farmer Idol&amp;quot; has created a healthy competition between the farmers, where everyone wants to outdo the others so they can be included in the video.  The program has resulted in significant productivity gains for these communities.&lt;/p&gt;
+&lt;p&gt;Bill concluded his speech by telling the audience of computer science and electrical engineering students to help keep their awareness of the world's poorest third of the population and that with some special effort, they can help with the problems those people are facing.&lt;/p&gt;
+&lt;p&gt;Afterwards his speech, Bill answered several questions about open source software, the decreasing number of people entering the computer science field, the work of his foundation, software in micro devices, and Microsoft's bid for Yahoo.&lt;/p&gt;
+&lt;p&gt;Again, the &lt;a class="reference external" href="http://cns.utexas.edu/communications/2008/02/gates_talk.asp"&gt;video of the speech is now available&lt;/a&gt;, so check it out if you are interested.&lt;/p&gt;
+</content><category term="05"></category><category term="bill gates"></category><category term="software"></category><category term="technology"></category><category term="ut austin"></category></entry><entry><title>Installing the latest version of Bazaar and tools on Gentoo</title><link href="https://gdub.github.io/thegarywilson.com/blog/2007/installing-the-latest-version-of-bazaar-and-tools-on-gentoo/" rel="alternate"></link><published>2007-12-01T00:00:00-06:00</published><updated>2007-12-01T00:00:00-06:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2007-12-01:/thegarywilson.com/blog/2007/installing-the-latest-version-of-bazaar-and-tools-on-gentoo/</id><summary type="html">&lt;p&gt;Currently, the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-svn&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-gtk&lt;/span&gt;&lt;/tt&gt; plugins are not available in Gentoo's package directory.  Fortunately, there is exists a &lt;a class="reference external" href="https://launchpad.net/bzr-gentoo-overlay/"&gt;bzr Gentoo overlay&lt;/a&gt;. If you've never used an &lt;a class="reference external" href="http://www.gentoo.org/proj/en/overlays/userguide.xml"&gt;overlay&lt;/a&gt; before, it's a way to override or add packages to Gentoo's standard package directory.  In this overlay there are a couple common plugins …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Currently, the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-svn&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-gtk&lt;/span&gt;&lt;/tt&gt; plugins are not available in Gentoo's package directory.  Fortunately, there is exists a &lt;a class="reference external" href="https://launchpad.net/bzr-gentoo-overlay/"&gt;bzr Gentoo overlay&lt;/a&gt;. If you've never used an &lt;a class="reference external" href="http://www.gentoo.org/proj/en/overlays/userguide.xml"&gt;overlay&lt;/a&gt; before, it's a way to override or add packages to Gentoo's standard package directory.  In this overlay there are a couple common plugins, as well as a patched version of Subversion that is needed for the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-svn&lt;/span&gt;&lt;/tt&gt; plugin.&lt;/p&gt;
+&lt;p&gt;Current packages in the overlay:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;bzr&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;bzrtools&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-config&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-dbus&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-gtk&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-rebase&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-svn&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-vimdiff&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;paramiko&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;subversion&lt;/tt&gt; (patched version needed for bzr-svn)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Steps for using the overlay:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;As usual, update your portage tree:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+emerge --sync
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Make sure you have the following line in your &lt;tt class="docutils literal"&gt;/etc/make.conf&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+source /usr/portage/local/layman/make.conf
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Get a copy of the overlay from launchpad:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+bzr branch lp:///bzr-gentoo-overlay
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Make sure you have the path to the overlay set in &lt;tt class="docutils literal"&gt;/usr/portage/local/layman/make.conf&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+PORTDIR_OVERLAY=&amp;quot;/path/to/bzr-gentoo-overlay&amp;quot;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Now you should be able to update your system, pulling in updates to any currently installed packages from the new overlay:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+emerge -uav world
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;emerge any of the new packages you want that are now available from the overlay.  Note: If you install &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bzr-svn&lt;/span&gt;&lt;/tt&gt;, make sure to re-install Subversion so that the patched version is used from the overlay:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+emerge -av bzr-gtk bzr-svn subversion
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content><category term="01"></category><category term="bzr"></category><category term="gentoo"></category></entry><entry><title>Texas Python Regional Unconference</title><link href="https://gdub.github.io/thegarywilson.com/blog/2007/texas-python-regional-unconference/" rel="alternate"></link><published>2007-09-03T00:00:00-05:00</published><updated>2007-09-03T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2007-09-03:/thegarywilson.com/blog/2007/texas-python-regional-unconference/</id><summary type="html">&lt;p&gt;Just a quick announcement for all the Houston and surrounding area Python lovers out there.  There is a &lt;a class="reference external" href="http://pycamp.python.org/Texas/HomePage"&gt;Texas Python Regional Unconference&lt;/a&gt; being held in a couple weeks (Sept. 15 - 16) at the University of Houston main campus.  Registration is free and as simple as adding your name to the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just a quick announcement for all the Houston and surrounding area Python lovers out there.  There is a &lt;a class="reference external" href="http://pycamp.python.org/Texas/HomePage"&gt;Texas Python Regional Unconference&lt;/a&gt; being held in a couple weeks (Sept. 15 - 16) at the University of Houston main campus.  Registration is free and as simple as adding your name to the &lt;a class="reference external" href="http://pycamp.python.org/Texas/Registration"&gt;registration wiki page&lt;/a&gt;.  I'll be there to talk or hack Django with anyone interested.  See you there!&lt;/p&gt;
+</content><category term="03"></category><category term="houston"></category><category term="python"></category><category term="texas"></category><category term="unconference"></category></entry><entry><title>Hacking Django, how Bazaar</title><link href="https://gdub.github.io/thegarywilson.com/blog/2007/hacking-django-how-bazaar/" rel="alternate"></link><published>2007-01-11T00:00:00-06:00</published><updated>2007-01-11T00:00:00-06:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2007-01-11:/thegarywilson.com/blog/2007/hacking-django-how-bazaar/</id><summary type="html">&lt;p&gt;A short while ago, I went on a mission to find a better way to hack &lt;a class="reference external" href="http://www.djangoproject.com/"&gt;Django&lt;/a&gt;.  I needed a way to keep my patches organized and updated.  So, in this article I discuss my experiences with a tool I found to help me achieve these goals...&lt;/p&gt;
+&lt;p&gt;Enter &lt;a class="reference external" href="http://bazaar-vcs.org/"&gt;Bazaar&lt;/a&gt;, one …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A short while ago, I went on a mission to find a better way to hack &lt;a class="reference external" href="http://www.djangoproject.com/"&gt;Django&lt;/a&gt;.  I needed a way to keep my patches organized and updated.  So, in this article I discuss my experiences with a tool I found to help me achieve these goals...&lt;/p&gt;
+&lt;p&gt;Enter &lt;a class="reference external" href="http://bazaar-vcs.org/"&gt;Bazaar&lt;/a&gt;, one of the several &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Version_control_system#Distributed_version_control"&gt;distributed version control systems&lt;/a&gt; that have been getting some hype recently.  With &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software"&gt;so many to choose from&lt;/a&gt;, why did I choose Bazaar?  Well, maybe it was because of the cool name, or maybe it was the pretty website, or maybe just because it's written in the language I love—&lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt;.  If you are familiar with &lt;a class="reference external" href="http://subversion.tigris.org/"&gt;Subversion&lt;/a&gt;, then you will feel right at home with Bazaar.  This is because Bazaar uses most of the same commands as Subversion (e.g. &lt;tt class="docutils literal"&gt;svn ci = bzr ci&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;svn st = bzr st&lt;/tt&gt;, etc.).&lt;/p&gt;
+&lt;p&gt;Following &lt;a class="reference external" href="http://jameswestby.net/tips/tips/hacking-a-project-with-bzr.html"&gt;this guide for hacking an open source project using bzr&lt;/a&gt;, I created a &lt;tt class="docutils literal"&gt;django&lt;/tt&gt; directory to stash my django hacks.  After using svn to check out the latest Django code to a directory named &lt;tt class="docutils literal"&gt;upstream&lt;/tt&gt;, and turning &lt;tt class="docutils literal"&gt;upstream&lt;/tt&gt; into a bzr repository too, it was time to start the real work.  To re-iterate in command line speak, here is what I did:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The steps below have been updated to reflect changes with bzr commands (versions &amp;gt;=0.15rc2).&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mkdir django
+cd django
+bzr init-repo .            # use &amp;quot;bzr init-repo --trees .&amp;quot; here instead if using a version &amp;lt;0.15rc2
+svn co http://code.djangoproject.com/svn/django/trunk/ upstream
+cd upstream
+bzr init
+echo &amp;quot;.svn&amp;quot; &amp;gt; .bzrignore   # do not store svn metadata in our bzr repo
+bzr add
+bzr ci -m 'Initial import of Django.'
+&lt;/pre&gt;
+&lt;p&gt;Usually, when you want to add a new feature to some code, you create a branch.  The purpose of these, so called, feature branches is to keep the features separated.  Trying to create multiple features in the same branch would just be a big mess.  Creating branches in a Subversion repository is easy enough, you just &lt;tt class="docutils literal"&gt;svn cp&lt;/tt&gt; the code to a new location.  It's the keeping your branch in sync with the trunk that's not as easy.&lt;/p&gt;
+&lt;p&gt;With Subversion, you have to keep track of the revisions that have already been merged to your branch and make sure to only merge the changes that haven't already been merged.  Not so with Bazaar; Bazaar keeps track of this for you.  A simple &lt;tt class="docutils literal"&gt;bzr merge&lt;/tt&gt; will pull in upstream changes that have not been merged yet.&lt;/p&gt;
+&lt;p&gt;So, when I wanted to start working on a patch for &lt;a class="reference external" href="http://code.djangoproject.com/ticket/2473"&gt;ticket #2473&lt;/a&gt;, I created a branch:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+bzr branch upstream in-and-empty-list-2473
+&lt;/pre&gt;
+&lt;p&gt;After &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt;'ing into my new branch and committing my changes, I created a diff to attach to the ticket with the command:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+bzr diff -r branch:../upstream
+&lt;/pre&gt;
+&lt;p&gt;So far, working with Bazaar has been a breeze.  Without it, &lt;a class="reference external" href="http://code.djangoproject.com/ticket/2473"&gt;my&lt;/a&gt; &lt;a class="reference external" href="http://code.djangoproject.com/ticket/2756"&gt;Django&lt;/a&gt; &lt;a class="reference external" href="http://code.djangoproject.com/ticket/3180"&gt;holiday&lt;/a&gt; &lt;a class="reference external" href="http://code.djangoproject.com/ticket/3182"&gt;hacking&lt;/a&gt; wouldn't have been nearly as fun.&lt;/p&gt;
+</content><category term="11"></category><category term="bzr"></category><category term="django"></category><category term="dvcs"></category></entry><entry><title>is_authenticated() vs. is_anonymous()</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/is_authenticated-vs-is_anonymous/" rel="alternate"></link><published>2006-09-23T00:00:00-05:00</published><updated>2006-09-23T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-09-23:/thegarywilson.com/blog/2006/is_authenticated-vs-is_anonymous/</id><summary type="html">&lt;p&gt;A warning for those who might not of noticed the change.  About a month ago (in &lt;a class="reference external" href="http://code.djangoproject.com/changeset/3360"&gt;[3360]&lt;/a&gt;), an &lt;tt class="docutils literal"&gt;is_authenticated&lt;/tt&gt; method was added to the User and AnonymousUser classes.  These are the classes used for Django's default authentication system.&lt;/p&gt;
+&lt;p&gt;Previously, the template code used for displaying content based on whether or …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A warning for those who might not of noticed the change.  About a month ago (in &lt;a class="reference external" href="http://code.djangoproject.com/changeset/3360"&gt;[3360]&lt;/a&gt;), an &lt;tt class="docutils literal"&gt;is_authenticated&lt;/tt&gt; method was added to the User and AnonymousUser classes.  These are the classes used for Django's default authentication system.&lt;/p&gt;
+&lt;p&gt;Previously, the template code used for displaying content based on whether or not a user had authenticated went something like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;user.is_anonymous&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for logged in users.&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for non-logged in users.&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The problem with this code is that if, somehow, the &lt;tt class="docutils literal"&gt;user&lt;/tt&gt; template variable did not get populated, your template would treat the requesting user as if they were logged in.&lt;/p&gt;
+&lt;p&gt;Notice that this sort of behavior will be seen for &lt;strong&gt;all&lt;/strong&gt; negative if statements.  The template code &lt;tt class="docutils literal"&gt;{% if not variable %}&lt;/tt&gt; will always evaluate to &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; if &lt;tt class="docutils literal"&gt;variable&lt;/tt&gt; doesn't exist in the context.  This is because Django uses the &lt;a class="reference external" href="http://www.djangoproject.com/documentation/settings/#template-string-if-invalid"&gt;settings.TEMPLATE_STRING_IF_INVALID&lt;/a&gt; value for non-existent template variables; by default, &lt;tt class="docutils literal"&gt;TEMPLATE_STRING_IF_INVALID&lt;/tt&gt; is &lt;tt class="docutils literal"&gt;''&lt;/tt&gt;, which evaluates to &lt;tt class="docutils literal"&gt;False&lt;/tt&gt; (and &lt;tt class="docutils literal"&gt;not False&lt;/tt&gt; is &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;Notice also that even using the template code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;user.is_anonymous&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for non-logged in users.&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for logged in users.&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(without the &lt;tt class="docutils literal"&gt;not&lt;/tt&gt;) will not work in this case because if the &lt;tt class="docutils literal"&gt;user&lt;/tt&gt; variable is non-existent, the requesting user will still be treated as if they were authenticated.&lt;/p&gt;
+&lt;p&gt;The new, recommended way for checking that a requesting user has been authenticated in your templates is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;user.is_authenticated&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for logged in users.&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Content for non-logged in users&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here, if the &lt;tt class="docutils literal"&gt;user&lt;/tt&gt; template variable were to not exist, your template would treat the requesting user as non-authenticated, just as we would want.&lt;/p&gt;
+</content><category term="23"></category><category term="authentication"></category><category term="django"></category><category term="templates"></category></entry><entry><title>Using CrackLib to require stronger passwords</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/using-cracklib-to-require-stronger-passwords/" rel="alternate"></link><published>2006-08-26T00:00:00-05:00</published><updated>2006-08-26T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-08-26:/thegarywilson.com/blog/2006/using-cracklib-to-require-stronger-passwords/</id><summary type="html">&lt;p&gt;Let's face it, humans are not well adapted to memorizing strings of random characters; and hence, the average computer user is not very good at creating &lt;a class="reference external" href="http://www.usewisdom.com/computer/passwords.html"&gt;secure passwords&lt;/a&gt;.  Most users create passwords made up of easy-to-remember words, like the name of a &lt;a class="reference external" href="http://www.mackbrown-texasfootball.com/"&gt;favorite sports team&lt;/a&gt; or maybe the name of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Let's face it, humans are not well adapted to memorizing strings of random characters; and hence, the average computer user is not very good at creating &lt;a class="reference external" href="http://www.usewisdom.com/computer/passwords.html"&gt;secure passwords&lt;/a&gt;.  Most users create passwords made up of easy-to-remember words, like the name of a &lt;a class="reference external" href="http://www.mackbrown-texasfootball.com/"&gt;favorite sports team&lt;/a&gt; or maybe the name of a significant other.  In this article, I will show you how you can make Django require better passwords from your users.&lt;/p&gt;
+&lt;p&gt;Here are the packages you will need:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://sourceforge.net/projects/cracklib/"&gt;CrackLib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/python-crack/"&gt;python-crack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="installing-the-required-packages"&gt;
+&lt;h2&gt;Installing the required packages&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Install CrackLib.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CrackLib is a library for checking that passwords are not easily crackable, or in other words, it makes sure that a password is not based on a simple character pattern or on a dictionary word.  CrackLib is a common package that you should be able to find in your distribution's package manager (or, quite possibly, it could already be installed).  Alternatively, you could download the source and follow the installation instructions in the README file.  By default, CrackLib installs a python package named cracklib, but it does not have as many features as python-crack.  (Redhat does not include the cracklib python package in its cracklib package.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 (optional, but recommended): Install extra word dictionaries.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Packaged with CrackLib is a file name &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;cracklib-small&lt;/span&gt;&lt;/tt&gt;.  (Some distributions, like RedHat, don't include this file in their cracklib package, in which case keep reading...)  This file is a dictionary of words, simply a long list of words with one word per line.  These 50,000 words are a good start, but we can do better.  On the &lt;a class="reference external" href="http://sourceforge.net/project/showfiles.php?group_id=130213"&gt;CrackLib download page&lt;/a&gt;, there is also a package named cracklib-words.  After downloading and extracting the package, you will have a single file containing 1,648,379 &amp;quot;words&amp;quot;.  Many distributions also have a cracklib-dicts or cracklib-words package that maybe the same or similar to the cracklib-words file on the CrackLib website.&lt;/p&gt;
+&lt;p&gt;For even more dictionaries, take a look at &lt;a class="reference external" href="http://www.cotse.com/tools/wordlists.htm"&gt;these word lists&lt;/a&gt;.  It might also be a good idea to create your own list of words.  For example, if you work for a company in the financial industry, it would be a good idea to make a list of words and slang specific to that industry.  If you will be dealing with non-english speaking users, it would be a good idea to find some dictionaries in other languages.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Create the word indexes that get used by CrackLib.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have our dictionaries, we need to compile them into an index that CrackLib uses.  So, put all your dictionaries in one directory (&lt;tt class="docutils literal"&gt;/usr/share/dict/&lt;/tt&gt; is a common place).  Depending on your distribution, there will be different commands to run.  On Gentoo (or if you installed from source), the following (as root) should do the trick:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+create-cracklib-dict /usr/share/dict/*
+&lt;/pre&gt;
+&lt;p&gt;And on RedHat:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mkdict /usr/share/dict/* | packer /usr/lib/cracklib_dict
+&lt;/pre&gt;
+&lt;p&gt;These commands should create the following files:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+/usr/lib/cracklib_dict.hwm
+/usr/lib/cracklib_dict.pwd
+/usr/lib/cracklib_dict.pwi
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 4: Install python-crack&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If your distribution's package manager doesn't include python-crack, then you will have to download and install it yourself.  Neither Gentoo nor RedHat include this package, so I will walk you through the install.  &lt;a class="reference external" href="http://www.nongnu.org/python-crack/"&gt;Download&lt;/a&gt; and unpack python-crack.  Now, &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; into the directory and run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure
+&lt;/pre&gt;
+&lt;p&gt;By default, configure will setup python-crack's files to be installed to &lt;tt class="docutils literal"&gt;/usr/local&lt;/tt&gt;.  This means that you will have to add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/local/lib/python2.4/site-packages&lt;/span&gt;&lt;/tt&gt; to your &lt;tt class="docutils literal"&gt;PYTHONPATH&lt;/tt&gt;.  Alternatively, you could add a &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--prefix=/usr&lt;/span&gt;&lt;/tt&gt; to the end of the configure command to install python-crack's files to the usual &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/lib/python2.4/site-packages&lt;/span&gt;&lt;/tt&gt; directory.&lt;/p&gt;
+&lt;p&gt;If you get this error:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+checking for prefix of the default cracklib dictionary database... unknown
+configure: error: crack.h does not define CRACKLIB_DICTPATH. Please use DEFAULT_DICTPATH, see ./configure --help
+&lt;/pre&gt;
+&lt;p&gt;then set the &lt;tt class="docutils literal"&gt;DEFAULT_DICTPATH&lt;/tt&gt; variable when running configure, like so:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure DEFAULT_DICTPATH=/usr/lib/cracklib_dict
+&lt;/pre&gt;
+&lt;p&gt;Now run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+make
+make install
+&lt;/pre&gt;
+&lt;p&gt;Now that we are finished installing, let's test out python-crack:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;$ python&lt;/span&gt;
+&lt;span class="go"&gt;Python 2.4.3 (#1, Jun 28 2006, 23:41:37)&lt;/span&gt;
+&lt;span class="go"&gt;[GCC 3.4.6 (Gentoo 3.4.6-r1, ssp-3.4.5-1.0, pie-8.7.9)] on linux2&lt;/span&gt;
+&lt;span class="go"&gt;Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;crack&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;...&lt;/span&gt;
+&lt;span class="gr"&gt;ValueError&lt;/span&gt;: &lt;span class="n"&gt;it is WAY too short&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;foobar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;...&lt;/span&gt;
+&lt;span class="gr"&gt;ValueError&lt;/span&gt;: &lt;span class="n"&gt;it is based on a dictionary word&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;3#hsad2U&amp;gt;u2u&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="go"&gt;&amp;#39;3#hsad2U&amp;gt;u2u&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;VeryFascistCheck()&lt;/tt&gt; raises a value error and prints an explanation if the password is not strong enough, otherwise it echos back the password.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="creating-the-django-manipulator"&gt;
+&lt;h2&gt;Creating the Django Manipulator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;NewUserForm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Manipulator&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PasswordField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;isStrongPassword&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PasswordField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;confirm_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+                    &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RequiredIfOtherFieldGiven&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                        &lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You must confirm password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                    &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AlwaysMatchesOtherField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                        &lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Passwords did not match&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;isStrongPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;all_data&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Test the password with cracklib to make sure it is strong.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;crack&lt;/span&gt;
+    &lt;span class="c1"&gt;# Increase the number of credits required from&lt;/span&gt;
+    &lt;span class="c1"&gt;# the default of 8 if you want.&lt;/span&gt;
+    &lt;span class="c1"&gt;#crack.min_length = 11&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ValidationError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; \
+            &lt;span class="s2"&gt;&amp;quot;Password &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;.&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice that I added &lt;tt class="docutils literal"&gt;isStrongPassword&lt;/tt&gt; to the password field's &lt;tt class="docutils literal"&gt;validator_list&lt;/tt&gt;.  Now you are ready to put the &lt;tt class="docutils literal"&gt;NewUserForm&lt;/tt&gt; manipulator to use in your &lt;tt class="docutils literal"&gt;views.py&lt;/tt&gt;.  After running the manipulator's &lt;tt class="docutils literal"&gt;get_validation_errors()&lt;/tt&gt;, bad passwords will generate errors such as &amp;quot;Password is based on a dictionary word&amp;quot; or &amp;quot;Password does not contain enough DIFFERENT characters.&amp;quot;  For help on using manipulators in your view, see the &lt;a class="reference external" href="http://www.djangoproject.com/documentation/forms/"&gt;Forms, fields, and manipulators&lt;/a&gt; documentation.&lt;/p&gt;
+&lt;p&gt;If you want to make Django's built-in authentication require stronger passwords, then you could add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;validator_list=[isStrongPassword]&lt;/span&gt;&lt;/tt&gt; to the password field of &lt;tt class="docutils literal"&gt;django.contrib.auth.models.User&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Now, go forth and require strong passwords.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="26"></category><category term="cracklib"></category><category term="django"></category><category term="gentoo"></category><category term="linux"></category><category term="passwords"></category><category term="redhat"></category></entry><entry><title>Cyclomatic complexity for Python code</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/cyclomatic-complexity-for-python-code/" rel="alternate"></link><published>2006-07-09T00:00:00-05:00</published><updated>2006-07-09T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-07-09:/thegarywilson.com/blog/2006/cyclomatic-complexity-for-python-code/</id><summary type="html">&lt;p&gt;We all know that maintenance is the biggest cost of software.  You can keep the maintenance cost of your program down by writing readable code.  More readable code means faster bug fixing, which leads to more time for adding new bugs.&lt;/p&gt;
+&lt;p&gt;One measure of readability is &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"&gt;cyclomatic complexity&lt;/a&gt;, a software …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We all know that maintenance is the biggest cost of software.  You can keep the maintenance cost of your program down by writing readable code.  More readable code means faster bug fixing, which leads to more time for adding new bugs.&lt;/p&gt;
+&lt;p&gt;One measure of readability is &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"&gt;cyclomatic complexity&lt;/a&gt;, a software metric that measures a program's complexity based on the number of distinct paths or branches in the code.  &lt;a class="reference external" href="http://www.sei.cmu.edu/str/descriptions/cyclomatic_body.html"&gt;Carnegie Mellon's Software Engineering Institute&lt;/a&gt; defines the following complexity risk levels:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="38%" /&gt;
+&lt;col width="63%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Cyclomatic Complexity&lt;/th&gt;
+&lt;th class="head"&gt;Risk Evaluation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;1-10&lt;/td&gt;
+&lt;td&gt;a simple program, without much risk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;11-20&lt;/td&gt;
+&lt;td&gt;more complex, moderate risk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;21-50&lt;/td&gt;
+&lt;td&gt;complex, high risk program&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;greater than 50&lt;/td&gt;
+&lt;td&gt;untestable program (very high risk)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I have written a python script that takes &lt;a class="reference external" href="http://www.journyx.com/curt/complexity.html"&gt;these complexity scripts&lt;/a&gt; a bit further by printing the most complex functions/methods in an entire Python package specified on the command line.  Save the following as &lt;tt class="docutils literal"&gt;complexity.py&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/python&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;Find the most complex functions/methods in your python code.&lt;/span&gt;
+
+&lt;span class="sd"&gt;This program is offered freely into the public domain by&lt;/span&gt;
+&lt;span class="sd"&gt;Gary Wilson (gary.wilson@gmail.com).&lt;/span&gt;
+
+&lt;span class="sd"&gt;This code requires the complexity shell scripts found at&lt;/span&gt;
+&lt;span class="sd"&gt;http://journyx.com/curt/complexity.html&lt;/span&gt;
+&lt;span class="sd"&gt;Download the four files and then specify the path to the&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;complexity&amp;quot; script below, as PATH_TO_COMPLEXITY.&lt;/span&gt;
+
+&lt;span class="sd"&gt;Note: To get the scripts to work for me I had to change the line&lt;/span&gt;
+&lt;span class="sd"&gt;open (T,&amp;quot;|$dn/tab|sort -n +5&amp;quot;) || die &amp;quot;no tab?&amp;quot;;&lt;/span&gt;
+&lt;span class="sd"&gt;to&lt;/span&gt;
+&lt;span class="sd"&gt;open (T,&amp;quot;|$dn/tab|sort -n -k 6&amp;quot;) || die &amp;quot;no tab?&amp;quot;;&lt;/span&gt;
+&lt;span class="sd"&gt;This line appears once in &amp;quot;complexdef&amp;quot; and twice in &amp;quot;complexdefclass&amp;quot;.&lt;/span&gt;
+
+&lt;span class="sd"&gt;Example uses:&lt;/span&gt;
+
+&lt;span class="sd"&gt;Search the current directory.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py&lt;/span&gt;
+
+&lt;span class="sd"&gt;Search the mypythonpackage package.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py ~/mypythonpackage&lt;/span&gt;
+
+&lt;span class="sd"&gt;You can also specify multiple files and/or directories.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py ~/mypythonpackage /src/myscript.py&lt;/span&gt;
+
+&lt;span class="sd"&gt;This script will search for all files ending in &amp;quot;.py&amp;quot; within the&lt;/span&gt;
+&lt;span class="sd"&gt;paths specified on the command line.  All functions and methods will&lt;/span&gt;
+&lt;span class="sd"&gt;be sorted by decreasing complexity and printed along with the&lt;/span&gt;
+&lt;span class="sd"&gt;filename and number of lines of code.&lt;/span&gt;
+
+&lt;span class="sd"&gt;By default, this script will print out all functions/methods found.&lt;/span&gt;
+&lt;span class="sd"&gt;If you would rather only see functions/methods with a certain&lt;/span&gt;
+&lt;span class="sd"&gt;complexity or above, then change the COMPLEXITY_LEVEL setting below.&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;## User Settings ###########################################&lt;/span&gt;
+&lt;span class="n"&gt;PATH_TO_COMPLEXITY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;~/complex/complexity&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Only show functions/methods with a complexity greater than or&lt;/span&gt;
+&lt;span class="c1"&gt;# equal to COMPLEXITY_LEVEL.  Setting to 0 will print all functions/methods.&lt;/span&gt;
+&lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="c1"&gt;############################################################&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;PIPE&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PATH_TO_COMPLEXITY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;close_fds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;reached_functions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+    &lt;span class="n"&gt;function_header&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Funcname|Classless_Function&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;function_header&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;reached_functions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;reached_functions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="c1"&gt;# We don&amp;#39;t want the header lines.&lt;/span&gt;
+            &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;continue&lt;/span&gt;
+            &lt;span class="c1"&gt;# filename, function name, lines of code, and complexity.&lt;/span&gt;
+            &lt;span class="n"&gt;tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;tuples&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_to_functions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;functions&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_column_widths&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;widths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;widths&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;col&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])):&lt;/span&gt;
+        &lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;col&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;widths&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;function_tuple&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;parms&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuple&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;curdir&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expanduser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;add_to_functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# Filter out functions less than desired complexity level.&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="c1"&gt;# Sort by complexity.&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Showing functions/methods with complexity greater than or equal to &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;headers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Filename&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Function/Method&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Lines of Code&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Complexity&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;widths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_column_widths&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;None.&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</content><category term="09"></category><category term="cyclomatic complexity"></category><category term="metrics"></category><category term="python"></category></entry><entry><title>Cyclomatic complexity of Django</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/cyclomatic-complexity-of-django/" rel="alternate"></link><published>2006-07-09T00:00:00-05:00</published><updated>2006-07-09T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-07-09:/thegarywilson.com/blog/2006/cyclomatic-complexity-of-django/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://groups.google.com/group/django-developers/browse_thread/thread/1026181083385c58/"&gt;Adrian's recent post&lt;/a&gt; on the dev mailing list about the code within &lt;tt class="docutils literal"&gt;django.db.models&lt;/tt&gt; got me remembering some other &amp;quot;monstrous&amp;quot; functions I've seen while browsing the Django source.  Guess no more as to the most monstrous functions of Django because below are the results of my &lt;a class="reference external" href="http://gdub.wordpress.com/2006/07/09/cyclomatic-complexity-for-python-code/"&gt;previously posted complexity …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://groups.google.com/group/django-developers/browse_thread/thread/1026181083385c58/"&gt;Adrian's recent post&lt;/a&gt; on the dev mailing list about the code within &lt;tt class="docutils literal"&gt;django.db.models&lt;/tt&gt; got me remembering some other &amp;quot;monstrous&amp;quot; functions I've seen while browsing the Django source.  Guess no more as to the most monstrous functions of Django because below are the results of my &lt;a class="reference external" href="http://gdub.wordpress.com/2006/07/09/cyclomatic-complexity-for-python-code/"&gt;previously posted complexity.py script&lt;/a&gt; when run on the Django source.&lt;/p&gt;
+&lt;p&gt;Here are all 80 of the functions and methods of Django that are of moderate risk or higher:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Showing functions/methods with complexity greater than or equal to 11:
+
+Filename                                    Function/Method                              Lines of Code Complexity
+./core/management.py                        get_validation_errors                                  146         78
+./db/models/manipulators.py                 AutomaticManipulator.save                               97         43
+./contrib/comments/templatetags/comments.py DoCommentForm.__call__                                  51         31
+./views/i18n.py                             javascript_catalog                                      68         28
+./contrib/admin/views/main.py               change_stage                                            75         28
+./utils/translation/trans_real.py           translation                                             62         26
+./bin/make-messages.py                      make_messages                                          114         26
+./contrib/admin/views/main.py               _get_deleted_objects                                    65         25
+./core/handlers/base.py                     BaseHandler.get_response                                50         24
+./views/defaults.py                         shortcut                                                40         23
+./contrib/auth/create_superuser.py          createsuperuser                                         64         23
+./core/management.py                        inspectdb                                               84         23
+./contrib/admin/views/doc.py                model_detail                                            64         22
+./templatetags/i18n.py                      do_block_translate                                      41         21
+./core/management.py                        syncdb                                                  61         21
+./core/management.py                        execute_from_command_line                               74         21
+./views/generic/create_update.py            update_object                                           54         20
+./contrib/admin/views/decorators.py         staff_member_required                                   44         20
+./utils/simplejson/decoder.py               scanstring                                              41         19
+./contrib/admin/views/main.py               add_stage                                               51         19
+./core/validators.py                        RelaxNGCompact.__call__                                 51         19
+./db/models/query.py                        lookup_inner                                           107         19
+./db/models/query.py                        delete_objects                                          48         19
+./template/__init__.py                      TokenParser.value                                       61         18
+./utils/simplejson/decoder.py               JSONObject                                              37         18
+./utils/decorators.py                       decorator_from_middleware                               25         18
+./contrib/comments/templatetags/comments.py DoGetCommentList.__call__                               31         18
+./contrib/comments/views/comments.py        post_comment                                            66         18
+./utils/translation/trans_real.py           get_language_from_request                               40         17
+./core/mail.py                              send_mass_mail                                          31         17
+./views/generic/create_update.py            create_object                                           38         16
+./views/static.py                           serve                                                   28         16
+./core/servers/fastcgi.py                   runfastcgi                                              56         16
+./core/management.py                        get_sql_delete                                          49         16
+./db/models/query.py                        QuerySet.__getitem__                                    38         16
+./utils/simplejson/encoder.py               floatstr                                                17         15
+./utils/simplejson/encoder.py               JSONEncoder._iterencode_dict                            49         15
+./views/generic/create_update.py            delete_object                                           36         15
+./contrib/comments/templatetags/comments.py DoCommentCount.__call__                                 25         15
+./db/models/fields/related.py               create_many_related_manager                             73         15
+./db/models/query.py                        QuerySet._get_sql_clause                                54         15
+./middleware/common.py                      CommonMiddleware.process_request                        22         14
+./template/__init__.py                      Parser.parse                                            35         14
+./template/defaulttags.py                   do_if                                                   33         14
+./template/defaulttags.py                   cycle                                                   25         14
+./views/generic/date_based.py               object_detail                                           43         14
+./contrib/comments/views/comments.py        post_free_comment                                       41         14
+./contrib/admin/templatetags/admin_list.py  items_for_result                                        59         14
+./contrib/admin/views/main.py               get_javascript_imports                                  23         14
+./contrib/admin/views/main.py               ChangeList.get_query_set                                39         14
+./core/handlers/base.py                     BaseHandler.load_middleware                             32         14
+./db/models/base.py                         Model.__init__                                          33         14
+./template/defaulttags.py                   SsiNode.render                                          21         13
+./views/generic/list_detail.py              object_list                                             46         13
+./contrib/auth/handlers/modpython.py        authenhandler                                           28         13
+./db/models/fields/__init__.py              Field.get_manipulator_fields                            24         13
+./db/models/base.py                         ModelBase.__new__                                       26         13
+./dispatch/saferef.py                       safeRef                                                 65         12
+./dispatch/dispatcher.py                    _removeOldBackRefs                                      20         12
+./template/loader.py                        find_template_source                                    26         12
+./template/defaulttags.py                   IfNode.render                                           21         12
+./utils/timesince.py                        timesince                                               34         12
+./views/generic/date_based.py               archive_month                                           36         12
+./core/management.py                        _get_sql_model_create                                   44         12
+./conf/__init__.py                          Settings.__init__                                       26         12
+./db/models/fields/__init__.py              DateTimeField.to_python                                 14         12
+./db/models/related.py                      RelatedObject.get_list                                  21         12
+./db/models/options.py                      Options.has_field_type                                  16         12
+./dispatch/dispatcher.py                    connect                                                 34         11
+./template/defaultfilters.py                pluralize                                               18         11
+./utils/simplejson/decoder.py               JSONArray                                               21         11
+./views/generic/list_detail.py              object_detail                                           33         11
+./views/generic/date_based.py               archive_week                                            31         11
+./views/generic/date_based.py               archive_day                                             34         11
+./contrib/redirects/middleware.py           RedirectFallbackMiddleware.process_response             17         11
+./contrib/admin/templatetags/log.py         DoGetAdminLog.__call__                                  11         11
+./db/backends/postgresql/base.py            DatabaseWrapper.cursor                                  21         11
+./db/backends/postgresql_psycopg2/base.py   DatabaseWrapper.cursor                                  21         11
+./db/models/fields/related.py               ReverseSingleRelatedObjectDescriptor.__get__            19         11
+./db/models/query.py                        get_where_clause                                        18         11
+&lt;/pre&gt;
+</content><category term="09"></category><category term="cyclomatic complexity"></category><category term="metrics"></category><category term="django"></category></entry><entry><title>News sites that don't suck</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/news-sites-that-dont-suck/" rel="alternate"></link><published>2006-05-20T00:00:00-05:00</published><updated>2006-05-20T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-05-20:/thegarywilson.com/blog/2006/news-sites-that-dont-suck/</id><summary type="html">&lt;p&gt;I sure wish there were news sites in my city that didn't suck.  How happy I would be if I could have sites such as the &lt;a class="reference external" href="http://www.djangoproject.com"&gt;Django&lt;/a&gt;-powered &lt;a class="reference external" href="http://www.49abcnews.com/"&gt;49abcnews&lt;/a&gt; or &lt;a class="reference external" href="http://www.ljworld.com/"&gt;LJWorld&lt;/a&gt; to give my attention to each evening.  Instead, I'm stuck with &lt;a class="reference external" href="http://www.news8austin.com/"&gt;crappy news site&lt;/a&gt; after &lt;a class="reference external" href="http://www.statesman.com/"&gt;crappy news site&lt;/a&gt; after …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I sure wish there were news sites in my city that didn't suck.  How happy I would be if I could have sites such as the &lt;a class="reference external" href="http://www.djangoproject.com"&gt;Django&lt;/a&gt;-powered &lt;a class="reference external" href="http://www.49abcnews.com/"&gt;49abcnews&lt;/a&gt; or &lt;a class="reference external" href="http://www.ljworld.com/"&gt;LJWorld&lt;/a&gt; to give my attention to each evening.  Instead, I'm stuck with &lt;a class="reference external" href="http://www.news8austin.com/"&gt;crappy news site&lt;/a&gt; after &lt;a class="reference external" href="http://www.statesman.com/"&gt;crappy news site&lt;/a&gt; after &lt;a class="reference external" href="http://www.kvue.com/"&gt;crappy news site&lt;/a&gt;.  Popups, popovers, registrations, and URLs that make you cringe...&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+http://sports.statesman.com/merge/tsnform.aspx?c=statesman&amp;amp;amp;page=mlb/news/index.aspx?sport=AA
+http://www.kvue.com/news/top/stories/051906cckrKvurescape.2b620a4.html
+&lt;/pre&gt;
+&lt;p&gt;Oh my!&lt;/p&gt;
+&lt;p&gt;To be fair, &lt;a class="reference external" href="http://www.statesman.com"&gt;Statesman.com&lt;/a&gt; (and its &lt;a class="reference external" href="http://www.austin360.com"&gt;Austin360.com&lt;/a&gt; entertainment site) is now much more pleasing on the eye due to a major redesign last December.  The redesign seems to have paid off, with the Statesman's web site duo recently receiving the top ranking by the &lt;a class="reference external" href="http://www.naa.org/"&gt;Newspaper Association of America (NAA)&lt;/a&gt; for the greatest local reach among large newspaper sites.  With a monthly readership of 31 percent of Austinites, it edged out &lt;a class="reference external" href="http://www.washingtonpost.com"&gt;The Washington Post&lt;/a&gt; (27 percent) and the &lt;a class="reference external" href="http://www.signonsandiego.com"&gt;San Diego Union-Tribune&lt;/a&gt; (23 percent).&lt;/p&gt;
+&lt;p&gt;In my mind though, Statesman.com fails to deliver the news.  All those headlines on the home page are just a tease to get me to register.  I just want to be able to read the news and &lt;a class="reference external" href="http://www.timesonline.co.uk/article/0,,2-1459390,00.html"&gt;find Rolexes in supermarkets&lt;/a&gt; without getting hassled.  Is that so much to ask?&lt;/p&gt;
+&lt;p&gt;LJWorld gets it.  There's plenty of content here just begging to be Django-ed.  With Austin being the state's capital, land of the
+&lt;a class="reference external" href="http://www.siliconmaps.com/hills3.html"&gt;silicon hills&lt;/a&gt;,
+a &lt;a class="reference external" href="http://www.kiplinger.com/personalfinance/features/archives/2006/05/intro.html"&gt;smart place to live&lt;/a&gt;,
+home to &lt;a class="reference external" href="http://www.utexas.edu"&gt;one of the largest universities&lt;/a&gt; in the U.S.
+(with plenty of &lt;a class="reference external" href="http://video.google.com/videoplay?docid=-70449010942275062"&gt;college girls making out (04:43)&lt;/a&gt;),
+and then there's always the &lt;a class="reference external" href="http://www.austintexas.org/music/"&gt;Live Music Capital of the World&lt;/a&gt;.
+Austin news sites don't get it.&lt;/p&gt;
+</content><category term="20"></category><category term="austin"></category><category term="django"></category><category term="news"></category></entry><entry><title>Form validators that always get tested</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/form-validators-that-always-get-tested/" rel="alternate"></link><published>2006-02-28T00:00:00-06:00</published><updated>2006-02-28T00:00:00-06:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-02-28:/thegarywilson.com/blog/2006/form-validators-that-always-get-tested/</id><summary type="html">&lt;p&gt;I needed to make a form that had two inputs, and wanted to require that one or both fields be filled in.  While poking around in &lt;tt class="docutils literal"&gt;django.core.formfields&lt;/tt&gt;, I noticed the following check:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_required&lt;/span&gt;
+    &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;new_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;always_test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ah ha!  What …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I needed to make a form that had two inputs, and wanted to require that one or both fields be filled in.  While poking around in &lt;tt class="docutils literal"&gt;django.core.formfields&lt;/tt&gt;, I noticed the following check:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_required&lt;/span&gt;
+    &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;new_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;always_test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ah ha!  What is this &lt;tt class="docutils literal"&gt;always_test&lt;/tt&gt; I see here?  The devs must have already thought of a situation like this, but just failed to mention it in the &lt;a class="reference external" href="http://www.djangoproject.com/documentation/forms/"&gt;documentation&lt;/a&gt;.  Anyway, on to the to the custom form:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.core&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;formfields&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;validators&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ItemAddForm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;formfields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Manipulator&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+            &lt;span class="n"&gt;formfields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;oneIsRequried&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+            &lt;span class="n"&gt;formfields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;URLField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;oneIsRequried&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+        &lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;oneIsRequried&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;field_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;all_data&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;all_data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;all_data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+            &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ValidationError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; \
+                &lt;span class="s2"&gt;&amp;quot;One of either name or URL must be filled in.&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;oneIsRequried&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;always_test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After defining the &lt;tt class="docutils literal"&gt;oneIsRequired&lt;/tt&gt; method, I set its &lt;tt class="docutils literal"&gt;always_test&lt;/tt&gt; attribute to &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;.  You see, normally, a field's validators will not get run if the field is left blank.  Here, the two fields will always get tested against the &lt;tt class="docutils literal"&gt;oneIsRequired&lt;/tt&gt; validator method, blank or not.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;Technically, I did not need to put the &lt;tt class="docutils literal"&gt;oneIsRequired&lt;/tt&gt; in both fields' &lt;tt class="docutils literal"&gt;validator_list&lt;/tt&gt; parameters, but by listing it in both, each field will get the error message in the &lt;tt class="docutils literal"&gt;form.errors&lt;/tt&gt; dict.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="28"></category><category term="django"></category><category term="forms"></category><category term="validators"></category></entry><entry><title>Hello world!</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/hello-world/" rel="alternate"></link><published>2006-02-20T00:00:00-06:00</published><updated>2006-02-20T00:00:00-06:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2006-02-20:/thegarywilson.com/blog/2006/hello-world/</id><content type="html">&lt;p&gt;Well, just finished setting up my &lt;a class="reference external" href="http://www.wordpress.com"&gt;WordPress&lt;/a&gt; account.  Came here after signing up with a &lt;a class="reference external" href="http://www.blogger.com"&gt;Blogger&lt;/a&gt; account only to realize that Blogger does not have a tagging or category feature.&lt;/p&gt;
+</content><category term="20"></category><category term="blog"></category><category term="blogger"></category><category term="wordpress"></category></entry></feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - 07</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/feeds/07.atom.xml" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2013-04-07T00:00:00-05:00</updated><entry><title>A Survey on Software Quality</title><link href="https://gdub.github.io/thegarywilson.com/blog/2013/a-survey-on-software-quality/" rel="alternate"></link><published>2013-04-07T00:00:00-05:00</published><updated>2013-04-07T00:00:00-05:00</updated><author><name>Gary</name></author><id>tag:gdub.github.io,2013-04-07:/thegarywilson.com/blog/2013/a-survey-on-software-quality/</id><summary type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
+&lt;p&gt;Great!  I am writing my graduate report on the topic of software quality, metrics, and visualization.
+The report will include a write-up on the results of the survey distributed here,
+an evaluation of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
+&lt;p&gt;Great!  I am writing my graduate report on the topic of software quality, metrics, and visualization.
+The report will include a write-up on the results of the survey distributed here,
+an evaluation of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how software-industry professionals define software quality&lt;/li&gt;
+&lt;li&gt;how software methods, metrics, and visualizations are used within teams for software quality improvement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The survey is about 25 questions long and takes about 10 minutes
+to complete.  You can find the survey at:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit April 10, 2013:&lt;/strong&gt; The survey is now closed, thanks to all that participated!&lt;/p&gt;
+&lt;p&gt;I would appreciate your help in distributing this survey to others you know in
+the software industry who would be interested in helping with this research on
+software quality.  Results from the survey will be posted here next month.&lt;/p&gt;
+&lt;p&gt;If interested in reading more on the subject, I encourage you to take a look
+at my &lt;a class="reference external" href="/tags/metrics/"&gt;previous posts about metrics&lt;/a&gt;, including a case study of Django and
+cyclomatic complexity metrics for Python code.&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;
+</content><category term="07"></category><category term="django"></category><category term="grad school"></category><category term="metrics"></category><category term="python"></category><category term="quality"></category><category term="software engineering"></category><category term="survey"></category></entry></feed>
