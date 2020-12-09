@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - software engineering</title><link href="https://gdub.github.io/" rel="alternate"></link><link href="https://gdub.github.io/blog/feed/software-engineering.atom" rel="self"></link><id>https://gdub.github.io/</id><updated>2013-06-19T01:24:07-05:00</updated><entry><title>Software Quality Survey Results</title><link href="https://gdub.github.io/blog/2013/software-quality-survey-results/" rel="alternate"></link><published>2013-06-19T01:24:07-05:00</published><updated>2013-06-19T01:24:07-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2013-06-19:/blog/2013/software-quality-survey-results/</id><summary type="html">&lt;p&gt;In April, &lt;a class="reference external" href="/blog/2013/software-quality-metrics-survey/"&gt;I conducted a survey&lt;/a&gt; to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - software engineering</title><link href="https://thegarywilson.com/" rel="alternate"></link><link href="https://thegarywilson.com/blog/feed/software-engineering.atom" rel="self"></link><id>https://thegarywilson.com/</id><updated>2013-06-19T01:24:07-05:00</updated><entry><title>Software Quality Survey Results</title><link href="https://thegarywilson.com/blog/2013/software-quality-survey-results/" rel="alternate"></link><published>2013-06-19T01:24:07-05:00</published><updated>2013-06-19T01:24:07-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:thegarywilson.com,2013-06-19:/blog/2013/software-quality-survey-results/</id><summary type="html">&lt;p&gt;In April, &lt;a class="reference external" href="/blog/2013/software-quality-metrics-survey/"&gt;I conducted a survey&lt;/a&gt; to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.&lt;/p&gt;
 &lt;div class="section" id="introduction"&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A literature review on software quality showed that software quality is a broad topic covering several factors, requiring a diverse set …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In April, &lt;a class="reference external" href="/blog/2013/software-quality-metrics-survey/"&gt;I conducted a survey&lt;/a&gt; to software professionals on the topic of software quality.  Today, I present the results from this survey, adapted from my final report.&lt;/p&gt;
@@ -131,7 +131,7 @@ These results confirm the quality definitions found in the literature, with both
 With quality in manufacturing very much tied to defects and reliability, it is interesting that, here, &amp;quot;lack of defects&amp;quot; was thought to be less important than &amp;quot;fit of need.&amp;quot;&lt;/p&gt;
 &lt;p&gt;The figure below shows a graph of the rank selection distribution for how important the subjects felt each attribute represents quality.&lt;/p&gt;
 &lt;div class="figure align-center"&gt;
-&lt;img alt="" src="https://gdub.github.io/blog/2013/software-quality-survey-results/figures/quality_attribute_ranks_1600_crop.png" /&gt;
+&lt;img alt="" src="https://thegarywilson.com/blog/2013/software-quality-survey-results/figures/quality_attribute_ranks_1600_crop.png" /&gt;
 &lt;p class="caption"&gt;Ranks given to attributes for importance in representing code quality.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The table below shows the attributes sorted by their weighted-average ranking.&lt;/p&gt;
@@ -198,7 +198,7 @@ With quality in manufacturing very much tied to defects and reliability, it is i
 &lt;p&gt;Subjects were then asked to rank three popular trade-off factors (cost, quality, and schedule) in how influential the factors were for a typical software project at their company.
 The responses predominantly showed &lt;em&gt;schedule&lt;/em&gt; ranked first, &lt;em&gt;quality&lt;/em&gt; ranked second, and &lt;em&gt;cost&lt;/em&gt; ranked third, with resulting weighted-rank averages of 1.69, 1.93, and 2.32 (out of 3), respectively.  The figure below shows the full rank distribution for all three factors.&lt;/p&gt;
 &lt;div class="figure align-center"&gt;
-&lt;img alt="" src="https://gdub.github.io/blog/2013/software-quality-survey-results/figures/schedule_quality_cost_ranks_1600_crop.png" /&gt;
+&lt;img alt="" src="https://thegarywilson.com/blog/2013/software-quality-survey-results/figures/schedule_quality_cost_ranks_1600_crop.png" /&gt;
 &lt;p class="caption"&gt;Rank distributions of schedule, quality, and cost influence for a typical software project.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In a follow-up question to responders who ranked either schedule or cost as more influential than quality, (summarized) reasons given for their selections included:&lt;/p&gt;
@@ -281,7 +281,7 @@ Additional insights gathered on choices that were presented include:&lt;/p&gt;
 &lt;p&gt;The subjects were then asked how regularly their team used metrics to evaluate seven different areas, which represented a one-to-one mapping to the measurement goals derived in the Goal, Question, Metric (GQM) exercise (not presented here).
 Answer choices were a frequency-type Likert scale with the following labels: Never, Rarely, Sometimes, Regularly, Constantly.  The figure below depicts the choice distributions for all seven measurement areas, and the table below shows the measurement areas sorted by most frequently used (a weighted-average ordering assuming approximately equal intervals of the frequency-type Likert scale, with values 1 to 5 representing &amp;quot;Never&amp;quot; to &amp;quot;Constantly&amp;quot;, respectively).&lt;/p&gt;
 &lt;div class="figure align-center" id="figure-measurement-goal-frequency"&gt;
-&lt;img alt="" src="https://gdub.github.io/blog/2013/software-quality-survey-results/figures/measurement_frequency_1600_crop.png" /&gt;
+&lt;img alt="" src="https://thegarywilson.com/blog/2013/software-quality-survey-results/figures/measurement_frequency_1600_crop.png" /&gt;
 &lt;p class="caption"&gt;Distributions of the frequency that teams make use of metrics to address measurement goals presented in GQM exercise.&lt;/p&gt;
 &lt;/div&gt;
 &lt;table border="1" class="docutils"&gt;
@@ -787,7 +787,7 @@ Additionally, the positive responses to the perceived usefulness of metrics visu
 &lt;p&gt;On the topic of visualization tools, subjects were asked how they would like to use such a tool (see figure below for a chart of all responses).  The most popular choices, selected by about 61--71% of the responders, were: &lt;em&gt;integrated into build/test server&lt;/em&gt;, &lt;em&gt;integrated into issue tracker&lt;/em&gt;, and &lt;em&gt;a self-hosted, stand-alone product with web interface&lt;/em&gt;.  Least popular were: &lt;em&gt;integrated into editor/IDE&lt;/em&gt; and &lt;em&gt;a hosted service with web interface&lt;/em&gt;.  Four responders filled in a selection for &lt;em&gt;other&lt;/em&gt;, mentioning a dedicated build server, as well as a script or command-line interface.&lt;/p&gt;
 &lt;!-- figure_howtouse_metrics_tool: --&gt;
 &lt;div class="figure align-center"&gt;
-&lt;img alt="" src="https://gdub.github.io/blog/2013/software-quality-survey-results/figures/howtouse_visualization_tool_1600_crop.png" /&gt;
+&lt;img alt="" src="https://thegarywilson.com/blog/2013/software-quality-survey-results/figures/howtouse_visualization_tool_1600_crop.png" /&gt;
 &lt;p class="caption"&gt;Number of responses on how subjects would like to use a tool for calculating and visualizing metrics describing their software.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -998,7 +998,7 @@ Additionally, the positive responses to the perceived usefulness of metrics visu
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</content><category term="writing"></category><category term="grad school"></category><category term="metrics"></category><category term="quality"></category><category term="software engineering"></category><category term="survey"></category></entry><entry><title>A Survey on Software Quality</title><link href="https://gdub.github.io/blog/2013/a-survey-on-software-quality/" rel="alternate"></link><published>2013-04-07T02:57:24-05:00</published><updated>2013-04-07T02:57:24-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2013-04-07:/blog/2013/a-survey-on-software-quality/</id><summary type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
+</content><category term="writing"></category><category term="grad school"></category><category term="metrics"></category><category term="quality"></category><category term="software engineering"></category><category term="survey"></category></entry><entry><title>A Survey on Software Quality</title><link href="https://thegarywilson.com/blog/2013/a-survey-on-software-quality/" rel="alternate"></link><published>2013-04-07T02:57:24-05:00</published><updated>2013-04-07T02:57:24-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:thegarywilson.com,2013-04-07:/blog/2013/a-survey-on-software-quality/</id><summary type="html">&lt;p&gt;Want to help me graduate, and make the software industry a better place for us all?&lt;/p&gt;
 &lt;p&gt;Great!  I am writing my graduate report on the topic of software quality, metrics, and visualization.
 The report will include a write-up on the results of the survey distributed here,
 an evaluation of:&lt;/p&gt;
