@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - cyclomatic complexity</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/blog/feed/cyclomatic-complexity/" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2006-07-09T00:48:00-05:00</updated><entry><title>Cyclomatic complexity of Django</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/cyclomatic-complexity-of-django/" rel="alternate"></link><published>2006-07-09T00:48:00-05:00</published><updated>2006-07-09T00:48:00-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2006-07-09:/thegarywilson.com/blog/2006/cyclomatic-complexity-of-django/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://groups.google.com/group/django-developers/browse_thread/thread/1026181083385c58/"&gt;Adrian's recent post&lt;/a&gt; on the dev mailing list about the code within &lt;tt class="docutils literal"&gt;django.db.models&lt;/tt&gt; got me remembering some other &amp;quot;monstrous&amp;quot; functions I've seen while browsing the Django source.  Guess no more as to the most monstrous functions of Django because below are the results of my &lt;a class="reference external" href="http://gdub.wordpress.com/2006/07/09/cyclomatic-complexity-for-python-code/"&gt;previously posted complexity …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://groups.google.com/group/django-developers/browse_thread/thread/1026181083385c58/"&gt;Adrian's recent post&lt;/a&gt; on the dev mailing list about the code within &lt;tt class="docutils literal"&gt;django.db.models&lt;/tt&gt; got me remembering some other &amp;quot;monstrous&amp;quot; functions I've seen while browsing the Django source.  Guess no more as to the most monstrous functions of Django because below are the results of my &lt;a class="reference external" href="http://gdub.wordpress.com/2006/07/09/cyclomatic-complexity-for-python-code/"&gt;previously posted complexity.py script&lt;/a&gt; when run on the Django source.&lt;/p&gt;
+&lt;p&gt;Here are all 80 of the functions and methods of Django that are of moderate risk or higher:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Showing functions/methods with complexity greater than or equal to 11:
+
+Filename                                    Function/Method                              Lines of Code Complexity
+./core/management.py                        get_validation_errors                                  146         78
+./db/models/manipulators.py                 AutomaticManipulator.save                               97         43
+./contrib/comments/templatetags/comments.py DoCommentForm.__call__                                  51         31
+./views/i18n.py                             javascript_catalog                                      68         28
+./contrib/admin/views/main.py               change_stage                                            75         28
+./utils/translation/trans_real.py           translation                                             62         26
+./bin/make-messages.py                      make_messages                                          114         26
+./contrib/admin/views/main.py               _get_deleted_objects                                    65         25
+./core/handlers/base.py                     BaseHandler.get_response                                50         24
+./views/defaults.py                         shortcut                                                40         23
+./contrib/auth/create_superuser.py          createsuperuser                                         64         23
+./core/management.py                        inspectdb                                               84         23
+./contrib/admin/views/doc.py                model_detail                                            64         22
+./templatetags/i18n.py                      do_block_translate                                      41         21
+./core/management.py                        syncdb                                                  61         21
+./core/management.py                        execute_from_command_line                               74         21
+./views/generic/create_update.py            update_object                                           54         20
+./contrib/admin/views/decorators.py         staff_member_required                                   44         20
+./utils/simplejson/decoder.py               scanstring                                              41         19
+./contrib/admin/views/main.py               add_stage                                               51         19
+./core/validators.py                        RelaxNGCompact.__call__                                 51         19
+./db/models/query.py                        lookup_inner                                           107         19
+./db/models/query.py                        delete_objects                                          48         19
+./template/__init__.py                      TokenParser.value                                       61         18
+./utils/simplejson/decoder.py               JSONObject                                              37         18
+./utils/decorators.py                       decorator_from_middleware                               25         18
+./contrib/comments/templatetags/comments.py DoGetCommentList.__call__                               31         18
+./contrib/comments/views/comments.py        post_comment                                            66         18
+./utils/translation/trans_real.py           get_language_from_request                               40         17
+./core/mail.py                              send_mass_mail                                          31         17
+./views/generic/create_update.py            create_object                                           38         16
+./views/static.py                           serve                                                   28         16
+./core/servers/fastcgi.py                   runfastcgi                                              56         16
+./core/management.py                        get_sql_delete                                          49         16
+./db/models/query.py                        QuerySet.__getitem__                                    38         16
+./utils/simplejson/encoder.py               floatstr                                                17         15
+./utils/simplejson/encoder.py               JSONEncoder._iterencode_dict                            49         15
+./views/generic/create_update.py            delete_object                                           36         15
+./contrib/comments/templatetags/comments.py DoCommentCount.__call__                                 25         15
+./db/models/fields/related.py               create_many_related_manager                             73         15
+./db/models/query.py                        QuerySet._get_sql_clause                                54         15
+./middleware/common.py                      CommonMiddleware.process_request                        22         14
+./template/__init__.py                      Parser.parse                                            35         14
+./template/defaulttags.py                   do_if                                                   33         14
+./template/defaulttags.py                   cycle                                                   25         14
+./views/generic/date_based.py               object_detail                                           43         14
+./contrib/comments/views/comments.py        post_free_comment                                       41         14
+./contrib/admin/templatetags/admin_list.py  items_for_result                                        59         14
+./contrib/admin/views/main.py               get_javascript_imports                                  23         14
+./contrib/admin/views/main.py               ChangeList.get_query_set                                39         14
+./core/handlers/base.py                     BaseHandler.load_middleware                             32         14
+./db/models/base.py                         Model.__init__                                          33         14
+./template/defaulttags.py                   SsiNode.render                                          21         13
+./views/generic/list_detail.py              object_list                                             46         13
+./contrib/auth/handlers/modpython.py        authenhandler                                           28         13
+./db/models/fields/__init__.py              Field.get_manipulator_fields                            24         13
+./db/models/base.py                         ModelBase.__new__                                       26         13
+./dispatch/saferef.py                       safeRef                                                 65         12
+./dispatch/dispatcher.py                    _removeOldBackRefs                                      20         12
+./template/loader.py                        find_template_source                                    26         12
+./template/defaulttags.py                   IfNode.render                                           21         12
+./utils/timesince.py                        timesince                                               34         12
+./views/generic/date_based.py               archive_month                                           36         12
+./core/management.py                        _get_sql_model_create                                   44         12
+./conf/__init__.py                          Settings.__init__                                       26         12
+./db/models/fields/__init__.py              DateTimeField.to_python                                 14         12
+./db/models/related.py                      RelatedObject.get_list                                  21         12
+./db/models/options.py                      Options.has_field_type                                  16         12
+./dispatch/dispatcher.py                    connect                                                 34         11
+./template/defaultfilters.py                pluralize                                               18         11
+./utils/simplejson/decoder.py               JSONArray                                               21         11
+./views/generic/list_detail.py              object_detail                                           33         11
+./views/generic/date_based.py               archive_week                                            31         11
+./views/generic/date_based.py               archive_day                                             34         11
+./contrib/redirects/middleware.py           RedirectFallbackMiddleware.process_response             17         11
+./contrib/admin/templatetags/log.py         DoGetAdminLog.__call__                                  11         11
+./db/backends/postgresql/base.py            DatabaseWrapper.cursor                                  21         11
+./db/backends/postgresql_psycopg2/base.py   DatabaseWrapper.cursor                                  21         11
+./db/models/fields/related.py               ReverseSingleRelatedObjectDescriptor.__get__            19         11
+./db/models/query.py                        get_where_clause                                        18         11
+&lt;/pre&gt;
+</content><category term="writing"></category><category term="cyclomatic complexity"></category><category term="metrics"></category><category term="django"></category></entry><entry><title>Cyclomatic complexity for Python code</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/cyclomatic-complexity-for-python-code/" rel="alternate"></link><published>2006-07-09T00:37:00-05:00</published><updated>2006-07-09T00:37:00-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2006-07-09:/thegarywilson.com/blog/2006/cyclomatic-complexity-for-python-code/</id><summary type="html">&lt;p&gt;We all know that maintenance is the biggest cost of software.  You can keep the maintenance cost of your program down by writing readable code.  More readable code means faster bug fixing, which leads to more time for adding new bugs.&lt;/p&gt;
+&lt;p&gt;One measure of readability is &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"&gt;cyclomatic complexity&lt;/a&gt;, a software …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We all know that maintenance is the biggest cost of software.  You can keep the maintenance cost of your program down by writing readable code.  More readable code means faster bug fixing, which leads to more time for adding new bugs.&lt;/p&gt;
+&lt;p&gt;One measure of readability is &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"&gt;cyclomatic complexity&lt;/a&gt;, a software metric that measures a program's complexity based on the number of distinct paths or branches in the code.  &lt;a class="reference external" href="http://www.sei.cmu.edu/str/descriptions/cyclomatic_body.html"&gt;Carnegie Mellon's Software Engineering Institute&lt;/a&gt; defines the following complexity risk levels:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="38%" /&gt;
+&lt;col width="63%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Cyclomatic Complexity&lt;/th&gt;
+&lt;th class="head"&gt;Risk Evaluation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;1-10&lt;/td&gt;
+&lt;td&gt;a simple program, without much risk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;11-20&lt;/td&gt;
+&lt;td&gt;more complex, moderate risk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;21-50&lt;/td&gt;
+&lt;td&gt;complex, high risk program&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;greater than 50&lt;/td&gt;
+&lt;td&gt;untestable program (very high risk)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I have written a python script that takes &lt;a class="reference external" href="http://www.journyx.com/curt/complexity.html"&gt;these complexity scripts&lt;/a&gt; a bit further by printing the most complex functions/methods in an entire Python package specified on the command line.  Save the following as &lt;tt class="docutils literal"&gt;complexity.py&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/python&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;Find the most complex functions/methods in your python code.&lt;/span&gt;
+
+&lt;span class="sd"&gt;This program is offered freely into the public domain by&lt;/span&gt;
+&lt;span class="sd"&gt;Gary Wilson (gary.wilson@gmail.com).&lt;/span&gt;
+
+&lt;span class="sd"&gt;This code requires the complexity shell scripts found at&lt;/span&gt;
+&lt;span class="sd"&gt;http://journyx.com/curt/complexity.html&lt;/span&gt;
+&lt;span class="sd"&gt;Download the four files and then specify the path to the&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;complexity&amp;quot; script below, as PATH_TO_COMPLEXITY.&lt;/span&gt;
+
+&lt;span class="sd"&gt;Note: To get the scripts to work for me I had to change the line&lt;/span&gt;
+&lt;span class="sd"&gt;open (T,&amp;quot;|$dn/tab|sort -n +5&amp;quot;) || die &amp;quot;no tab?&amp;quot;;&lt;/span&gt;
+&lt;span class="sd"&gt;to&lt;/span&gt;
+&lt;span class="sd"&gt;open (T,&amp;quot;|$dn/tab|sort -n -k 6&amp;quot;) || die &amp;quot;no tab?&amp;quot;;&lt;/span&gt;
+&lt;span class="sd"&gt;This line appears once in &amp;quot;complexdef&amp;quot; and twice in &amp;quot;complexdefclass&amp;quot;.&lt;/span&gt;
+
+&lt;span class="sd"&gt;Example uses:&lt;/span&gt;
+
+&lt;span class="sd"&gt;Search the current directory.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py&lt;/span&gt;
+
+&lt;span class="sd"&gt;Search the mypythonpackage package.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py ~/mypythonpackage&lt;/span&gt;
+
+&lt;span class="sd"&gt;You can also specify multiple files and/or directories.&lt;/span&gt;
+&lt;span class="sd"&gt;python complexity.py ~/mypythonpackage /src/myscript.py&lt;/span&gt;
+
+&lt;span class="sd"&gt;This script will search for all files ending in &amp;quot;.py&amp;quot; within the&lt;/span&gt;
+&lt;span class="sd"&gt;paths specified on the command line.  All functions and methods will&lt;/span&gt;
+&lt;span class="sd"&gt;be sorted by decreasing complexity and printed along with the&lt;/span&gt;
+&lt;span class="sd"&gt;filename and number of lines of code.&lt;/span&gt;
+
+&lt;span class="sd"&gt;By default, this script will print out all functions/methods found.&lt;/span&gt;
+&lt;span class="sd"&gt;If you would rather only see functions/methods with a certain&lt;/span&gt;
+&lt;span class="sd"&gt;complexity or above, then change the COMPLEXITY_LEVEL setting below.&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;## User Settings ###########################################&lt;/span&gt;
+&lt;span class="n"&gt;PATH_TO_COMPLEXITY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;~/complex/complexity&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Only show functions/methods with a complexity greater than or&lt;/span&gt;
+&lt;span class="c1"&gt;# equal to COMPLEXITY_LEVEL.  Setting to 0 will print all functions/methods.&lt;/span&gt;
+&lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="c1"&gt;############################################################&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;PIPE&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PATH_TO_COMPLEXITY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;close_fds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;reached_functions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+    &lt;span class="n"&gt;function_header&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Funcname|Classless_Function&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;function_header&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;reached_functions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;reached_functions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="c1"&gt;# We don&amp;#39;t want the header lines.&lt;/span&gt;
+            &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;continue&lt;/span&gt;
+            &lt;span class="c1"&gt;# filename, function name, lines of code, and complexity.&lt;/span&gt;
+            &lt;span class="n"&gt;tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;tuples&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_to_functions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;functions&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_column_widths&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;widths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;widths&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;col&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])):&lt;/span&gt;
+        &lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;col&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;widths&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;function_tuple&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;parms&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuple&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parms&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;curdir&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expanduser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;add_to_functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;complexity_for_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# Filter out functions less than desired complexity level.&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="c1"&gt;# Sort by complexity.&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+    &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Showing functions/methods with complexity greater than or equal to &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;COMPLEXITY_LEVEL&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;headers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Filename&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Function/Method&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Lines of Code&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Complexity&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;widths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_column_widths&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;function_tuples&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;function_tuples&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%-*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt; &lt;/span&gt;&lt;span class="si"&gt;%*s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;get_print_parms&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;widths&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;None.&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</content><category term="writing"></category><category term="cyclomatic complexity"></category><category term="metrics"></category><category term="python"></category></entry></feed>
