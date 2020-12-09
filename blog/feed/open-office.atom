@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - open office</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/blog/feed/open-office.atom" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2011-03-14T00:55:00-05:00</updated><entry><title>Drawing Petri nets</title><link href="https://gdub.github.io/thegarywilson.com/blog/2011/drawing-petri-nets/" rel="alternate"></link><published>2011-03-14T00:55:00-05:00</published><updated>2011-03-14T00:55:00-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2011-03-14:/thegarywilson.com/blog/2011/drawing-petri-nets/</id><summary type="html">&lt;p&gt;I recently went looking for tools to easily draw &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Petri_net"&gt;Petri nets&lt;/a&gt;, a modeling language for distributed systems, and here's what I found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/macros/generic/petri-nets/"&gt;petri-nets LaTeX package&lt;/a&gt;: A LaTeX package written by Franck Pommereau specifically for drawing Petri nets that makes use of &lt;a class="reference external" href="http://www.tug.org/PSTricks/main.cgi/"&gt;PSTricks&lt;/a&gt; as a basis for the actual creation of …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I recently went looking for tools to easily draw &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Petri_net"&gt;Petri nets&lt;/a&gt;, a modeling language for distributed systems, and here's what I found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/macros/generic/petri-nets/"&gt;petri-nets LaTeX package&lt;/a&gt;: A LaTeX package written by Franck Pommereau specifically for drawing Petri nets that makes use of &lt;a class="reference external" href="http://www.tug.org/PSTricks/main.cgi/"&gt;PSTricks&lt;/a&gt; as a basis for the actual creation of the drawings. I didn't actually try this package out because, after skimming through the documentation, it seems that nodes must be positioned using the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system"&gt;Cartesian coordinate system&lt;/a&gt;. Not really what I'm looking for since, ideally, I'd like to be able to simply define the graph's structure and not have to worry about explicitly positioning each object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.ctan.org/tex-archive/help/Catalogue/entries/pgf.html"&gt;PGF (&amp;quot;portable graphics format&amp;quot;) LaTeX package&lt;/a&gt;: A LaTeX package for creating graphics, similar to PStricks. Unlike PStricks, this package has built-in support for Petri nets. It provides out-of-the box support for defining place and transition nodes, drawing edges, and placing a defined number of tokens within a node.  If interested, Section 3 of the &lt;a class="reference external" href="http://mirror.ctan.org/graphics/pgf/base/doc/generic/pgf/pgfmanual.pdf"&gt;PGF manual&lt;/a&gt; provides an excellent and detailed tutorial on building a Petri net graph. While the syntax for describing a graph seems easier than the petri-nets package above, there are still cumbersome aspects to the definition. For example, positioning is still a bit of a manual process. You must specify &amp;quot;left of&amp;quot;, &amp;quot;right of&amp;quot;, &amp;quot;above of&amp;quot;, and &amp;quot;below of&amp;quot; layout commands for each node, though at least you do not have to deal with coordinates. Now granted, precise layout might be exactly what's needed in a LaTeX document, but I'm looking for something easier and faster to define.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.graphviz.org/"&gt;Graphviz&lt;/a&gt;: visualization software that can auto-generate directed graphs a specification given in its &lt;a class="reference external" href="http://www.graphviz.org/content/dot-language"&gt;DOT language&lt;/a&gt;.  It's easy to create the place and transition nodes using subgraph declarations, and connecting the nodes requires no manual positioning at all.  Below is an example graph:&lt;/p&gt;
+&lt;p&gt;File &lt;tt class="docutils literal"&gt;barber.dot&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;digraph G {
+    subgraph place {
+        graph [shape=circle,color=gray];
+        node [shape=circle,fixedsize=true,width=2];
+        &amp;quot;customer waiting&amp;quot;;
+        cutting;
+        &amp;quot;idle barber&amp;quot;;
+        &amp;quot;customer paying&amp;quot;;
+    }
+    subgraph transitions {
+        node [shape=rect,height=0.2,width=2];
+        enter;
+        &amp;quot;start cutting&amp;quot;;
+        &amp;quot;finish cutting&amp;quot;;
+        exit;
+    }
+    enter -&amp;gt; &amp;quot;customer waiting&amp;quot;;
+    &amp;quot;customer waiting&amp;quot; -&amp;gt; &amp;quot;start cutting&amp;quot;;
+    &amp;quot;idle barber&amp;quot; -&amp;gt; &amp;quot;start cutting&amp;quot;;
+    &amp;quot;start cutting&amp;quot; -&amp;gt; cutting;
+    cutting -&amp;gt; &amp;quot;finish cutting&amp;quot;;
+    &amp;quot;finish cutting&amp;quot; -&amp;gt; &amp;quot;customer paying&amp;quot;;
+    &amp;quot;finish cutting&amp;quot; -&amp;gt; &amp;quot;idle barber&amp;quot;;
+    &amp;quot;customer paying&amp;quot; -&amp;gt; exit;
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When run through dot:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+dot -T png barber.dot -o barber.png
+&lt;/pre&gt;
+&lt;p&gt;...you get an image that looks something like this:&lt;/p&gt;
+&lt;img alt="Petri net barber example" src="https://gdub.github.io/thegarywilson.com/blog/2011/drawing-petri-nets/barber.png" /&gt;
+&lt;p&gt;However, there doesn't seem to be a very good way for drawing the tokens within the place nodes.  Nodes can define text labels, but using periods for tokens isn't very readable. Alternatively, since nodes can specify a background image, you could generate a few images with different numbers of tokens and use the correct image to represent the desired number of tokens, while still having a text label too.&lt;/p&gt;
+&lt;p&gt;If you intend to put your graph into LaTeX, check out the &lt;a class="reference external" href="http://www.fauskes.net/code/dot2tex/"&gt;dot2tex&lt;/a&gt; tool (written in Python) which will convert Graphviz's xdot output to LaTeX using PSTricks and PGF. Not only does this allow you to create beautiful graphs in your LaTeX documents, but it also allows your labels to be typeset by LaTeX (including the use of math mode, which is very nice).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Finally, there's your favorite drawing or image manipulation program. It's quick-and-dirty, but perhaps the easiest solution I examined.  While it might be a pain to edit or reconnect nodes, it's certainly easy to set the positioning you want. If your program supports snapping edges and labels to nodes, such as &lt;a class="reference external" href="http://www.openoffice.org/product/draw.html"&gt;OODraw&lt;/a&gt;, then moving or reconfiguring portions of the graph are even easier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you've found a better tool for drawing Petri nets, please share your experiences.&lt;/p&gt;
+</content><category term="writing"></category><category term="distributed systems"></category><category term="grad school"></category><category term="graphviz"></category><category term="latex"></category><category term="modeling"></category><category term="open office"></category><category term="petri nets"></category></entry></feed>

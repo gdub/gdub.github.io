@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - eclipse</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/blog/feed/eclipse.atom" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2008-04-27T23:03:00-05:00</updated><entry><title>Eclipse security component errors</title><link href="https://gdub.github.io/thegarywilson.com/blog/2008/eclipse-security-component-errors/" rel="alternate"></link><published>2008-04-27T23:03:00-05:00</published><updated>2008-04-27T23:03:00-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2008-04-27:/thegarywilson.com/blog/2008/eclipse-security-component-errors/</id><summary type="html">&lt;p&gt;Just got through installing eclipse on an Kubuntu Hardy box, and got the following error during the splash screen:&lt;/p&gt;
+&lt;blockquote&gt;
+Could not initialize the application's security component. The most likely cause is problems with files in your application's profile directory. Please check that this directory has no read/write restrictions and …&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Just got through installing eclipse on an Kubuntu Hardy box, and got the following error during the splash screen:&lt;/p&gt;
+&lt;blockquote&gt;
+Could not initialize the application's security component. The most likely cause is problems with files in your application's profile directory. Please check that this directory has no read/write restrictions and your hard disk is not full or close to full. It is recommended that you exit the application and fix the problem. If you continue to use this session, you might see incorrect application behavior when accessing security features.&lt;/blockquote&gt;
+&lt;p&gt;The solution seems to be to create the directory: &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.mozilla/eclipse&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;The corresponding bugs where the above solution was found:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/eclipse/+bug/188380"&gt;Ubuntu bug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=206432"&gt;Eclipse bug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="writing"></category><category term="eclipse"></category><category term="error"></category><category term="kubuntu"></category></entry></feed>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Gary Wilson Jr. - linux</title><link href="https://gdub.github.io/thegarywilson.com/" rel="alternate"></link><link href="https://gdub.github.io/thegarywilson.com/blog/feed/linux.atom" rel="self"></link><id>https://gdub.github.io/thegarywilson.com/</id><updated>2006-08-26T21:57:00-05:00</updated><entry><title>Using CrackLib to require stronger passwords</title><link href="https://gdub.github.io/thegarywilson.com/blog/2006/using-cracklib-to-require-stronger-passwords/" rel="alternate"></link><published>2006-08-26T21:57:00-05:00</published><updated>2006-08-26T21:57:00-05:00</updated><author><name>Gary Wilson Jr.</name></author><id>tag:gdub.github.io,2006-08-26:/thegarywilson.com/blog/2006/using-cracklib-to-require-stronger-passwords/</id><summary type="html">&lt;p&gt;Let's face it, humans are not well adapted to memorizing strings of random characters; and hence, the average computer user is not very good at creating &lt;a class="reference external" href="http://www.usewisdom.com/computer/passwords.html"&gt;secure passwords&lt;/a&gt;.  Most users create passwords made up of easy-to-remember words, like the name of a &lt;a class="reference external" href="http://www.mackbrown-texasfootball.com/"&gt;favorite sports team&lt;/a&gt; or maybe the name of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Let's face it, humans are not well adapted to memorizing strings of random characters; and hence, the average computer user is not very good at creating &lt;a class="reference external" href="http://www.usewisdom.com/computer/passwords.html"&gt;secure passwords&lt;/a&gt;.  Most users create passwords made up of easy-to-remember words, like the name of a &lt;a class="reference external" href="http://www.mackbrown-texasfootball.com/"&gt;favorite sports team&lt;/a&gt; or maybe the name of a significant other.  In this article, I will show you how you can make Django require better passwords from your users.&lt;/p&gt;
+&lt;p&gt;Here are the packages you will need:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://sourceforge.net/projects/cracklib/"&gt;CrackLib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/python-crack/"&gt;python-crack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="installing-the-required-packages"&gt;
+&lt;h2&gt;Installing the required packages&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Install CrackLib.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CrackLib is a library for checking that passwords are not easily crackable, or in other words, it makes sure that a password is not based on a simple character pattern or on a dictionary word.  CrackLib is a common package that you should be able to find in your distribution's package manager (or, quite possibly, it could already be installed).  Alternatively, you could download the source and follow the installation instructions in the README file.  By default, CrackLib installs a python package named cracklib, but it does not have as many features as python-crack.  (Redhat does not include the cracklib python package in its cracklib package.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 (optional, but recommended): Install extra word dictionaries.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Packaged with CrackLib is a file name &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;cracklib-small&lt;/span&gt;&lt;/tt&gt;.  (Some distributions, like RedHat, don't include this file in their cracklib package, in which case keep reading...)  This file is a dictionary of words, simply a long list of words with one word per line.  These 50,000 words are a good start, but we can do better.  On the &lt;a class="reference external" href="http://sourceforge.net/project/showfiles.php?group_id=130213"&gt;CrackLib download page&lt;/a&gt;, there is also a package named cracklib-words.  After downloading and extracting the package, you will have a single file containing 1,648,379 &amp;quot;words&amp;quot;.  Many distributions also have a cracklib-dicts or cracklib-words package that maybe the same or similar to the cracklib-words file on the CrackLib website.&lt;/p&gt;
+&lt;p&gt;For even more dictionaries, take a look at &lt;a class="reference external" href="http://www.cotse.com/tools/wordlists.htm"&gt;these word lists&lt;/a&gt;.  It might also be a good idea to create your own list of words.  For example, if you work for a company in the financial industry, it would be a good idea to make a list of words and slang specific to that industry.  If you will be dealing with non-english speaking users, it would be a good idea to find some dictionaries in other languages.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Create the word indexes that get used by CrackLib.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have our dictionaries, we need to compile them into an index that CrackLib uses.  So, put all your dictionaries in one directory (&lt;tt class="docutils literal"&gt;/usr/share/dict/&lt;/tt&gt; is a common place).  Depending on your distribution, there will be different commands to run.  On Gentoo (or if you installed from source), the following (as root) should do the trick:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+create-cracklib-dict /usr/share/dict/*
+&lt;/pre&gt;
+&lt;p&gt;And on RedHat:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mkdict /usr/share/dict/* | packer /usr/lib/cracklib_dict
+&lt;/pre&gt;
+&lt;p&gt;These commands should create the following files:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+/usr/lib/cracklib_dict.hwm
+/usr/lib/cracklib_dict.pwd
+/usr/lib/cracklib_dict.pwi
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 4: Install python-crack&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If your distribution's package manager doesn't include python-crack, then you will have to download and install it yourself.  Neither Gentoo nor RedHat include this package, so I will walk you through the install.  &lt;a class="reference external" href="http://www.nongnu.org/python-crack/"&gt;Download&lt;/a&gt; and unpack python-crack.  Now, &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; into the directory and run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure
+&lt;/pre&gt;
+&lt;p&gt;By default, configure will setup python-crack's files to be installed to &lt;tt class="docutils literal"&gt;/usr/local&lt;/tt&gt;.  This means that you will have to add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/local/lib/python2.4/site-packages&lt;/span&gt;&lt;/tt&gt; to your &lt;tt class="docutils literal"&gt;PYTHONPATH&lt;/tt&gt;.  Alternatively, you could add a &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--prefix=/usr&lt;/span&gt;&lt;/tt&gt; to the end of the configure command to install python-crack's files to the usual &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/lib/python2.4/site-packages&lt;/span&gt;&lt;/tt&gt; directory.&lt;/p&gt;
+&lt;p&gt;If you get this error:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+checking for prefix of the default cracklib dictionary database... unknown
+configure: error: crack.h does not define CRACKLIB_DICTPATH. Please use DEFAULT_DICTPATH, see ./configure --help
+&lt;/pre&gt;
+&lt;p&gt;then set the &lt;tt class="docutils literal"&gt;DEFAULT_DICTPATH&lt;/tt&gt; variable when running configure, like so:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure DEFAULT_DICTPATH=/usr/lib/cracklib_dict
+&lt;/pre&gt;
+&lt;p&gt;Now run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+make
+make install
+&lt;/pre&gt;
+&lt;p&gt;Now that we are finished installing, let's test out python-crack:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;$ python&lt;/span&gt;
+&lt;span class="go"&gt;Python 2.4.3 (#1, Jun 28 2006, 23:41:37)&lt;/span&gt;
+&lt;span class="go"&gt;[GCC 3.4.6 (Gentoo 3.4.6-r1, ssp-3.4.5-1.0, pie-8.7.9)] on linux2&lt;/span&gt;
+&lt;span class="go"&gt;Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;crack&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;...&lt;/span&gt;
+&lt;span class="gr"&gt;ValueError&lt;/span&gt;: &lt;span class="n"&gt;it is WAY too short&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;foobar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;...&lt;/span&gt;
+&lt;span class="gr"&gt;ValueError&lt;/span&gt;: &lt;span class="n"&gt;it is based on a dictionary word&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;3#hsad2U&amp;gt;u2u&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="go"&gt;&amp;#39;3#hsad2U&amp;gt;u2u&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;VeryFascistCheck()&lt;/tt&gt; raises a value error and prints an explanation if the password is not strong enough, otherwise it echos back the password.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="creating-the-django-manipulator"&gt;
+&lt;h2&gt;Creating the Django Manipulator&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;NewUserForm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Manipulator&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PasswordField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;isStrongPassword&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+            &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PasswordField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;confirm_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;maxlength&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is_required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;validator_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+                    &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RequiredIfOtherFieldGiven&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                        &lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You must confirm password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                    &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AlwaysMatchesOtherField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                        &lt;span class="s2"&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Passwords did not match&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;]&lt;/span&gt;
+            &lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;isStrongPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;all_data&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Test the password with cracklib to make sure it is strong.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;crack&lt;/span&gt;
+    &lt;span class="c1"&gt;# Increase the number of credits required from&lt;/span&gt;
+    &lt;span class="c1"&gt;# the default of 8 if you want.&lt;/span&gt;
+    &lt;span class="c1"&gt;#crack.min_length = 11&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;crack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VeryFascistCheck&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;field_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ValidationError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; \
+            &lt;span class="s2"&gt;&amp;quot;Password &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;.&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice that I added &lt;tt class="docutils literal"&gt;isStrongPassword&lt;/tt&gt; to the password field's &lt;tt class="docutils literal"&gt;validator_list&lt;/tt&gt;.  Now you are ready to put the &lt;tt class="docutils literal"&gt;NewUserForm&lt;/tt&gt; manipulator to use in your &lt;tt class="docutils literal"&gt;views.py&lt;/tt&gt;.  After running the manipulator's &lt;tt class="docutils literal"&gt;get_validation_errors()&lt;/tt&gt;, bad passwords will generate errors such as &amp;quot;Password is based on a dictionary word&amp;quot; or &amp;quot;Password does not contain enough DIFFERENT characters.&amp;quot;  For help on using manipulators in your view, see the &lt;a class="reference external" href="http://www.djangoproject.com/documentation/forms/"&gt;Forms, fields, and manipulators&lt;/a&gt; documentation.&lt;/p&gt;
+&lt;p&gt;If you want to make Django's built-in authentication require stronger passwords, then you could add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;validator_list=[isStrongPassword]&lt;/span&gt;&lt;/tt&gt; to the password field of &lt;tt class="docutils literal"&gt;django.contrib.auth.models.User&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Now, go forth and require strong passwords.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="writing"></category><category term="cracklib"></category><category term="django"></category><category term="gentoo"></category><category term="linux"></category><category term="passwords"></category><category term="redhat"></category></entry></feed>
